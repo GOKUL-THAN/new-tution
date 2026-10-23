@@ -1,12 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { GraduationCap, Mail, Lock, Eye, EyeOff, ArrowRight, Loader2 } from 'lucide-react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { GraduationCap, Mail, Lock, Eye, EyeOff, ArrowRight, Loader2, CheckCircle } from 'lucide-react';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const verified = searchParams.get('verified');
+  const reset = searchParams.get('reset');
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -89,6 +93,20 @@ export default function LoginPage() {
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-2">Sign in to your account</h2>
           <p className="text-gray-500 mb-8">Access your dashboard, courses, and more.</p>
 
+          {verified === '1' && (
+            <div className="flex items-center gap-2 bg-success-50 text-success-700 px-4 py-3 rounded-xl text-sm mb-6">
+              <CheckCircle className="w-4 h-4 shrink-0" />
+              Email verified successfully! You can now sign in.
+            </div>
+          )}
+
+          {reset === '1' && (
+            <div className="flex items-center gap-2 bg-success-50 text-success-700 px-4 py-3 rounded-xl text-sm mb-6">
+              <CheckCircle className="w-4 h-4 shrink-0" />
+              Password reset successfully. Please sign in with your new password.
+            </div>
+          )}
+
           {error && (
             <div className="bg-danger-50 text-danger-600 px-4 py-3 rounded-xl text-sm mb-6">
               {error}
@@ -168,5 +186,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
+      <LoginForm />
+    </Suspense>
   );
 }

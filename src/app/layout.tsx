@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Outfit } from 'next/font/google';
+import Providers from '@/components/providers/Providers';
 import './globals.css';
 
 const inter = Inter({
@@ -55,7 +56,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="GMA" />
       </head>
       <body className="min-h-screen flex flex-col font-sans">
-        {children}
+        <Providers>
+          {children}
+        </Providers>
         <script
           dangerouslySetInnerHTML={{
             __html: `
