@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans text-gray-900 bg-white antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-500/20 text-brand-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium rounded-xl
+           transition-all duration-200 ease-out
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700
+           shadow-lg shadow-brand-600/25 hover:shadow-xl hover:shadow-brand-600/30
+           focus-visible:outline-brand-600
+           px-6 py-3 text-sm;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-brand-700 border-2 border-brand-200
+           hover:bg-brand-50 hover:border-brand-300
+           focus-visible:outline-brand-600
+           px-6 py-3 text-sm;
+  }
+
+  .btn-accent {
+    @apply btn bg-gradient-to-r from-brand-600 to-accent-600 text-white
+           hover:from-brand-700 hover:to-accent-700
+           shadow-lg shadow-accent-600/25
+           focus-visible:outline-accent-600
+           px-6 py-3 text-sm;
+  }
+
+  .btn-ghost {
+    @apply btn text-gray-600 hover:text-brand-600 hover:bg-brand-50
+           px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-xs;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100
+           shadow-sm hover:shadow-md
+           transition-all duration-300 ease-out;
+  }
+
+  .card-hover {
+    @apply card hover:border-brand-200 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20
+           shadow-lg;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-600 via-accent-500 to-brand-700
+           bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200
+           bg-white text-gray-900 placeholder:text-gray-400
+           focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500
+           transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-brand-100 text-brand-700;
+  }
+
+  .badge-success {
+    @apply badge bg-success-50 text-success-600;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-50 text-warning-600;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gray-900;
+  }
+
+  .section-subtitle {
+    @apply text-lg sm:text-xl text-gray-600 max-w-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fadeUp 0.6s ease-out both;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
