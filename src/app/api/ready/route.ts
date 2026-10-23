@@ -1,0 +1,14 @@
+import { NextResponse } from 'next/server';
+import prisma from '@/lib/db';
+
+export async function GET() {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    return NextResponse.json({ status: 'ready', db_status: 'ok' });
+  } catch {
+    return NextResponse.json(
+      { status: 'unavailable', db_status: 'unavailable' },
+      { status: 503 }
+    );
+  }
+}
