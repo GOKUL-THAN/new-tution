@@ -143,15 +143,15 @@ export default function AboutPage() {
         {/* What We Offer */}
         <section className="section-padding bg-white">
           <div className="container-wide">
-            <div className="bg-gradient-to-br from-[#0D2B3E] to-[#1A6B5A] rounded-3xl p-8 sm:p-12">
-              <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-8 text-center">
+            <div className="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 border border-teal-200/80 rounded-3xl p-8 sm:p-12 shadow-sm">
+              <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-8 text-center">
                 What We Offer
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {offerings.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2 bg-white/10 rounded-xl p-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#F5C518] shrink-0 mt-0.5" />
-                    <span className="text-sm text-white/90">{item}</span>
+                  <div key={i} className="flex items-start gap-2 bg-white border border-teal-100 rounded-xl p-3 shadow-sm">
+                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-800 font-medium">{item}</span>
                   </div>
                 ))}
               </div>

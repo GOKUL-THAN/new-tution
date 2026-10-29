@@ -88,28 +88,28 @@ const prepTools = [
 
 export default function ExamPrepSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-[#0D2B3E] via-[#0f2e3a] to-[#091e2d] text-white overflow-hidden" id="exam-prep">
+    <section className="section-padding bg-gradient-to-b from-white via-teal-50/20 to-slate-50 text-slate-900 overflow-hidden border-t border-slate-200/80" id="exam-prep">
       <div className="container-wide">
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-5">
-              <Target className="w-4 h-4 text-[#F5C518]" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-200/80 text-teal-900 text-sm font-semibold mb-5 shadow-sm">
+              <Target className="w-4 h-4 text-teal-600" />
               Competitive Exam Preparation
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-4 leading-tight">
               Ace Your{' '}
-              <span className="bg-gradient-to-r from-[#F5C518] to-[#F9D85A] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 bg-clip-text text-transparent">
                 Entrance Exams
               </span>
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
               JEE, NEET, BITSAT, CUET — structured prep with DPPs, mock tests, error notebooks,
               and rank predictors. Built by studying Aakash, Allen, FIITJEE, Sri Chaitanya, and
               Resonance preparation methodologies.
             </p>
-            <Link href="/entrance-exams" className="btn border-2 border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-xl">
+            <Link href="/entrance-exams" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-6 py-3 rounded-xl transition-all">
               View All Exams <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
@@ -123,10 +123,10 @@ export default function ExamPrepSection() {
         {/* ── Prep tools strip ────────────────────────────────────── */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-14">
           {prepTools.map((t) => (
-            <div key={t.title} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center hover:bg-white/10 transition-colors">
+            <div key={t.title} className="bg-white border border-slate-200/90 shadow-sm rounded-2xl p-4 text-center hover:border-teal-300 hover:shadow-md transition-all">
               <div className="text-2xl mb-2">{t.icon}</div>
-              <p className="font-semibold text-white text-xs mb-1">{t.title}</p>
-              <p className="text-[10px] text-gray-400 leading-snug">{t.desc}</p>
+              <p className="font-bold text-slate-900 text-xs mb-1">{t.title}</p>
+              <p className="text-[11px] text-slate-600 leading-snug">{t.desc}</p>
             </div>
           ))}
         </div>
@@ -137,43 +137,43 @@ export default function ExamPrepSection() {
             <Link
               key={exam.slug}
               href={exam.href}
-              className="group bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-lg hover:border-teal-400 transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
               {/* Top */}
               <div className="flex items-start justify-between mb-4">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${exam.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${exam.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                   <exam.icon className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/60">
+                <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold border border-slate-200/60">
                   {exam.category}
                 </span>
               </div>
 
               {/* Info */}
-              <h3 className="font-display font-bold text-lg text-white mb-1 group-hover:text-[#F5C518] transition-colors">
+              <h3 className="font-display font-bold text-lg text-slate-900 mb-1 group-hover:text-teal-700 transition-colors">
                 {exam.name}
               </h3>
-              <p className="text-xs text-gray-500 mb-2">{exam.authority}</p>
-              <p className="text-sm text-gray-400 mb-4 leading-relaxed flex-1">{exam.desc}</p>
+              <p className="text-xs text-slate-500 mb-2 font-medium">{exam.authority}</p>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed flex-1">{exam.desc}</p>
 
               {/* Subjects */}
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {exam.subjects.map((s) => (
-                  <span key={s} className="text-xs px-2 py-0.5 rounded-md bg-white/5 text-gray-400">{s}</span>
+                  <span key={s} className="text-xs px-2 py-0.5 rounded-md bg-teal-50 border border-teal-200/60 text-teal-800 font-medium">{s}</span>
                 ))}
               </div>
 
               {/* Features */}
               <ul className="space-y-1.5 mb-4">
                 {exam.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs text-gray-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#F5C518] shrink-0" />
+                  <li key={f} className="flex items-center gap-2 text-xs text-slate-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
 
-              <div className="flex items-center text-sm font-semibold text-[#F5C518] group-hover:text-[#F9D85A] mt-auto">
+              <div className="flex items-center text-sm font-bold text-teal-700 group-hover:text-teal-800 mt-auto">
                 Start Preparing
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -182,13 +182,13 @@ export default function ExamPrepSection() {
         </div>
 
         {/* Official links note */}
-        <div className="mt-10 p-5 rounded-2xl bg-white/5 border border-white/10 text-center">
-          <p className="text-xs text-gray-400">
+        <div className="mt-10 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm text-center">
+          <p className="text-xs text-slate-600">
             📌 Official exam info sources:{' '}
-            <a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-[#F5C518] hover:underline">JEE Main</a> ·{' '}
-            <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener noreferrer" className="text-[#F5C518] hover:underline">JEE Advanced</a> ·{' '}
-            <a href="https://neet.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-[#F5C518] hover:underline">NEET UG</a> ·{' '}
-            <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer" className="text-[#F5C518] hover:underline">NTA</a>
+            <a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">JEE Main</a> ·{' '}
+            <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">JEE Advanced</a> ·{' '}
+            <a href="https://neet.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">NEET UG</a> ·{' '}
+            <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">NTA</a>
             {' '}— always verify dates from official sources.
           </p>
         </div>

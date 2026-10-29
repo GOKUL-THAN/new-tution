@@ -191,22 +191,22 @@ export default function ResetPasswordForm() {
   return (
     <div className="min-h-screen flex">
       {/* Left Panel - Brand */}
-      <div className="hidden lg:flex lg:w-1/2 bg-hero-pattern relative items-center justify-center p-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.15),transparent_60%)]" />
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-50 via-teal-50/50 to-emerald-50/50 border-r border-slate-200 relative items-center justify-center p-12">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
         <div className="relative z-10 text-center max-w-md">
           <Link href="/" className="inline-flex items-center gap-3 mb-8">
-            <div className="w-14 h-14 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center">
-              <GraduationCap className="w-8 h-8 text-white" />
+            <div className="w-14 h-14 bg-white border border-teal-200/80 shadow-md rounded-2xl flex items-center justify-center">
+              <GraduationCap className="w-8 h-8 text-teal-700" />
             </div>
             <div className="text-left">
-              <span className="font-display font-bold text-2xl text-white block">Global Minds</span>
-              <span className="text-xs uppercase tracking-widest text-brand-200">Academy</span>
+              <span className="font-display font-black text-2xl text-[#0D2B3E] block">Global Minds</span>
+              <span className="text-xs uppercase tracking-widest text-[#1A6B5A] font-bold">Academy</span>
             </div>
           </Link>
-          <h1 className="text-3xl font-display font-bold text-white mb-4">
+          <h1 className="text-3xl font-display font-black text-slate-900 mb-4">
             Create a New Password
           </h1>
-          <p className="text-blue-100/70 leading-relaxed">
+          <p className="text-slate-600 font-medium leading-relaxed">
             Choose a strong password to secure your account and get back to
             learning.
           </p>

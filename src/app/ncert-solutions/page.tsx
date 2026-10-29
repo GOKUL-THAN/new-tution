@@ -183,7 +183,7 @@ export default function NCERTSolutionsPage() {
         </section>
 
         {/* Official resources CTA */}
-        <section className="section-padding bg-[#0D2B3E]">
+        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
           <div className="container-wide">
             <div className="grid md:grid-cols-3 gap-5">
               {[
@@ -196,17 +196,17 @@ export default function NCERTSolutionsPage() {
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 border border-white/20 rounded-2xl p-5 hover:bg-white/15 transition-colors group flex items-center justify-between"
+                  className="bg-white border border-slate-200/90 rounded-2xl p-5 hover:border-teal-400 hover:shadow-md transition-all group flex items-center justify-between shadow-sm"
                 >
                   <div>
-                    <p className="font-semibold text-white text-sm group-hover:text-[#F5C518] transition-colors">{r.label}</p>
-                    <p className="text-xs text-white/50 mt-0.5">{r.sub}</p>
+                    <p className="font-bold text-slate-900 text-sm group-hover:text-teal-700 transition-colors">{r.label}</p>
+                    <p className="text-xs text-slate-600 mt-0.5 font-medium">{r.sub}</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-white/30 group-hover:text-[#F5C518] transition-colors shrink-0" />
+                  <ExternalLink className="w-4 h-4 text-teal-600 group-hover:text-teal-700 transition-colors shrink-0" />
                 </a>
               ))}
             </div>
-            <p className="text-center text-xs text-white/30 mt-6">
+            <p className="text-center text-xs text-slate-500 mt-6">
               Official sources — ncert.nic.in · diksha.gov.in
             </p>
           </div>

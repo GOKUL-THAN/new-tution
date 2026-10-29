@@ -69,7 +69,8 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const isHome = pathname === '/';
-  const isLightNav = !isHome || scrolled;
+  // Always use crisp premium light navigation across the entire website
+  const isLightNav = true;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

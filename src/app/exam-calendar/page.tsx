@@ -179,8 +179,8 @@ export default function ExamCalendarPage() {
               {examsByMonth.map((month) => (
                 <div key={month.month}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-[#0D2B3E] flex items-center justify-center">
-                      <Clock className="w-4 h-4 text-[#F5C518]" />
+                    <div className="w-8 h-8 rounded-full bg-teal-50 border border-teal-200 flex items-center justify-center shadow-sm">
+                      <Clock className="w-4 h-4 text-teal-700" />
                     </div>
                     <h2 className="font-display font-bold text-gray-900 text-lg">{month.month}</h2>
                   </div>

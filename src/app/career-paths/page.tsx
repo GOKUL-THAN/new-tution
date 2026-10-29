@@ -281,23 +281,23 @@ export default function CareerPathsPage() {
         </section>
 
         {/* Preparation CTA */}
-        <section className="section-padding bg-[#0D2B3E]">
+        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
           <div className="container-wide text-center">
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-4">
               Start Your Preparation Today
             </h2>
-            <p className="text-white/60 mb-8 max-w-lg mx-auto">
+            <p className="text-slate-600 mb-8 max-w-lg mx-auto font-medium">
               Now that you know your path — begin with a free diagnostic test to understand your current level
               and get a personalised study plan.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/diagnostic-test" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3">
+              <Link href="/diagnostic-test" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
                 Take Free Diagnostic Test
               </Link>
-              <Link href="/college-guide" className="btn border-2 border-white/20 text-white hover:bg-white/10 px-8 py-3">
+              <Link href="/college-guide" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
                 College Guide <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
-              <Link href="/batches" className="btn border-2 border-white/20 text-white hover:bg-white/10 px-8 py-3">
+              <Link href="/batches" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
                 View Batches
               </Link>
             </div>

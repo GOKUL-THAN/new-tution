@@ -3,44 +3,44 @@ import { ArrowRight, BookOpen, Sparkles } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="section-padding bg-gradient-to-br from-[#0c2e28] via-[#1A6B5A] to-[#1A8A7A] relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-teal-50/60 via-slate-50 to-white border-t border-teal-100 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.15),transparent_55%)]" />
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#F5C518]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Subtle dot pattern */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #F5C518 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #1A6B5A 1px, transparent 1px)`,
           backgroundSize: '32px 32px',
         }}
       />
 
       <div className="container-wide relative z-10 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm mb-6">
-          <Sparkles className="w-4 h-4 text-[#F5C518]" />
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-200/80 text-teal-900 text-sm font-semibold mb-6 shadow-sm">
+          <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
           Start Your Learning Journey Today
         </div>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white mb-6 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-6 max-w-3xl mx-auto leading-tight">
           Ready to Transform Your{' '}
-          <span className="bg-gradient-to-r from-[#F5C518] to-[#F9D85A] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 bg-clip-text text-transparent">
             Academic Future?
           </span>
         </h2>
 
-        <p className="text-lg sm:text-xl text-white font-medium max-w-2xl mx-auto mb-6 leading-relaxed">
+        <p className="text-lg sm:text-xl text-slate-700 font-medium max-w-2xl mx-auto mb-6 leading-relaxed">
           Join Global Minds Academy — expert-guided learning for Classes 6–12, JEE, NEET,
           and Tamil Nadu State Board. Perumbakkam, Chennai.
         </p>
 
-        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2.5 rounded-2xl bg-white/15 border border-white/25 text-white font-semibold text-sm mb-10 backdrop-blur-md">
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2.5 rounded-2xl bg-white border border-teal-200/80 text-slate-800 font-bold text-sm mb-10 shadow-sm">
           <span>15,000+ Students Trained</span>
-          <span className="text-[#F5C518]">·</span>
+          <span className="text-teal-600">·</span>
           <span>4.9 / 5.0 Rating</span>
-          <span className="text-[#F5C518]">·</span>
+          <span className="text-teal-600">·</span>
           <span>98.4% Placement Success</span>
         </div>
 
@@ -48,7 +48,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link
             href="/register"
-            className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-xl shadow-[#F5C518]/25 px-8 py-4 text-base font-black rounded-2xl w-full sm:w-auto group transition-all"
+            className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-lg shadow-amber-500/20 px-8 py-4 text-base font-black rounded-2xl w-full sm:w-auto group transition-all"
           >
             <BookOpen className="w-5 h-5" />
             Start Learning Free
@@ -60,7 +60,7 @@ export default function CTASection() {
             href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20joining%20Global%20Minds%20Academy"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn border-2 border-white/60 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto inline-flex items-center gap-3 backdrop-blur-sm transition-all"
+            className="btn border-2 border-emerald-500 bg-emerald-50/80 text-emerald-900 hover:bg-emerald-100 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto inline-flex items-center gap-3 shadow-sm transition-all"
           >
             {/* WhatsApp icon */}
             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#25D366]" aria-hidden="true">
@@ -71,14 +71,14 @@ export default function CTASection() {
 
           <Link
             href="/contact"
-            className="btn border-2 border-white/60 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto backdrop-blur-sm transition-all"
+            className="btn border-2 border-slate-300 bg-white text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto transition-all"
           >
             Book Free Counselling
           </Link>
         </div>
 
         {/* Trust badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-white/90 text-xs sm:text-sm font-semibold">
+        <div className="flex flex-wrap items-center justify-center gap-6 text-slate-600 text-xs sm:text-sm font-semibold">
           {[
             '✓ No credit card required',
             '✓ Free diagnostic test included',

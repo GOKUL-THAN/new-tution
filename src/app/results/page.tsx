@@ -255,12 +255,12 @@ export default function ResultsPage() {
         </section>
 
         {/* Official results links */}
-        <section className="section-padding bg-[#0D2B3E]">
+        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
           <div className="container-wide">
-            <h2 className="text-2xl font-display font-bold text-white mb-3 text-center">
+            <h2 className="text-2xl font-display font-black text-slate-900 mb-3 text-center">
               Check Official Exam Results
             </h2>
-            <p className="text-white/60 text-center mb-8 max-w-lg mx-auto">
+            <p className="text-slate-600 text-center mb-8 max-w-lg mx-auto font-medium">
               Always check your actual results directly from official NTA and board portals.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -271,14 +271,14 @@ export default function ResultsPage() {
                 { label: 'TN Board Results', url: 'https://www.dge.tn.gov.in/' },
               ].map((r) => (
                 <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer"
-                  className="bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-colors group">
-                  <p className="font-semibold text-white text-sm group-hover:text-[#F5C518] transition-colors">{r.label}</p>
-                  <p className="text-white/40 text-xs mt-1">Official portal →</p>
+                  className="bg-white border border-slate-200/90 rounded-2xl p-4 text-center hover:border-teal-400 hover:shadow-md transition-all group shadow-sm">
+                  <p className="font-bold text-slate-900 text-sm group-hover:text-teal-700 transition-colors">{r.label}</p>
+                  <p className="text-teal-700 text-xs mt-1 font-semibold">Official portal →</p>
                 </a>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3">
+              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
                 Start Your Preparation
               </Link>
             </div>

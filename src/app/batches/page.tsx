@@ -279,12 +279,12 @@ export default function BatchesPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm min-w-[700px]">
                 <thead>
-                  <tr className="bg-[#0D2B3E] text-white">
-                    <th className="text-left px-4 py-3 rounded-tl-xl">Batch</th>
-                    <th className="text-left px-4 py-3">Target Class</th>
-                    <th className="text-left px-4 py-3">Duration</th>
-                    <th className="text-left px-4 py-3">Days/Week</th>
-                    <th className="text-left px-4 py-3 rounded-tr-xl">Best For</th>
+                  <tr className="bg-slate-100 text-slate-900 border-b border-slate-200">
+                    <th className="text-left px-4 py-3.5 rounded-tl-xl font-bold">Batch</th>
+                    <th className="text-left px-4 py-3.5 font-bold">Target Class</th>
+                    <th className="text-left px-4 py-3.5 font-bold">Duration</th>
+                    <th className="text-left px-4 py-3.5 font-bold">Days/Week</th>
+                    <th className="text-left px-4 py-3.5 rounded-tr-xl font-bold">Best For</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
@@ -311,20 +311,20 @@ export default function BatchesPage() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-gradient-to-br from-[#0c2e28] to-[#1A6B5A]">
+        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
           <div className="container-wide text-center">
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-4">
               Not Sure Which Batch is Right?
             </h2>
-            <p className="text-white/60 mb-8 max-w-lg mx-auto">
+            <p className="text-slate-600 mb-8 max-w-lg mx-auto font-medium">
               Book a free 30-minute counselling session. Our academic counsellors will
               help you choose the right programme based on your current level and goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3">
+              <Link href="/contact" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
                 Book Free Counselling
               </Link>
-              <Link href="/diagnostic-test" className="btn border-2 border-white/20 text-white hover:bg-white/10 px-8 py-3">
+              <Link href="/diagnostic-test" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
                 Take Diagnostic Test First
               </Link>
             </div>

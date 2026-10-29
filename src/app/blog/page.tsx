@@ -320,20 +320,20 @@ export default function BlogPage() {
         </section>
 
         {/* Subscribe / register CTA */}
-        <section className="section-padding bg-[#0D2B3E]">
+        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
           <div className="container-wide text-center">
-            <h2 className="text-2xl font-display font-bold text-white mb-3">
+            <h2 className="text-2xl font-display font-black text-slate-900 mb-3">
               Get New Articles in Your Dashboard
             </h2>
-            <p className="text-white/60 mb-6 max-w-md mx-auto">
+            <p className="text-slate-600 mb-6 max-w-md mx-auto font-medium">
               Register for a free account to get personalised article recommendations
               based on your board, class, and exam goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3">
+              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
                 Create Free Account
               </Link>
-              <Link href="/contact" className="btn border-2 border-white/20 text-white hover:bg-white/10 px-8 py-3">
+              <Link href="/contact" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
                 Suggest a Topic
               </Link>
             </div>

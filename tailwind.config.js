@@ -84,8 +84,8 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        // Global Minds hero gradient: deep teal → teal → gold tint
-        'hero-pattern': 'linear-gradient(135deg, #0c2e28 0%, #1A6B5A 55%, #1A8A7A 100%)',
+        // Global Minds hero gradient: premium soft light gradient
+        'hero-pattern': 'linear-gradient(135deg, #f8fafc 0%, #f0faf8 50%, #e6f7f4 100%)',
       },
     },
   },

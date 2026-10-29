@@ -182,22 +182,22 @@ export default function FeaturesSection() {
         {/* ── Two hero illustration cards ──────────────────────────── */}
         <div className="grid lg:grid-cols-2 gap-6 mb-14">
           {/* Live class card */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#0D2B3E] to-[#1A6B5A] p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-[#F5C518]/5 rounded-full blur-2xl" />
+          <div className="rounded-3xl bg-gradient-to-br from-teal-50 via-emerald-50/50 to-teal-100/40 border border-teal-200 p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative shadow-sm">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-teal-400/10 rounded-full blur-2xl pointer-events-none" />
             <div className="flex-1 text-left">
-              <span className="inline-block bg-[#F5C518]/20 text-[#F5C518] text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              <span className="inline-block bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full mb-3 border border-teal-200/60">
                 ● LIVE NOW
               </span>
-              <h3 className="font-display font-bold text-white text-xl mb-2">
+              <h3 className="font-display font-bold text-slate-900 text-xl mb-2">
                 Live Classes with Expert Teachers
               </h3>
-              <p className="text-white/90 text-sm leading-relaxed mb-4 font-medium">
+              <p className="text-slate-700 text-sm leading-relaxed mb-4 font-normal">
                 Join live sessions, ask doubts in real time, and access recordings anytime.
                 Interactive whiteboards, polls, and chat — just like Vedantu and PW.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['Live sessions','Recordings','Doubt chat','Whiteboard'].map((t) => (
-                  <span key={t} className="text-xs bg-white/20 text-white font-medium px-3 py-1 rounded-full">{t}</span>
+                  <span key={t} className="text-xs bg-teal-100/80 text-teal-900 font-semibold px-3 py-1 rounded-full border border-teal-200/60">{t}</span>
                 ))}
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function FeaturesSection() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-8">
+        <p className="text-center text-xs text-slate-500 font-medium mt-8">
           Feature set designed after analysing BYJU&apos;S, Physics Wallah, Khan Academy, Aakash, Allen,
           Vedantu, Embibe, Doubtnut, Testbook, Unacademy, and 50+ other platforms.
         </p>

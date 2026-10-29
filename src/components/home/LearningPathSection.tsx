@@ -151,7 +151,7 @@ export default function LearningPathSection() {
 
             {/* Mock chapter grid */}
             <div>
-              <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-4">
+              <p className="text-xs text-slate-600 font-bold uppercase tracking-wider mb-4">
                 Physics — Class 12 (Sample)
               </p>
               <div className="grid grid-cols-5 gap-2">
@@ -171,11 +171,11 @@ export default function LearningPathSection() {
                     <div className={`${c.color} rounded-xl h-10 flex items-center justify-center text-white font-bold text-xs mb-1`}>
                       {c.pct > 0 ? `${c.pct}%` : '—'}
                     </div>
-                    <p className="text-[9px] text-gray-400">{c.ch}</p>
+                    <p className="text-[10px] text-slate-600 font-semibold">{c.ch}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-400 mt-3">
+              <p className="text-xs text-slate-500 font-medium mt-3">
                 Sample data only. Actual mastery is calculated from your test attempts.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function LearningPathSection() {
               Take Free Diagnostic Test
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <p className="text-xs text-gray-400 mt-3">Takes 15 minutes · No account needed to start</p>
+            <p className="text-xs text-slate-600 font-medium mt-3">Takes 15 minutes · No account needed to start</p>
           </div>
         </div>
       </div>

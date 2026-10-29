@@ -155,7 +155,7 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-8">
+        <p className="text-center text-xs text-slate-500 font-medium mt-8">
           Course content shown above is for demonstration. Enrol to access full course materials.
         </p>
       </div>

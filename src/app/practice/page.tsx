@@ -223,16 +223,16 @@ export default function PracticePage() {
                 ))}
               </div>
 
-              <div className="bg-[#0D2B3E] rounded-2xl p-6 mt-8 text-center">
-                <h3 className="font-display font-bold text-white mb-2">Ready to start?</h3>
-                <p className="text-white/60 text-sm mb-5">
+              <div className="bg-gradient-to-r from-teal-50 via-slate-50 to-emerald-50 border border-teal-200/80 rounded-2xl p-6 mt-8 text-center shadow-sm">
+                <h3 className="font-display font-black text-slate-900 text-lg mb-2">Ready to start?</h3>
+                <p className="text-slate-600 text-sm mb-5 font-medium">
                   Create a free account to access all practice modes, save your progress, and track improvement.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-6 py-2.5 text-sm">
+                  <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-6 py-2.5 text-sm shadow-md shadow-amber-500/20">
                     Create Free Account
                   </Link>
-                  <Link href="/diagnostic-test" className="btn border border-white/20 text-white hover:bg-white/10 px-6 py-2.5 text-sm">
+                  <Link href="/diagnostic-test" className="btn bg-white border border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-6 py-2.5 text-sm">
                     Take Diagnostic Test
                   </Link>
                 </div>

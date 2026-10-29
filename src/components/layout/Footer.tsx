@@ -62,7 +62,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0D2B3E] text-gray-300">
+    <footer className="bg-slate-50 border-t border-slate-200/90 text-slate-700">
 
       {/* ── Main Footer ─────────────────────────────────────────── */}
       <div className="container-wide section-padding">
@@ -79,16 +79,16 @@ export default function Footer() {
                 className="transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col leading-none">
-                <span className="font-display font-black text-lg text-white uppercase tracking-wide">
+                <span className="font-display font-black text-lg text-[#0D2B3E] uppercase tracking-wide">
                   GLOBAL MINDS
                 </span>
-                <span className="text-[10px] uppercase tracking-widest font-semibold text-[#F5C518]">
+                <span className="text-[10px] uppercase tracking-widest font-bold text-[#1A6B5A]">
                   BUILD SKILLS | OWN THE FUTURE
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-gray-400 mb-6 max-w-xs leading-relaxed">
+            <p className="text-sm text-slate-600 mb-6 max-w-xs leading-relaxed">
               Comprehensive education platform for Indian students — school tuition,
               competitive exam preparation, and personalised learning.
               Serving students across Tamil Nadu and India.
@@ -96,22 +96,22 @@ export default function Footer() {
 
             {/* Contact details (from globalmindsacademy.in) */}
             <div className="space-y-2.5 text-sm">
-              <div className="flex items-start gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-[#F5C518] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 text-slate-600">
+                <MapPin className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
                 <span>Perumbakkam, Chennai, Tamil Nadu, India</span>
               </div>
               <a
                 href="mailto:info@globalmindsacademy.in"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-slate-600 hover:text-teal-700 font-medium transition-colors"
               >
-                <Mail className="w-4 h-4 text-[#F5C518] shrink-0" />
+                <Mail className="w-4 h-4 text-teal-700 shrink-0" />
                 <span>info@globalmindsacademy.in</span>
               </a>
               <a
                 href="https://wa.me/919876543210"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-slate-600 hover:text-teal-700 font-medium transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#F5C518] shrink-0" />
+                <Phone className="w-4 h-4 text-teal-700 shrink-0" />
                 <span>Contact via WhatsApp</span>
               </a>
             </div>
@@ -120,13 +120,13 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h3 className="font-semibold text-white mb-4 text-sm">{title}</h3>
+              <h3 className="font-bold text-slate-900 mb-4 text-sm tracking-wide">{title}</h3>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-slate-600 hover:text-teal-700 font-medium transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -139,9 +139,9 @@ export default function Footer() {
       </div>
 
       {/* ── Bottom bar ──────────────────────────────────────────── */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-slate-200">
         <div className="container-wide py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500 text-center sm:text-left">
+          <p className="text-xs text-slate-500 text-center sm:text-left">
             © {new Date().getFullYear()} Global Minds Academy · Perumbakkam, Chennai, Tamil Nadu.
             Independent educational platform. All rights reserved.
           </p>
@@ -153,7 +153,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 hover:bg-[#F5C518] hover:text-[#0D2B3E] transition-all"
+                className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-teal-600 hover:text-white hover:border-teal-600 shadow-sm transition-all"
               >
                 <Icon className="w-4 h-4" />
               </a>

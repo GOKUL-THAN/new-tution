@@ -71,37 +71,37 @@ const comparisons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-[#091e2d] to-[#0D2B3E] text-white overflow-hidden relative" id="why-us">
-      {/* Background blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1A6B5A]/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#F5C518]/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="section-padding bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 overflow-hidden relative border-y border-slate-200/80" id="why-us">
+      {/* Background subtle light glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-wide relative z-10">
 
         {/* ── Header + illustration ───────────────────────────────── */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-4 leading-tight">
               Why{' '}
-              <span className="bg-gradient-to-r from-[#F5C518] to-[#F9D85A] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 bg-clip-text text-transparent">
                 Global Minds Academy?
               </span>
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-normal">
               We studied BYJU&apos;S, Physics Wallah, Vedantu, Khan Academy, Aakash, Allen,
               Embibe, Doubtnut, Unacademy, and 50+ more platforms — then built the best
               of all of them into one place, designed specifically for Tamil Nadu students.
             </p>
             <div className="flex flex-wrap gap-3">
               {['Classes 6–12', 'JEE + NEET', 'TN State Board', 'CBSE + ICSE'].map((tag) => (
-                <span key={tag} className="bg-white/10 text-white/80 text-xs font-semibold px-4 py-1.5 rounded-full border border-white/20">
+                <span key={tag} className="bg-teal-50 text-teal-800 text-xs font-semibold px-4 py-1.5 rounded-full border border-teal-200/70 shadow-sm">
                   {tag}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="hidden lg:block h-72 rounded-3xl overflow-hidden bg-white/5 border border-white/10 p-4">
+          <div className="hidden lg:block h-72 rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-sm p-4">
             <StudyIllustration className="w-full h-full" />
           </div>
         </div>
@@ -111,14 +111,14 @@ export default function WhyUsSection() {
           {reasons.map((r, i) => (
             <div
               key={i}
-              className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#F5C518]/30 transition-all duration-300"
+              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-md hover:border-teal-400 transition-all duration-300"
             >
               <div className="text-3xl mb-4">{r.emoji}</div>
-              <h3 className="font-display font-bold text-white mb-2 group-hover:text-[#F5C518] transition-colors">
+              <h3 className="font-display font-bold text-slate-900 text-lg mb-2 group-hover:text-teal-700 transition-colors">
                 {r.title}
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed mb-3">{r.desc}</p>
-              <p className="text-xs text-gray-500 leading-relaxed border-t border-white/10 pt-3">
+              <p className="text-sm text-slate-700 leading-relaxed mb-3">{r.desc}</p>
+              <p className="text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3 font-normal">
                 {r.detail}
               </p>
             </div>
@@ -126,33 +126,33 @@ export default function WhyUsSection() {
         </div>
 
         {/* ── Comparison table ─────────────────────────────────────── */}
-        <div className="rounded-3xl bg-white/5 border border-white/10 overflow-hidden">
-          <div className="px-6 py-4 border-b border-white/10">
-            <h3 className="font-display font-bold text-white text-lg">Feature Comparison</h3>
-            <p className="text-xs text-gray-500 mt-1">
+        <div className="rounded-3xl bg-white border border-slate-200 shadow-md overflow-hidden">
+          <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/70">
+            <h3 className="font-display font-bold text-slate-900 text-lg">Feature Comparison</h3>
+            <p className="text-xs text-slate-500 mt-1">
               ✓ available &nbsp;·&nbsp; — not available &nbsp;·&nbsp; Based on publicly observed platform features as of October 2026.
             </p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10">
-                  <th className="text-left px-6 py-3 text-gray-400 font-semibold text-xs uppercase">Feature</th>
-                  <th className="px-4 py-3 text-[#F5C518] font-bold text-xs uppercase">GMA</th>
-                  <th className="px-4 py-3 text-gray-400 font-semibold text-xs uppercase">BYJU&apos;S</th>
-                  <th className="px-4 py-3 text-gray-400 font-semibold text-xs uppercase">PW</th>
-                  <th className="px-4 py-3 text-gray-400 font-semibold text-xs uppercase">Aakash</th>
+                <tr className="border-b border-slate-200 bg-slate-100/70">
+                  <th className="text-left px-6 py-3.5 text-slate-700 font-bold text-xs uppercase tracking-wider">Feature</th>
+                  <th className="px-4 py-3.5 text-teal-800 font-black text-xs uppercase tracking-wider bg-teal-50/60">GMA</th>
+                  <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">BYJU&apos;S</th>
+                  <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">PW</th>
+                  <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">Aakash</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-slate-100">
                 {comparisons.map((row) => (
-                  <tr key={row.feature} className="hover:bg-white/5 transition-colors">
-                    <td className="px-6 py-3 text-gray-300 text-sm">{row.feature}</td>
+                  <tr key={row.feature} className="hover:bg-slate-50/60 transition-colors">
+                    <td className="px-6 py-3.5 text-slate-800 text-sm font-medium">{row.feature}</td>
                     {[row.us, row.byju, row.pw, row.aakash].map((val, i) => (
-                      <td key={i} className="px-4 py-3 text-center">
+                      <td key={i} className={`px-4 py-3.5 text-center ${i === 0 ? 'bg-teal-50/30' : ''}`}>
                         {val
-                          ? <CheckCircle2 className={`w-5 h-5 mx-auto ${i === 0 ? 'text-[#F5C518]' : 'text-[#1A6B5A]'}`} />
-                          : <span className="text-gray-600 text-lg">—</span>
+                          ? <CheckCircle2 className={`w-5 h-5 mx-auto ${i === 0 ? 'text-teal-600' : 'text-slate-400'}`} />
+                          : <span className="text-slate-300 text-lg">—</span>
                         }
                       </td>
                     ))}
@@ -161,7 +161,7 @@ export default function WhyUsSection() {
               </tbody>
             </table>
           </div>
-          <p className="px-6 py-3 text-xs text-gray-600 border-t border-white/10">
+          <p className="px-6 py-3 text-xs text-slate-500 border-t border-slate-200 bg-slate-50">
             GMA = Global Minds Academy. PW = Physics Wallah. Comparison based on publicly available feature information.
           </p>
         </div>

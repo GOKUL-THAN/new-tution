@@ -98,9 +98,9 @@
            shadow-lg;
   }
 
-  /* Global Minds Academy — gold-to-teal gradient text */
+  /* Global Minds Academy — high contrast teal-to-dark-gold gradient text */
   .gradient-text {
-    background: linear-gradient(135deg, #1A6B5A 0%, #F5C518 100%);
+    background: linear-gradient(135deg, #1A6B5A 0%, #B8860B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -136,11 +136,11 @@
   }
 
   .section-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gray-900;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 tracking-tight;
   }
 
   .section-subtitle {
-    @apply text-lg sm:text-xl text-gray-600 max-w-2xl;
+    @apply text-lg sm:text-xl text-slate-600 max-w-2xl font-normal leading-relaxed;
   }
 }
 

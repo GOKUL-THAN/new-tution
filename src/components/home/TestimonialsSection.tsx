@@ -147,8 +147,8 @@ export default function TestimonialsSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.class}</p>
-                  <p className="text-xs text-gray-400">{t.location}</p>
+                  <p className="text-xs text-gray-600 font-medium">{t.class}</p>
+                  <p className="text-xs text-slate-500 font-medium">{t.location}</p>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Disclaimer */}
-        <p className="text-center text-xs text-gray-400 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-slate-500 font-medium max-w-2xl mx-auto">
           The testimonials above are representative examples.
           Actual results vary by student effort, consistency, and starting level.
           Academy must replace these with verified real testimonials before public launch.

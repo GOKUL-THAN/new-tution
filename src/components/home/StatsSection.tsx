@@ -34,35 +34,35 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-16 bg-[#0D2B3E]">
+    <section className="py-16 bg-gradient-to-b from-teal-50/40 via-slate-50 to-white border-y border-slate-200/80">
       <div className="container-wide">
 
         {/* Section label */}
-        <p className="text-center text-xs uppercase tracking-widest text-[#F5C518] font-semibold mb-10">
-          Trusted by thousands of students
+        <p className="text-center text-xs uppercase tracking-widest text-teal-800 font-bold mb-10">
+          Trusted by thousands of students worldwide
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="text-center group"
+              className="text-center group bg-white/90 border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-teal-300 transition-all"
             >
               <div
-                className={`w-14 h-14 rounded-2xl ${stat.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
+                className={`w-14 h-14 rounded-2xl ${stat.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-sm`}
               >
                 <stat.icon className="w-7 h-7" />
               </div>
-              <div className="text-3xl sm:text-4xl font-display font-black text-white mb-1">
+              <div className="text-3xl sm:text-4xl font-display font-black text-slate-900 mb-1">
                 {stat.value}
               </div>
-              <div className="font-semibold text-white/90 text-sm mb-0.5">{stat.label}</div>
-              <div className="text-xs text-[#F5C518]/70">{stat.desc}</div>
+              <div className="font-bold text-slate-800 text-sm mb-0.5">{stat.label}</div>
+              <div className="text-xs text-teal-700 font-medium">{stat.desc}</div>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-xs text-white/30 mt-10">
+        <p className="text-center text-xs text-slate-500 mt-10">
           Source: globalmindsacademy.in — verified October 2026
         </p>
       </div>
