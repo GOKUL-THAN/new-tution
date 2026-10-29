@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle2, Phone, Mail, GraduationCap, ClipboardList, Us
 export const metadata: Metadata = {
   title: 'Admissions — Enrol at Global Minds Academy',
   description:
-    'Find out how to enrol at Global Minds Academy. Step-by-step admission process for Classes 1–12, JEE, NEET, and all board programmes.',
+    'Find out how to enrol at Global Minds Academy. Step-by-step admission process for Classes 6–12, JEE, NEET, and all board programmes.',
 };
 
 const steps = [
@@ -34,14 +34,14 @@ const steps = [
 ];
 
 const programmes = [
-  { name: 'CBSE School Tuition', classes: 'Classes 1–12', format: 'Online & Offline' },
-  { name: 'ICSE / ISC Tuition', classes: 'Classes 1–12', format: 'Online & Offline' },
-  { name: 'TN State Board / Samacheer', classes: 'Classes 1–12', format: 'Online & Offline' },
-  { name: 'TN Matriculation', classes: 'Classes 1–12', format: 'Online & Offline' },
+  { name: 'CBSE School Tuition', classes: 'Classes 6–12', format: 'Online & Offline' },
+  { name: 'ICSE / ISC Tuition', classes: 'Classes 6–12', format: 'Online & Offline' },
+  { name: 'TN State Board / Samacheer', classes: 'Classes 6–12', format: 'Online & Offline' },
+  { name: 'TN Matriculation', classes: 'Classes 6–10', format: 'Online & Offline' },
   { name: 'JEE Main & Advanced', classes: 'Classes 11–12 & Repeaters', format: 'Online' },
   { name: 'NEET UG Preparation', classes: 'Classes 11–12 & Repeaters', format: 'Online' },
-  { name: 'Olympiad Preparation', classes: 'Classes 4–12', format: 'Online' },
-  { name: 'Diagnostic & Foundation', classes: 'Classes 5–10', format: 'Online' },
+  { name: 'Olympiad Preparation', classes: 'Classes 6–12', format: 'Online' },
+  { name: 'Diagnostic & Foundation', classes: 'Classes 6–10', format: 'Online' },
 ];
 
 export default function AdmissionsPage() {

@@ -1,38 +1,31 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+// Primary (Classes 1–5) removed — platform serves Classes 6–12
 const classGroups = [
-  {
-    range: 'Primary',
-    classes: [1, 2, 3, 4, 5],
-    color: 'from-emerald-500 to-teal-500',
-    bgColor: 'bg-emerald-50',
-    textColor: 'text-emerald-700',
-    description: 'Building strong foundations',
-  },
   {
     range: 'Middle School',
     classes: [6, 7, 8],
-    color: 'from-blue-500 to-indigo-500',
-    bgColor: 'bg-blue-50',
-    textColor: 'text-blue-700',
-    description: 'Deepening understanding',
+    color: 'from-brand-500 to-brand-700',
+    bgColor: 'bg-brand-50',
+    textColor: 'text-brand-700',
+    description: 'Deepening understanding & subject foundations',
   },
   {
     range: 'Secondary',
     classes: [9, 10],
-    color: 'from-violet-500 to-purple-500',
-    bgColor: 'bg-violet-50',
-    textColor: 'text-violet-700',
-    description: 'Board exam preparation',
+    color: 'from-[#1A6B5A] to-teal-600',
+    bgColor: 'bg-teal-50',
+    textColor: 'text-teal-700',
+    description: 'Board exam preparation & concept mastery',
   },
   {
     range: 'Senior Secondary',
     classes: [11, 12],
-    color: 'from-rose-500 to-pink-500',
-    bgColor: 'bg-rose-50',
-    textColor: 'text-rose-700',
-    description: 'Board + entrance exams',
+    color: 'from-[#D4A017] to-[#F5C518]',
+    bgColor: 'bg-amber-50',
+    textColor: 'text-amber-700',
+    description: 'Board exams + JEE / NEET / entrance exams',
   },
 ];
 
@@ -42,25 +35,26 @@ export default function ClassesSection() {
       <div className="container-wide">
         <div className="text-center mb-14">
           <h2 className="section-title mb-4">
-            Classes <span className="gradient-text">1 to 12</span>
+            Classes <span className="gradient-text">6 to 12</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Expert tuition for every grade — from building foundations in primary school
-            to mastering board exams in senior secondary.
+            Expert tuition for every grade — from building strong foundations in
+            middle school to mastering board and entrance exams in senior secondary.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {classGroups.map((group) => (
             <div key={group.range} className="card-hover p-6">
-              <div className={`${group.bgColor} rounded-2xl p-4 mb-5`}>
-                <p className={`text-sm font-semibold ${group.textColor} mb-3`}>{group.range}</p>
+              <div className={`${group.bgColor} rounded-2xl p-5 mb-5`}>
+                <p className={`text-sm font-bold ${group.textColor} mb-3`}>{group.range}</p>
                 <div className="flex flex-wrap gap-2">
                   {group.classes.map((cls) => (
                     <Link
                       key={cls}
                       href={`/classes/class-${cls}`}
-                      className={`w-11 h-11 rounded-xl bg-gradient-to-br ${group.color} text-white font-bold text-sm flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 transition-all`}
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${group.color} text-white font-bold text-sm flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 transition-all`}
+                      aria-label={`Class ${cls}`}
                     >
                       {cls}
                     </Link>

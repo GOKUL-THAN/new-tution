@@ -7,7 +7,7 @@ import { ArrowRight, MapPin, Users, Clock, BookOpen, CheckCircle2, Phone } from 
 export const metadata: Metadata = {
   title: 'Offline Classes — In-Person Tuition',
   description:
-    'Join Global Minds Academy\'s in-person offline classes in Tamil Nadu. Small batch sizes, experienced teachers, and board-aligned curriculum for Classes 1–12, JEE, and NEET.',
+    'Join Global Minds Academy\'s in-person offline classes in Tamil Nadu. Small batch sizes, experienced teachers, and board-aligned curriculum for Classes 6–12, JEE, and NEET.',
 };
 
 const benefits = [

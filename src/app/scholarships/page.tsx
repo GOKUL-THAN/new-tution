@@ -29,7 +29,7 @@ const scholarships = [
     name: 'Sibling Benefit',
     amount: '10% fee concession',
     criteria: 'Applicable when two or more siblings enrol simultaneously at Global Minds Academy.',
-    eligibility: ['Classes 1–12', 'All programmes'],
+    eligibility: ['Classes 6–12', 'All programmes'],
     color: 'from-blue-500 to-indigo-600',
   },
   {

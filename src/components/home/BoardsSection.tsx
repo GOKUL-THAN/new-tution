@@ -6,40 +6,35 @@ const boards = [
     name: 'CBSE',
     fullName: 'Central Board of Secondary Education',
     slug: 'cbse',
-    classes: 'Classes 1–12',
-    color: 'from-blue-500 to-blue-700',
+    color: 'from-brand-600 to-brand-800',
     features: ['NCERT-aligned curriculum', 'Board exam preparation', 'All major subjects'],
   },
   {
     name: 'ICSE',
     fullName: 'Indian Certificate of Secondary Education',
     slug: 'icse',
-    classes: 'Classes 1–10',
-    color: 'from-emerald-500 to-emerald-700',
+    color: 'from-teal-600 to-teal-800',
     features: ['CISCE curriculum', 'Application-based learning', 'Language & Science focus'],
   },
   {
     name: 'ISC',
     fullName: 'Indian School Certificate',
     slug: 'isc',
-    classes: 'Classes 11–12',
-    color: 'from-teal-500 to-teal-700',
+    color: 'from-[#1A6B5A] to-emerald-800',
     features: ['Pre-university preparation', 'Stream specialisation', 'Board exam readiness'],
   },
   {
     name: 'TN State Board',
     fullName: 'Tamil Nadu State Board / Samacheer Kalvi',
     slug: 'tn-state-board',
-    classes: 'Classes 1–12',
-    color: 'from-violet-500 to-violet-700',
+    color: 'from-[#D4A017] to-amber-700',
     features: ['Samacheer Kalvi syllabus', 'Tamil & English medium', 'Public exam preparation'],
   },
   {
     name: 'TN Matriculation',
     fullName: 'Tamil Nadu Matriculation Board',
     slug: 'tn-matriculation',
-    classes: 'Classes 1–12',
-    color: 'from-rose-500 to-rose-700',
+    color: 'from-orange-600 to-orange-800',
     features: ['Matriculation curriculum', 'Comprehensive coverage', 'Exam-focused learning'],
   },
 ];
@@ -58,7 +53,7 @@ export default function BoardsSection() {
           </h2>
           <p className="section-subtitle mx-auto">
             Content aligned to every major Indian education board. Choose your board and
-            start learning with curriculum-specific materials.
+            start learning with curriculum-specific materials for Classes 6–12.
           </p>
         </div>
 
@@ -70,22 +65,24 @@ export default function BoardsSection() {
               className="card-hover group p-6"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${board.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform`}>
-                <span className="text-white font-display font-bold text-sm">
-                  {board.name.substring(0, 4)}
+              {/* Board icon */}
+              <div
+                className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${board.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform`}
+              >
+                <span className="text-white font-display font-black text-xs tracking-wide">
+                  {board.name.length > 4 ? board.name.split(' ')[0].substring(0, 4) : board.name}
                 </span>
               </div>
 
               <h3 className="font-display font-bold text-lg text-gray-900 mb-1 group-hover:text-brand-600 transition-colors">
                 {board.name}
               </h3>
-              <p className="text-sm text-gray-500 mb-1">{board.fullName}</p>
-              <p className="text-xs text-brand-600 font-medium mb-4">{board.classes}</p>
+              <p className="text-sm text-gray-500 mb-4">{board.fullName}</p>
 
               <ul className="space-y-2 mb-5">
                 {board.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1A6B5A] shrink-0" />
                     {f}
                   </li>
                 ))}

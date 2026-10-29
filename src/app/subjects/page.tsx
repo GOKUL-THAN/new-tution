@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Subjects',
   description:
-    'Browse all subjects offered at Global Minds Academy — Mathematics, Physics, Chemistry, Biology, English, Tamil, Social Science, and more.',
+    'Browse all subjects offered at Global Minds Academy — Mathematics, Physics, Chemistry, Biology, English, Tamil, Japanese, German, Social Science, and more.',
 };
 
 const subjects = [
@@ -25,6 +25,8 @@ const subjects = [
   { name: 'History', slug: 'history', icon: '📜', color: 'from-yellow-600 to-amber-700', desc: 'Ancient, medieval & modern history' },
   { name: 'Geography', slug: 'geography', icon: '🗺', color: 'from-cyan-500 to-blue-600', desc: 'Physical & human geography' },
   { name: 'Physical Education', slug: 'physical-education', icon: '🏃', color: 'from-red-500 to-rose-600', desc: 'Sports science & health education' },
+  { name: 'Japanese', slug: 'japanese', icon: '日', color: 'from-pink-500 to-fuchsia-600', desc: 'Language, kanji & Japanese culture' },
+  { name: 'German', slug: 'german', icon: 'De', color: 'from-stone-500 to-zinc-700', desc: 'Language, grammar & German culture' },
 ];
 
 export default function SubjectsPage() {

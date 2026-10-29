@@ -13,8 +13,8 @@ const faqCategories = [
   {
     category: 'General',
     questions: [
-      { q: 'What is Global Minds Academy?', a: 'Global Minds Academy is a comprehensive education platform for Indian students covering school tuition (Classes 1–12), competitive exam preparation (JEE, NEET), curriculum resources, mock tests, and personalised learning analytics.' },
-      { q: 'Who is this platform for?', a: 'Students from Classes 1–12, JEE and NEET aspirants, parents who want to track their child\'s progress, and teachers who want to manage their classes and assessments.' },
+      { q: 'What is Global Minds Academy?', a: 'Global Minds Academy is a comprehensive education platform for Indian students covering school tuition (Classes 6–12), competitive exam preparation (JEE, NEET), curriculum resources, mock tests, and personalised learning analytics.' },
+      { q: 'Who is this platform for?', a: 'Students from Classes 6–12, JEE and NEET aspirants, parents who want to track their child\'s progress, and teachers who want to manage their classes and assessments.' },
       { q: 'Is this platform free?', a: 'We offer both free and paid content. Free resources include select notes, worksheets, and practice sets. Premium courses include full video lessons, mock tests, and teacher support.' },
     ],
   },

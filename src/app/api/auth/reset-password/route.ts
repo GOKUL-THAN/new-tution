@@ -3,6 +3,8 @@ import prisma from '@/lib/db';
 import { hashPassword } from '@/lib/auth';
 import { resetPasswordSchema } from '@/lib/validations';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();

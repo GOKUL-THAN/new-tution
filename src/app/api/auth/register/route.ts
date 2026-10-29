@@ -3,6 +3,8 @@ import prisma from '@/lib/db';
 import { hashPassword, generateToken, generateVerifyToken } from '@/lib/auth';
 import { registerSchema } from '@/lib/validations';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -45,8 +47,13 @@ export async function POST(request: NextRequest) {
         lastName,
         phone,
         role: role as any,
+        status: 'ACTIVE',
+        emailVerified: false,
         verifyToken,
         verifyExpiry: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
+        ...(role === 'STUDENT' ? { studentProfile: { create: {} } } : {}),
+        ...(role === 'TEACHER' ? { teacherProfile: { create: { specializations: [], subjects: [] } } } : {}),
+        ...(role === 'PARENT' ? { parentProfile: { create: {} } } : {}),
       },
       select: {
         id: true,
@@ -57,15 +64,6 @@ export async function POST(request: NextRequest) {
         status: true,
       },
     });
-
-    // In production, send verification email here
-    // For development, auto-activate
-    if (process.env.NODE_ENV === 'development') {
-      await prisma.user.update({
-        where: { id: user.id },
-        data: { status: 'ACTIVE', emailVerified: true },
-      });
-    }
 
     // Generate auth token
     const token = generateToken({ userId: user.id, role: user.role });

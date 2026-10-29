@@ -5,16 +5,39 @@ import Link from 'next/link';
 import { ArrowRight, BookOpen, GraduationCap, CheckCircle2, Star, Clock, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'School Tuition — Classes 1–12 All Boards',
+  title: 'School Tuition — Classes 6–12 All Boards',
   description:
-    'Comprehensive school tuition for Classes 1–12 covering CBSE, ICSE, ISC, Tamil Nadu State Board, and TN Matriculation. Expert faculty, structured curriculum, and personalised learning.',
+    'Comprehensive school tuition for Classes 6–12 covering CBSE, ICSE, ISC, Tamil Nadu State Board, and TN Matriculation. Structured curriculum, experienced teachers, and personalised learning.',
 };
 
 const boards = ['CBSE', 'ICSE', 'ISC', 'TN State Board', 'TN Matriculation'];
 
+const boardDetails = [
+  {
+    name: 'CBSE',
+    description: 'Structured national curriculum for schools that need strong conceptual learning, regular assessments, and board-focused academic support.',
+  },
+  {
+    name: 'ICSE',
+    description: 'Detailed, language-rich learning model that builds analytical skills, writing confidence, and well-rounded subject understanding.',
+  },
+  {
+    name: 'ISC',
+    description: 'Senior-secondary academic preparation designed for students aiming for deeper subject mastery and higher education admissions.',
+  },
+  {
+    name: 'TN State Board',
+    description: 'Tamil Nadu State Board coaching aligned to the Samacheer Kalvi syllabus, helping students prepare for board exams with clarity and consistency.',
+  },
+  {
+    name: 'TN Matriculation',
+    description: 'Matriculation-focused tuition with subjectwise revision, practice papers, and examination strategy suited to state board expectations.',
+  },
+];
+
 const features = [
   { icon: BookOpen, title: 'Board-Aligned Content', desc: 'Every lesson follows the official syllabus — no extra, no gaps.' },
-  { icon: Star, title: 'Expert Faculty', desc: 'Experienced teachers with strong subject knowledge and classroom practice.' },
+  { icon: Star, title: 'Experienced Teachers', desc: 'Teachers with strong subject knowledge and classroom practice.' },
   { icon: Clock, title: 'Flexible Scheduling', desc: 'Choose online live classes, recorded sessions, or offline batches.' },
   { icon: Users, title: 'Small Batches', desc: 'Limited batch sizes ensure personalised attention for every student.' },
   { icon: GraduationCap, title: 'Exam Preparation', desc: 'Board exam-focused practice with past papers, mock tests, and revision.' },
@@ -22,7 +45,6 @@ const features = [
 ];
 
 const classGroups = [
-  { label: 'Primary (1–5)', range: [1, 5], color: 'from-emerald-400 to-teal-500', subjects: ['English', 'Mathematics', 'EVS / Science', 'Hindi / Tamil'] },
   { label: 'Middle School (6–8)', range: [6, 8], color: 'from-blue-400 to-indigo-500', subjects: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi / Tamil'] },
   { label: 'Secondary (9–10)', range: [9, 10], color: 'from-violet-500 to-purple-600', subjects: ['Mathematics', 'Science', 'Social Science', 'English', 'Second Language'] },
   { label: 'Senior Secondary (11–12)', range: [11, 12], color: 'from-rose-500 to-orange-500', subjects: ['PCM / PCB / Commerce / Arts streams'] },
@@ -40,13 +62,13 @@ export default function SchoolTuitionPage() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-6">
                 <BookOpen className="w-4 h-4 text-emerald-300" />
-                Classes 1–12 · All Boards
+                Classes 6–12 · All Boards
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
                 School Tuition for Every Class and Board
               </h1>
               <p className="text-lg text-blue-100/80 mb-8 max-w-2xl">
-                Structured, board-aligned tuition from Class 1 to Class 12. Live classes, recorded lessons, doubt support, and exam preparation — all in one place.
+                Structured, board-aligned tuition from Class 6 to Class 12. Live classes, recorded lessons, doubt support, and exam preparation — all in one place.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {boards.map((b) => (
@@ -80,6 +102,21 @@ export default function SchoolTuitionPage() {
                   </div>
                   <h3 className="font-display font-bold text-gray-900 mb-2">{f.title}</h3>
                   <p className="text-sm text-gray-500">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding">
+          <div className="container-wide">
+            <h2 className="section-title text-center mb-3">Board-Wise Tuition Coverage</h2>
+            <p className="section-subtitle text-center mb-12">Designed to suit the learning style, exam pattern, and academic expectations of every board.</p>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {boardDetails.map((board) => (
+                <div key={board.name} className="card p-6">
+                  <h3 className="font-display font-bold text-gray-900 mb-2">{board.name}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{board.description}</p>
                 </div>
               ))}
             </div>

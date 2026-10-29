@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const boards = [
   {
     name: 'CBSE', fullName: 'Central Board of Secondary Education', slug: 'cbse',
-    classes: 'Classes 1–12', color: 'from-blue-500 to-blue-700',
+    classes: 'Classes 6–12', color: 'from-blue-500 to-blue-700',
     description: 'India\'s largest national education board with NCERT-aligned curriculum. We provide comprehensive tuition for all classes with board exam preparation for Classes 10 and 12.',
     features: ['NCERT-aligned study material', 'Board exam practice papers', 'Chapter-wise question banks', 'Periodic test preparation', 'Annual exam revision'],
   },
   {
     name: 'ICSE', fullName: 'Indian Certificate of Secondary Education', slug: 'icse',
-    classes: 'Classes 1–10', color: 'from-emerald-500 to-emerald-700',
+    classes: 'Classes 6–10', color: 'from-emerald-500 to-emerald-700',
     description: 'CISCE board curriculum focusing on application-based learning. Our programme covers the comprehensive ICSE syllabus with emphasis on language skills and analytical thinking.',
     features: ['CISCE syllabus coverage', 'Application-based learning', 'English language proficiency', 'Science practical preparation', 'Board exam readiness'],
   },
@@ -30,13 +30,13 @@ const boards = [
   },
   {
     name: 'Tamil Nadu State Board', fullName: 'Samacheer Kalvi / TN State Board', slug: 'tn-state-board',
-    classes: 'Classes 1–12', color: 'from-violet-500 to-violet-700',
+    classes: 'Classes 6–12', color: 'from-violet-500 to-violet-700',
     description: 'Samacheer Kalvi (Equitable Education) curriculum of Tamil Nadu. Content available in both Tamil and English medium with public exam preparation for Classes 10 and 12.',
     features: ['Samacheer Kalvi syllabus', 'Tamil & English medium', 'Public exam preparation', 'Government exam alignment', 'Quarterly & half-yearly prep'],
   },
   {
     name: 'TN Matriculation', fullName: 'Tamil Nadu Matriculation Board', slug: 'tn-matriculation',
-    classes: 'Classes 1–12', color: 'from-rose-500 to-rose-700',
+    classes: 'Classes 6–12', color: 'from-rose-500 to-rose-700',
     description: 'Tamil Nadu Matriculation Board curriculum for matriculation schools. Comprehensive coverage with exam-focused learning approach.',
     features: ['Matriculation syllabus', 'Exam-focused practice', 'Chapter completion tracking', 'Revision scheduling', 'Board exam preparation'],
   },

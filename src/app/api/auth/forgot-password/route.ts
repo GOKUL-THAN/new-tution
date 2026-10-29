@@ -3,6 +3,8 @@ import prisma from '@/lib/db';
 import { generateResetToken } from '@/lib/auth';
 import { forgotPasswordSchema } from '@/lib/validations';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   // Always return the same message to prevent user enumeration
   const GENERIC_MESSAGE = 'If an account exists for this email, a reset link has been sent.';

@@ -7,7 +7,7 @@ import { ArrowRight, Video, MessageCircle, BarChart3, BookOpen, Clock, Globe, Ch
 export const metadata: Metadata = {
   title: 'Online Learning — Live Classes & Recorded Lessons',
   description:
-    'Learn from anywhere with Global Minds Academy\'s online learning platform. Live classes, recorded video lessons, doubt sessions, and progress tracking for Classes 1–12, JEE, and NEET.',
+    'Learn from anywhere with Global Minds Academy\'s online learning platform. Live classes, recorded video lessons, doubt sessions, and progress tracking for Classes 6–12, JEE, and NEET.',
 };
 
 const features = [

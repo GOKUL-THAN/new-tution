@@ -1,20 +1,59 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight, Play, BookOpen, GraduationCap, Users, Star,
   Sparkles, Target, TrendingUp, CheckCircle2,
 } from 'lucide-react';
 
+const badges = [
+  { icon: BookOpen,    label: 'Classes 6–12' },
+  { icon: Target,      label: 'JEE & NEET' },
+  { icon: TrendingUp,  label: 'Personalised Learning' },
+];
+
+const boardBadges = [
+  'CBSE Aligned', 'ICSE Aligned', 'TN State Board',
+  'Samacheer Kalvi', 'JEE Main & Advanced', 'NEET UG',
+];
+
+const featureCards = [
+  {
+    icon: BookOpen,
+    title: 'Multi-Board Curriculum',
+    desc: 'CBSE, ICSE, ISC, TN State Board & Matriculation',
+    color: 'from-[#1A6B5A] to-teal-400',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Entrance Exam Prep',
+    desc: 'JEE Main, JEE Advanced, NEET UG & more',
+    color: 'from-[#D4A017] to-[#F5C518]',
+  },
+  {
+    icon: Users,
+    title: 'Personalised Learning',
+    desc: 'Adaptive study plans tailored to your pace',
+    color: 'from-rose-500 to-pink-500',
+  },
+  {
+    icon: Star,
+    title: '4.9 / 5.0 Rating',
+    desc: 'Rated by students across 25+ countries',
+    color: 'from-amber-500 to-orange-400',
+  },
+];
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-[100vh] flex items-center overflow-hidden">
-      {/* Background */}
+      {/* Background — Global Minds teal gradient */}
       <div className="absolute inset-0 bg-hero-pattern" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.15),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(37,99,235,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.12),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(26,107,90,0.18),transparent_55%)]" />
 
-      {/* Grid pattern overlay */}
+      {/* Subtle grid */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -22,54 +61,69 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-brand-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      {/* Floating blobs */}
+      <div className="absolute top-1/4 left-10 w-72 h-72 bg-[#F5C518]/8 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#1A6B5A]/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
 
       <div className="container-wide relative z-10 py-32 lg:py-40">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
+
+          {/* ── Left content ─────────────────────────────────────── */}
           <div className="text-center lg:text-left">
+
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm mb-8 animate-fade-in">
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Premier Education Platform for India</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm mb-6 animate-fade-in">
+              <Sparkles className="w-4 h-4 text-[#F5C518]" />
+              <span>Premier Education Platform · Chennai, Tamil Nadu</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-[1.1] mb-6 animate-fade-up">
+            {/* Logo + Academy name */}
+            <div className="flex items-center gap-3 justify-center lg:justify-start mb-6 animate-fade-up">
+              <Image
+                src="/logo.svg"
+                alt="Global Minds Academy"
+                width={64}
+                height={64}
+                priority
+              />
+              <div className="text-left">
+                <p className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-wide leading-none">
+                  GLOBAL MINDS
+                </p>
+                <p className="text-[11px] text-[#F5C518] uppercase tracking-widest font-semibold mt-0.5">
+                  BUILD SKILLS | OWN THE FUTURE
+                </p>
+              </div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-[1.1] mb-5 animate-fade-up">
               Unlock Your
-              <span className="block mt-2">
-                <span className="bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-transparent">
-                  Academic Potential
-                </span>
+              <span className="block mt-1 bg-gradient-to-r from-[#F5C518] via-[#F9D85A] to-[#F5C518] bg-clip-text text-transparent">
+                Academic Potential
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-blue-100/80 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-              Comprehensive learning for Classes 1–12, JEE, NEET, and competitive exams.
-              Expert faculty, personalised study plans, and a curriculum aligned with
+            <p className="text-lg sm:text-xl text-white/75 max-w-xl mx-auto lg:mx-0 mb-7 leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
+              Comprehensive learning for Classes 6–12, JEE, NEET, and competitive exams.
+              Personalised study plans, structured curriculum, and resources aligned with
               CBSE, ICSE, and Tamil Nadu State Board.
             </p>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-6 justify-center lg:justify-start mb-10 animate-fade-up" style={{ animationDelay: '300ms' }}>
-              {[
-                { icon: BookOpen, label: 'Classes 1–12' },
-                { icon: Target, label: 'JEE & NEET' },
-                { icon: TrendingUp, label: 'Personalised Learning' },
-              ].map((item, i) => (
+            <div className="flex flex-wrap items-center gap-5 justify-center lg:justify-start mb-8 animate-fade-up" style={{ animationDelay: '300ms' }}>
+              {badges.map((b, i) => (
                 <div key={i} className="flex items-center gap-2 text-white/70">
-                  <item.icon className="w-4 h-4 text-amber-400" />
-                  <span className="text-sm font-medium">{item.label}</span>
+                  <b.icon className="w-4 h-4 text-[#F5C518]" />
+                  <span className="text-sm font-medium">{b.label}</span>
                 </div>
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '400ms' }}>
               <Link
                 href="/register"
-                className="btn bg-white text-brand-700 hover:bg-gray-50 shadow-xl shadow-black/20 px-8 py-4 text-base font-semibold rounded-2xl w-full sm:w-auto group"
+                className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-xl shadow-[#F5C518]/25 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto group"
               >
                 Start Learning Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -84,38 +138,12 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right - Feature Cards */}
+          {/* ── Right — feature cards ─────────────────────────────── */}
           <div className="hidden lg:grid grid-cols-2 gap-4 animate-fade-in" style={{ animationDelay: '500ms' }}>
-            {[
-              {
-                icon: BookOpen,
-                title: 'Multi-Board Curriculum',
-                desc: 'CBSE, ICSE, ISC, TN State Board & Matriculation',
-                color: 'from-blue-500 to-cyan-500',
-              },
-              {
-                icon: GraduationCap,
-                title: 'Entrance Exam Prep',
-                desc: 'JEE Main, JEE Advanced, NEET UG & more',
-                color: 'from-violet-500 to-purple-500',
-              },
-              {
-                icon: Users,
-                title: 'Expert Faculty',
-                desc: 'Experienced teachers with proven track records',
-                color: 'from-rose-500 to-pink-500',
-              },
-              {
-                icon: Star,
-                title: 'Smart Analytics',
-                desc: 'Track progress, identify strengths & areas for growth',
-                color: 'from-amber-500 to-orange-500',
-              },
-            ].map((card, i) => (
+            {featureCards.map((card, i) => (
               <div
                 key={i}
                 className="group bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${600 + i * 100}ms` }}
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${card.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                   <card.icon className="w-6 h-6 text-white" />
@@ -127,19 +155,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Bottom badges */}
-        <div className="mt-16 pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: '700ms' }}>
-          <div className="flex flex-wrap items-center justify-center gap-8 text-white/50">
-            {[
-              'CBSE Aligned',
-              'ICSE Aligned',
-              'TN State Board',
-              'Samacheer Kalvi',
-              'JEE Main & Advanced',
-              'NEET UG',
-            ].map((badge) => (
+        {/* Bottom board badges */}
+        <div className="mt-14 pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: '700ms' }}>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-white/50">
+            {boardBadges.map((badge) => (
               <div key={badge} className="flex items-center gap-2 text-sm">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400/60" />
+                <CheckCircle2 className="w-4 h-4 text-[#F5C518]/60" />
                 {badge}
               </div>
             ))}

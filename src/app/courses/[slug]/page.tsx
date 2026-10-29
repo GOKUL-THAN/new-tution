@@ -4,75 +4,90 @@ import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Clock, Users, ChevronRight, Lock, CheckCircle2 } from 'lucide-react';
 import EmptyState from '@/components/ui/EmptyState';
+import { Prisma } from '@prisma/client';
+import prisma from '@/lib/db';
 
-interface CourseModule {
-  id: string;
-  title: string;
-  number: number;
-  lessons: {
-    id: string;
-    title: string;
-    number: number;
-    duration: number | null;
-    isFree: boolean;
-    isPublished: boolean;
-  }[];
-}
-
-interface CourseDetail {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  shortDescription: string | null;
-  level: string;
-  language: string;
-  thumbnailUrl: string | null;
-  price: number;
-  discountPrice: number | null;
-  duration: string | null;
-  status: string;
-  isFeatured: boolean;
-  isFree: boolean;
-  publishedAt: string | null;
-  board: { name: string; shortName: string } | null;
-  class: { name: string; number: number } | null;
-  subject: { name: string; slug: string } | null;
+const courseDetailSelect = Prisma.validator<Prisma.CourseSelect>()({
+  id: true,
+  title: true,
+  slug: true,
+  description: true,
+  shortDescription: true,
+  level: true,
+  language: true,
+  thumbnailUrl: true,
+  price: true,
+  discountPrice: true,
+  duration: true,
+  status: true,
+  isFeatured: true,
+  isFree: true,
+  publishedAt: true,
+  board: { select: { name: true, shortName: true } },
+  class: { select: { id: true, name: true, number: true } },
+  subject: { select: { name: true, slug: true } },
   instructor: {
-    id: string;
-    qualification: string | null;
-    specializations: string[];
-    experience: string | null;
-    user: { firstName: string; lastName: string; avatarUrl: string | null; bio: string | null };
-  } | null;
-  modules: CourseModule[];
-  _count: { enrolments: number; reviews: number };
-}
+    select: {
+      id: true,
+      qualification: true,
+      specializations: true,
+      experience: true,
+      user: { select: { firstName: true, lastName: true, avatarUrl: true, bio: true } },
+    },
+  },
+  modules: {
+    select: {
+      id: true,
+      title: true,
+      number: true,
+      lessons: {
+        select: {
+          id: true,
+          title: true,
+          number: true,
+          duration: true,
+          isFree: true,
+          isPublished: true,
+        },
+      },
+    },
+    orderBy: { number: 'asc' },
+  },
+  _count: { select: { enrolments: true, reviews: true } },
+});
+
+type CourseDetail = Prisma.CourseGetPayload<{ select: typeof courseDetailSelect }>;
+
+type CourseLookup =
+  | { course: CourseDetail; unavailable: false }
+  | { course: null; unavailable: boolean };
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-async function getCourse(slug: string): Promise<CourseDetail | null> {
+async function getCourse(slug: string): Promise<CourseLookup> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/courses/${slug}`, {
-      next: { revalidate: 60 },
+    const course = await prisma.course.findFirst({
+      where: { slug, status: 'PUBLISHED' },
+      select: courseDetailSelect,
     });
-    if (!res.ok) return null;
-    return res.json();
-  } catch {
-    return null;
+    return { course, unavailable: false };
+  } catch (error) {
+    if (!(error instanceof Prisma.PrismaClientInitializationError)) throw error;
+    console.error('Course detail is unavailable because the database could not be reached:', error);
+    return { course: null, unavailable: true };
   }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const course = await getCourse(slug);
+  const result = await getCourse(slug);
 
-  if (!course) {
-    return { title: 'Course Not Found' };
+  if (!result.course) {
+    return { title: result.unavailable ? 'Course Temporarily Unavailable' : 'Course Not Found' };
   }
+  const course = result.course;
 
   const description = course.shortDescription || course.description.slice(0, 155);
 
@@ -96,9 +111,9 @@ const LEVEL_LABEL: Record<string, string> = {
 
 export default async function CourseDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const course = await getCourse(slug);
+  const result = await getCourse(slug);
 
-  if (!course) {
+  if (!result.course) {
     return (
       <>
         <Navbar />
@@ -106,8 +121,12 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <div className="container-wide">
             <EmptyState
               icon={BookOpen}
-              title="Course Not Found"
-              description="This course may not exist or is not yet published. Browse our full course catalogue."
+              title={result.unavailable ? 'Course Temporarily Unavailable' : 'Course Not Found'}
+              description={
+                result.unavailable
+                  ? 'Course details are temporarily unavailable because the course database cannot be reached. Please try again later.'
+                  : 'This course may not exist or is not yet published. Browse our full course catalogue.'
+              }
               actionLabel="Browse All Courses"
               actionHref="/courses"
             />
@@ -117,6 +136,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
       </>
     );
   }
+  const course = result.course;
 
   const totalLessons = course.modules.reduce((sum, m) => sum + m.lessons.length, 0);
   const instructorName = course.instructor

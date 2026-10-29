@@ -3,6 +3,8 @@ import prisma from '@/lib/db';
 import { requireAuth } from '@/lib/auth';
 import { z } from 'zod';
 
+export const dynamic = 'force-dynamic';
+
 const courseUpdateSchema = z.object({
   title: z.string().min(1).max(300).optional(),
   description: z.string().min(1).optional(),

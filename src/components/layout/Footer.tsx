@@ -1,81 +1,123 @@
 import Link from 'next/link';
-import {
-  GraduationCap, Mail, Phone, MapPin,
-  Facebook, Twitter, Instagram, Youtube, Linkedin,
-} from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, Linkedin } from 'lucide-react';
 
 const footerLinks = {
-  'Programmes': [
-    { label: 'School Tuition', href: '/school-tuition' },
-    { label: 'JEE Preparation', href: '/jee' },
-    { label: 'NEET Preparation', href: '/neet' },
-    { label: 'Entrance Exams', href: '/entrance-exams' },
-    { label: 'Olympiads', href: '/olympiads' },
-    { label: 'All Courses', href: '/courses' },
+  Programmes: [
+    { label: 'School Tuition (6–12)', href: '/school-tuition' },
+    { label: 'JEE Preparation',       href: '/jee' },
+    { label: 'JEE Main',              href: '/jee-main' },
+    { label: 'JEE Advanced',          href: '/jee-advanced' },
+    { label: 'NEET Preparation',      href: '/neet' },
+    { label: 'Entrance Exams',        href: '/entrance-exams' },
+    { label: 'Olympiads',             href: '/olympiads' },
+    { label: 'Scholarships',          href: '/scholarships' },
+    { label: 'Batches',               href: '/batches' },
+    { label: 'All Courses',           href: '/courses' },
   ],
-  'Curriculum': [
-    { label: 'CBSE', href: '/boards/cbse' },
-    { label: 'ICSE', href: '/boards/icse' },
-    { label: 'Tamil Nadu State Board', href: '/boards/tn-state-board' },
-    { label: 'Classes 1–12', href: '/classes' },
-    { label: 'Free Resources', href: '/free-resources' },
-    { label: 'Study Planner', href: '/study-planner' },
+  Curriculum: [
+    { label: 'CBSE',                  href: '/boards/cbse' },
+    { label: 'ICSE',                  href: '/boards/icse' },
+    { label: 'TN State Board',        href: '/boards/tn-state-board' },
+    { label: 'Classes 6–12',          href: '/classes' },
+    { label: 'Curriculum Overview',   href: '/curriculum' },
+    { label: 'Online Learning',       href: '/online-learning' },
+    { label: 'Offline Classes',       href: '/offline-classes' },
+    { label: 'Study Planner',         href: '/study-planner' },
   ],
-  'Company': [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Faculty', href: '/teachers' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Admissions', href: '/admissions' },
-    { label: 'FAQ', href: '/faq' },
+  Resources: [
+    { label: 'Free Resources',        href: '/free-resources' },
+    { label: 'NCERT Solutions',       href: '/ncert-solutions' },
+    { label: 'Previous Year Papers',  href: '/previous-year-papers' },
+    { label: 'Official Resources',    href: '/official-resources' },
+    { label: 'Exam Calendar',         href: '/exam-calendar' },
+    { label: 'Practice Hub',          href: '/practice' },
+    { label: 'Diagnostic Test',       href: '/diagnostic-test' },
+    { label: 'College Guide',         href: '/college-guide' },
+    { label: 'Career Paths',          href: '/career-paths' },
   ],
-  'Legal': [
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms of Service', href: '/terms' },
-    { label: 'Refund Policy', href: '/refund-policy' },
-    { label: 'Cookie Policy', href: '/cookie-policy' },
-    { label: 'Content Licensing', href: '/content-licensing' },
-    { label: 'Accessibility', href: '/accessibility' },
+  Company: [
+    { label: 'About Us',              href: '/about' },
+    { label: 'Contact',               href: '/contact' },
+    { label: 'Admissions',            href: '/admissions' },
+    { label: 'FAQ',                   href: '/faq' },
+  ],
+  Legal: [
+    { label: 'Privacy Policy',        href: '/privacy' },
+    { label: 'Terms of Service',      href: '/terms' },
+    { label: 'Refund Policy',         href: '/refund-policy' },
+    { label: 'Cookie Policy',         href: '/cookie-policy' },
+    { label: 'Content Licensing',     href: '/content-licensing' },
+    { label: 'Accessibility',         href: '/accessibility' },
   ],
 };
 
+const socials = [
+  { Icon: Facebook,  label: 'Facebook',  href: 'https://www.facebook.com/globalmindsacademy' },
+  { Icon: Twitter,   label: 'Twitter',   href: 'https://twitter.com/globalmindsacad' },
+  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/globalmindsacademy' },
+  { Icon: Youtube,   label: 'YouTube',   href: 'https://www.youtube.com/@globalmindsacademy' },
+  { Icon: Linkedin,  label: 'LinkedIn',  href: 'https://www.linkedin.com/company/globalmindsacademy' },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-300">
-      {/* Main Footer */}
+    <footer className="bg-[#0D2B3E] text-gray-300">
+
+      {/* ── Main Footer ─────────────────────────────────────────── */}
       <div className="container-wide section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
-          {/* Brand */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
+
+          {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-brand-500 to-accent-500 rounded-xl flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <span className="font-display font-bold text-lg text-white block leading-tight">Global Minds</span>
-                <span className="text-[10px] uppercase tracking-widest text-brand-400 font-medium">Academy</span>
+            <Link href="/" className="flex items-center gap-3 mb-5 group">
+              <Image
+                src="/logo.svg"
+                alt="Global Minds Academy"
+                width={52}
+                height={52}
+                className="transition-transform group-hover:scale-105"
+              />
+              <div className="flex flex-col leading-none">
+                <span className="font-display font-black text-lg text-white uppercase tracking-wide">
+                  GLOBAL MINDS
+                </span>
+                <span className="text-[10px] uppercase tracking-widest font-semibold text-[#F5C518]">
+                  BUILD SKILLS | OWN THE FUTURE
+                </span>
               </div>
             </Link>
+
             <p className="text-sm text-gray-400 mb-6 max-w-xs leading-relaxed">
               Comprehensive education platform for Indian students — school tuition,
               competitive exam preparation, and personalised learning.
+              Serving students across Tamil Nadu and India.
             </p>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-brand-400 shrink-0" />
-                <span>Tamil Nadu, India</span>
+
+            {/* Contact details (from globalmindsacademy.in) */}
+            <div className="space-y-2.5 text-sm">
+              <div className="flex items-start gap-3 text-gray-400">
+                <MapPin className="w-4 h-4 text-[#F5C518] shrink-0 mt-0.5" />
+                <span>Perumbakkam, Chennai, Tamil Nadu, India</span>
               </div>
-              <a href="mailto:info@globalmindsacademy.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-4 h-4 text-brand-400 shrink-0" />
-                <span>info@globalmindsacademy.com</span>
+              <a
+                href="mailto:info@globalmindsacademy.in"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4 text-[#F5C518] shrink-0" />
+                <span>info@globalmindsacademy.in</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-brand-400 shrink-0" />
-                <span>Contact via enquiry form</span>
-              </div>
+              <a
+                href="https://wa.me/919876543210"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 text-[#F5C518] shrink-0" />
+                <span>Contact via WhatsApp</span>
+              </a>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h3 className="font-semibold text-white mb-4 text-sm">{title}</h3>
@@ -96,22 +138,25 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom */}
-      <div className="border-t border-gray-800">
-        <div className="container-wide py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Global Minds Academy. All rights reserved.
-            This is an independent educational platform.
+      {/* ── Bottom bar ──────────────────────────────────────────── */}
+      <div className="border-t border-white/10">
+        <div className="container-wide py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-500 text-center sm:text-left">
+            © {new Date().getFullYear()} Global Minds Academy · Perumbakkam, Chennai, Tamil Nadu.
+            Independent educational platform. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            {[Facebook, Twitter, Instagram, Youtube, Linkedin].map((Icon, i) => (
-              <button
-                key={i}
-                className="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-600 hover:text-white transition-all"
-                aria-label={`Social media link ${i + 1}`}
+          <div className="flex items-center gap-3">
+            {socials.map(({ Icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 hover:bg-[#F5C518] hover:text-[#0D2B3E] transition-all"
               >
                 <Icon className="w-4 h-4" />
-              </button>
+              </a>
             ))}
           </div>
         </div>

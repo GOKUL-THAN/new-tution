@@ -3,21 +3,20 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 import { GraduationCap } from 'lucide-react';
+import {
+  getBoardClasses,
+  getBoardCurriculum,
+  getClassesForSubject,
+  getSubjectLabel,
+} from '@/lib/curriculum';
 
 export const metadata: Metadata = {
-  title: 'Classes 1–12',
+  title: 'Classes 6–12',
   description:
-    'Browse all classes from 1 to 12. Find course content, subjects, and study material for CBSE, ICSE, and Tamil Nadu State Board students.',
+    'Browse all classes from 6 to 12. Find course content, subjects, and study material for CBSE, ICSE, and Tamil Nadu State Board students.',
 };
 
 const classGroups = [
-  {
-    label: 'Primary',
-    range: 'Classes 1–5',
-    color: 'from-emerald-400 to-teal-500',
-    classes: [1, 2, 3, 4, 5],
-    description: 'Build strong foundational skills in language, numeracy, and environmental science.',
-  },
   {
     label: 'Middle School',
     range: 'Classes 6–8',
@@ -41,7 +40,38 @@ const classGroups = [
   },
 ];
 
-export default function ClassesPage() {
+interface PageProps {
+  searchParams: Promise<{ board?: string; subject?: string }>;
+}
+
+export default async function ClassesPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const boardKey = getBoardCurriculum(params.board) ? params.board : undefined;
+  const selectedSubject = params.subject;
+
+  const allowedClasses = boardKey ? getBoardClasses(boardKey) : [6, 7, 8, 9, 10, 11, 12];
+  const classFilterFn = (num: number) => allowedClasses.includes(num);
+
+  const filteredGroups = classGroups
+    .map((group) => ({
+      ...group,
+      classes: group.classes.filter(classFilterFn),
+    }))
+    .filter((group) => group.classes.length > 0);
+
+  const boardLabel = boardKey ? getBoardCurriculum(boardKey)?.name : 'All Boards';
+
+  const selectedSubjectClasses = selectedSubject
+    ? getClassesForSubject(selectedSubject, boardKey)
+    : undefined;
+
+  const visibleGroups = selectedSubjectClasses
+    ? filteredGroups.map((group) => ({
+        ...group,
+        classes: group.classes.filter((num) => selectedSubjectClasses.includes(num)),
+      })).filter((group) => group.classes.length > 0)
+    : filteredGroups;
+
   return (
     <>
       <Navbar />
@@ -49,50 +79,83 @@ export default function ClassesPage() {
         <section className="bg-hero-pattern pt-32 pb-20">
           <div className="container-wide text-center">
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-              Classes 1–12
+              {selectedSubject ? `${getSubjectLabel(selectedSubject)} Classes` : 'Classes 6–12'}
             </h1>
             <p className="text-lg text-blue-100/80 max-w-xl mx-auto">
-              Grade-wise learning across all boards — pick your class to explore subjects and courses.
+              {boardKey
+                ? `Focused learning for ${boardLabel} ${selectedSubject ? `— ${getSubjectLabel(selectedSubject)}` : ''}.`
+                : 'Grade-wise learning across all boards — pick your class to explore subjects and courses.'}
             </p>
+            {(boardKey || selectedSubject) && (
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                {boardKey && (
+                  <span className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm border border-white/15">
+                    {boardLabel}
+                  </span>
+                )}
+                {selectedSubject && (
+                  <span className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm border border-white/15">
+                    {getSubjectLabel(selectedSubject)}
+                  </span>
+                )}
+                {(boardKey || selectedSubject) && (
+                  <Link href="/classes" className="px-3 py-1.5 rounded-full bg-white text-brand-700 text-sm font-medium">
+                    Clear filters
+                  </Link>
+                )}
+              </div>
+            )}
           </div>
         </section>
 
         <section className="section-padding">
           <div className="container-wide space-y-12">
-            {classGroups.map((group) => (
-              <div key={group.label}>
-                <div className="flex items-center gap-4 mb-6">
-                  <div
-                    className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${group.color} flex items-center justify-center shadow-lg`}
-                  >
-                    <GraduationCap className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-display font-bold text-gray-900">{group.label}</h2>
-                    <p className="text-sm text-gray-500">{group.range}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-5 text-sm max-w-2xl">{group.description}</p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                  {group.classes.map((num) => (
-                    <Link
-                      key={num}
-                      href={`/classes/class-${num}`}
-                      className="card-hover p-6 text-center group"
-                    >
-                      <div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${group.color} flex items-center justify-center mx-auto mb-3 shadow-md`}
-                      >
-                        <span className="text-white font-bold font-display text-lg">{num}</span>
-                      </div>
-                      <div className="font-semibold text-gray-900 group-hover:text-brand-600 transition-colors text-sm">
-                        Class {num}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+            {visibleGroups.length === 0 ? (
+              <div className="card p-8 text-center text-gray-600">
+                No classes are available for this board and subject combination.
               </div>
-            ))}
+            ) : (
+              visibleGroups.map((group) => (
+                <div key={group.label}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${group.color} flex items-center justify-center shadow-lg`}
+                    >
+                      <GraduationCap className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-display font-bold text-gray-900">{group.label}</h2>
+                      <p className="text-sm text-gray-500">{group.range}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-5 text-sm max-w-2xl">{group.description}</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    {group.classes.map((num) => {
+                      const query = new URLSearchParams();
+                      if (boardKey) query.set('board', boardKey);
+                      if (selectedSubject) query.set('subject', selectedSubject);
+
+                      return (
+                        <Link
+                          key={num}
+                          href={{ pathname: `/classes/class-${num}`, query: Object.fromEntries(query.entries()) }}
+                          className="card-hover p-6 text-center group"
+                        >
+                          <div
+                            className={`w-12 h-12 rounded-xl bg-gradient-to-br ${group.color} flex items-center justify-center mx-auto mb-3 shadow-md`}
+                          >
+                            <span className="text-white font-bold font-display text-lg">{num}</span>
+                          </div>
+                          <div className="font-semibold text-gray-900 group-hover:text-brand-600 transition-colors text-sm">
+                            Class {num}
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </section>
       </main>

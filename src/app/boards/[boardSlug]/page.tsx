@@ -4,13 +4,17 @@ import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, BookOpen, GraduationCap } from 'lucide-react';
 import EmptyState from '@/components/ui/EmptyState';
+import {
+  getBoardClasses,
+  getBoardSubjects,
+  getSubjectLabel,
+} from '@/lib/curriculum';
 
 const BOARDS = [
   {
     name: 'CBSE',
     fullName: 'Central Board of Secondary Education',
     slug: 'cbse',
-    classes: 'Classes 1–12',
     color: 'from-blue-500 to-blue-700',
     description:
       "India's largest national education board with NCERT-aligned curriculum. Comprehensive tuition for all classes with board exam preparation for Classes 10 and 12.",
@@ -21,13 +25,11 @@ const BOARDS = [
       'Periodic test preparation',
       'Annual exam revision',
     ],
-    subjects: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Science'],
   },
   {
     name: 'ICSE',
     fullName: 'Indian Certificate of Secondary Education',
     slug: 'icse',
-    classes: 'Classes 1–10',
     color: 'from-emerald-500 to-emerald-700',
     description:
       'CISCE board curriculum focusing on application-based learning with emphasis on language skills and analytical thinking.',
@@ -38,13 +40,11 @@ const BOARDS = [
       'Science practical preparation',
       'Board exam readiness',
     ],
-    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English', 'History & Geography'],
   },
   {
     name: 'ISC',
     fullName: 'Indian School Certificate',
     slug: 'isc',
-    classes: 'Classes 11–12',
     color: 'from-teal-500 to-teal-700',
     description:
       'Senior secondary programme under CISCE with specialised streams. Prepare for ISC board exams alongside competitive entrance examinations.',
@@ -55,13 +55,11 @@ const BOARDS = [
       'Project work guidance',
       'University admission support',
     ],
-    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Computer Science', 'Accounts'],
   },
   {
     name: 'Tamil Nadu State Board',
     fullName: 'Samacheer Kalvi / TN State Board',
     slug: 'tn-state-board',
-    classes: 'Classes 1–12',
     color: 'from-violet-500 to-violet-700',
     description:
       'Samacheer Kalvi (Equitable Education) curriculum of Tamil Nadu. Content available in both Tamil and English medium.',
@@ -72,13 +70,11 @@ const BOARDS = [
       'Government exam alignment',
       'Quarterly & half-yearly prep',
     ],
-    subjects: ['Mathematics', 'Science', 'Social Science', 'Tamil', 'English', 'Computer Science'],
   },
   {
     name: 'TN Matriculation',
     fullName: 'Tamil Nadu Matriculation Board',
     slug: 'tn-matriculation',
-    classes: 'Classes 1–12',
     color: 'from-rose-500 to-rose-700',
     description:
       'Tamil Nadu Matriculation Board curriculum for matriculation schools. Comprehensive coverage with exam-focused learning approach.',
@@ -89,9 +85,13 @@ const BOARDS = [
       'Revision scheduling',
       'Board exam preparation',
     ],
-    subjects: ['Mathematics', 'Science', 'Social Science', 'Tamil', 'English', 'Computer Science'],
   },
 ];
+
+function getClassRange(boardSlug: string): string {
+  const classes = getBoardClasses(boardSlug);
+  return `Classes ${classes[0]}–${classes[classes.length - 1]}`;
+}
 
 interface PageProps {
   params: Promise<{ boardSlug: string }>;
@@ -106,7 +106,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${board.name} Courses — ${board.classes}`,
+    title: `${board.name} Courses — ${getClassRange(board.slug)}`,
     description: `${board.description} Explore all ${board.name} courses and study materials at Global Minds Academy.`,
   };
 }
@@ -135,6 +135,9 @@ export default async function BoardDetailPage({ params }: PageProps) {
     );
   }
 
+  const availableClasses = getBoardClasses(board.slug);
+  const classRange = getClassRange(board.slug);
+
   return (
     <>
       <Navbar />
@@ -148,7 +151,7 @@ export default async function BoardDetailPage({ params }: PageProps) {
               </Link>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white/90 text-sm mb-4">
                 <GraduationCap className="w-4 h-4" />
-                {board.classes}
+                {classRange}
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
                 {board.name}
@@ -157,7 +160,7 @@ export default async function BoardDetailPage({ params }: PageProps) {
               <p className="text-lg text-white/70 mb-8 max-w-2xl">{board.description}</p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href={`/courses?board=${board.name}`}
+                  href={`/courses?board=${board.slug}`}
                   className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl"
                 >
                   Browse {board.name} Courses <ArrowRight className="w-4 h-4" />
@@ -197,13 +200,17 @@ export default async function BoardDetailPage({ params }: PageProps) {
                   Subjects Offered
                 </h2>
                 <div className="grid grid-cols-2 gap-3">
-                  {board.subjects.map((subject) => (
-                    <div key={subject} className="card p-4 flex items-center gap-3">
+                  {getBoardSubjects(board.slug).map((subject) => (
+                    <Link
+                      key={subject}
+                      href={`/subjects/${subject}`}
+                      className="card p-4 flex items-center gap-3 hover:border-brand-200 transition-colors"
+                    >
                       <div className="w-9 h-9 rounded-lg bg-brand-100 flex items-center justify-center shrink-0">
                         <BookOpen className="w-5 h-5 text-brand-600" />
                       </div>
-                      <span className="text-sm font-medium text-gray-800">{subject}</span>
-                    </div>
+                      <span className="text-sm font-medium text-gray-800">{getSubjectLabel(subject)}</span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -215,10 +222,10 @@ export default async function BoardDetailPage({ params }: PageProps) {
                 Classes Available
               </h2>
               <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-                {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
+                {availableClasses.map((num) => (
                   <Link
                     key={num}
-                    href={`/classes/class-${num}`}
+                    href={`/classes/class-${num}?board=${board.slug}`}
                     className="card-hover p-4 text-center group"
                   >
                     <div className="text-2xl font-display font-bold text-brand-600 group-hover:text-brand-700">
