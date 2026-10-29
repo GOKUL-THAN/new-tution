@@ -37,3 +37,6 @@ logs/
 *.tsbuildinfo
 .vercel/
 
+
+.vercel
+.env*
