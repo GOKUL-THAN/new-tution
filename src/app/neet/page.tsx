@@ -14,26 +14,27 @@ export default function NEETPage() {
     <>
       <Navbar />
       <main>
-        <section className="bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.2),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-6">
-                <Stethoscope className="w-4 h-4 text-amber-300" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
+                <Stethoscope className="w-4 h-4 text-[#1A6B5A]" />
                 Medical Entrance
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
-                NEET UG Preparation
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
+                NEET UG <span className="text-[#1A6B5A]">Preparation</span>
               </h1>
-              <p className="text-lg text-emerald-100/80 mb-8 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 Comprehensive preparation for India&apos;s national medical entrance examination.
                 Master Biology, Physics, and Chemistry with expert guidance and NEET-pattern mock tests.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/register" className="btn bg-white text-emerald-700 hover:bg-gray-50 shadow-xl px-6 py-3 text-sm font-semibold rounded-xl">
+                <Link href="/register" className="btn bg-[#1A6B5A] text-white hover:bg-[#145346] shadow-md shadow-teal-900/10 px-7 py-3.5 text-sm font-bold rounded-xl transition-colors">
                   Start NEET Prep <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/courses" className="btn border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 text-sm rounded-xl">
+                <Link href="/courses" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-7 py-3.5 text-sm font-semibold rounded-xl shadow-xs transition-colors">
                   View NEET Courses
                 </Link>
               </div>

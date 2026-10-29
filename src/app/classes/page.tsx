@@ -76,12 +76,17 @@ export default async function ClassesPage({ searchParams }: PageProps) {
     <>
       <Navbar />
       <main>
-        <section className="bg-hero-pattern pt-32 pb-20">
-          <div className="container-wide text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-              {selectedSubject ? `${getSubjectLabel(selectedSubject)} Classes` : 'Classes 6–12'}
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide text-center relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              Structured Grade Pathways
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              {selectedSubject ? `${getSubjectLabel(selectedSubject)} Classes` : <span>Classes <span className="text-[#1A6B5A]">6–12</span></span>}
             </h1>
-            <p className="text-lg text-blue-100/80 max-w-xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               {boardKey
                 ? `Focused learning for ${boardLabel} ${selectedSubject ? `— ${getSubjectLabel(selectedSubject)}` : ''}.`
                 : 'Grade-wise learning across all boards — pick your class to explore subjects and courses.'}
@@ -89,17 +94,17 @@ export default async function ClassesPage({ searchParams }: PageProps) {
             {(boardKey || selectedSubject) && (
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 {boardKey && (
-                  <span className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm border border-white/15">
+                  <span className="px-3.5 py-1.5 rounded-full bg-white text-slate-700 text-sm border border-slate-200 font-medium shadow-xs">
                     {boardLabel}
                   </span>
                 )}
                 {selectedSubject && (
-                  <span className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm border border-white/15">
+                  <span className="px-3.5 py-1.5 rounded-full bg-white text-slate-700 text-sm border border-slate-200 font-medium shadow-xs">
                     {getSubjectLabel(selectedSubject)}
                   </span>
                 )}
                 {(boardKey || selectedSubject) && (
-                  <Link href="/classes" className="px-3 py-1.5 rounded-full bg-white text-brand-700 text-sm font-medium">
+                  <Link href="/classes" className="px-3.5 py-1.5 rounded-full bg-[#1A6B5A] text-white text-sm font-semibold hover:bg-[#145346] shadow-xs transition-colors">
                     Clear filters
                   </Link>
                 )}

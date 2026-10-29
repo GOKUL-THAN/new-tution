@@ -140,19 +140,19 @@ export default function AnswerKeysPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0c2e28] via-[#1A6B5A] to-[#1A8A7A] pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.1),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm mb-5">
-                <Key className="w-4 h-4 text-[#F5C518]" />
-                Official Sources Only
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+                <Key className="w-4 h-4 text-[#1A6B5A]" />
+                Official Examination Sources Only
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-5">
-                Answer Keys &amp; Solutions
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
+                Answer Keys &amp; <span className="text-[#1A6B5A]">Solutions Directory</span>
               </h1>
-              <p className="text-lg text-white/75 max-w-2xl leading-relaxed">
+              <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Step-by-step guides to download official answer keys for JEE Main,
                 JEE Advanced, NEET UG, CBSE, Tamil Nadu Board, and more.
                 All links go directly to official government and institutional portals.

@@ -47,10 +47,17 @@ export default function BoardsPage() {
     <>
       <Navbar />
       <main>
-        <section className="bg-hero-pattern pt-32 pb-20">
-          <div className="container-wide text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">Education Boards</h1>
-            <p className="text-lg text-blue-100/80 max-w-xl mx-auto">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide text-center relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              National &amp; State Boards
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              Education <span className="text-[#1A6B5A]">Boards</span>
+            </h1>
+            <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Curriculum-aligned learning for every major Indian education board.
             </p>
           </div>

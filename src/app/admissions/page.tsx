@@ -49,14 +49,19 @@ export default function AdmissionsPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-hero-pattern pt-32 pb-20">
-          <div className="container-wide text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-              Admissions
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide relative z-10 text-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
+              Admissions Open 2025–26
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              Admissions & <span className="text-[#1A6B5A]">Enrolment</span>
             </h1>
-            <p className="text-lg text-blue-100/80 max-w-xl mx-auto">
-              Simple, transparent, and student-first. Enrol in the programme that fits your needs.
+            <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
+              Simple, transparent, and student-first. Enrol in the programme that fits your academic goals and learning style.
             </p>
           </div>
         </section>

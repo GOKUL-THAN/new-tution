@@ -9,12 +9,13 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-slate-50">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="flex-1 pt-32 pb-20">
         <div className="container-wide max-w-3xl">
-          <h1 className="text-3xl font-display font-bold text-gray-900 mb-4">Privacy Policy</h1>
-          <p className="text-sm text-gray-500 mb-8">Last updated: To be configured by administrator</p>
+          <div className="card p-8 sm:p-10 border border-slate-200 shadow-sm">
+            <h1 className="text-3xl font-display font-black text-slate-900 mb-2">Privacy Policy</h1>
+            <p className="text-sm text-slate-500 mb-8">Last updated: October 2026</p>
 
           <div className="prose prose-gray max-w-none space-y-6 text-sm leading-relaxed text-gray-600">
             <section>
@@ -57,8 +58,9 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
+        </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

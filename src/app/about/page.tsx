@@ -54,34 +54,35 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0c2e28] via-[#1A6B5A] to-[#1A8A7A] pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.12),transparent_55%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/30 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(245,197,24,0.06),transparent_50%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-5">
                   <Image src="/logo.svg" alt="Global Minds Academy" width={56} height={56} priority />
                   <div>
-                    <p className="font-display font-black text-xl text-white uppercase tracking-wide">GLOBAL MINDS</p>
-                    <p className="text-[10px] text-[#F5C518] uppercase tracking-widest font-semibold">BUILD SKILLS | OWN THE FUTURE</p>
+                    <p className="font-display font-black text-xl text-[#0D2B3E] uppercase tracking-wide">GLOBAL MINDS</p>
+                    <p className="text-[10px] text-[#1A6B5A] uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</p>
                   </div>
                 </div>
-                <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-5 leading-tight">
-                  About Global Minds Academy
+                <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 leading-tight tracking-tight">
+                  About <span className="text-[#1A6B5A]">Global Minds Academy</span>
                 </h1>
-                <p className="text-lg text-white/75 leading-relaxed mb-6">
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
                   A comprehensive education platform dedicated to empowering Indian students
                   from middle school through competitive exam preparation.
                   Based in Perumbakkam, Chennai — serving Tamil Nadu and India.
                 </p>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
-                  <MapPin className="w-4 h-4 text-[#F5C518]" />
+                <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
+                  <MapPin className="w-4 h-4 text-[#1A6B5A] shrink-0" />
                   <span>Perumbakkam, Chennai, Tamil Nadu, India</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/60 text-sm mt-2">
-                  <Mail className="w-4 h-4 text-[#F5C518]" />
-                  <a href="mailto:info@globalmindsacademy.in" className="hover:text-white transition-colors">
+                <div className="flex items-center gap-2 text-slate-600 text-sm mt-2 font-medium">
+                  <Mail className="w-4 h-4 text-[#1A6B5A] shrink-0" />
+                  <a href="mailto:info@globalmindsacademy.in" className="hover:text-[#1A6B5A] text-slate-700 transition-colors">
                     info@globalmindsacademy.in
                   </a>
                 </div>
@@ -89,10 +90,10 @@ export default function AboutPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((s) => (
-                  <div key={s.value} className="bg-white/10 backdrop-blur rounded-2xl p-5 border border-white/20 text-center">
-                    <p className="text-3xl font-display font-black text-[#F5C518] mb-1">{s.value}</p>
-                    <p className="font-semibold text-white text-sm">{s.label}</p>
-                    <p className="text-white/50 text-xs mt-0.5">{s.sub}</p>
+                  <div key={s.value} className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm shadow-slate-100/50 hover:shadow-md hover:border-teal-300 transition-all text-center">
+                    <p className="text-3xl font-display font-black text-[#1A6B5A] mb-1">{s.value}</p>
+                    <p className="font-bold text-slate-800 text-sm">{s.label}</p>
+                    <p className="text-slate-500 text-xs mt-0.5">{s.sub}</p>
                   </div>
                 ))}
               </div>

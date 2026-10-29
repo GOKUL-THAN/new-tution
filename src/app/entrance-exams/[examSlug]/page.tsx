@@ -105,29 +105,30 @@ export default async function ExamDetailPage({ params }: PageProps) {
     <>
       <Navbar />
       <main>
-        <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-violet-900 pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.2),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 max-w-4xl">
-            <Link href="/entrance-exams" className="inline-flex items-center gap-1 text-white/60 text-sm mb-6 hover:text-white">
+            <Link href="/entrance-exams" className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">
               ← All Entrance Exams
             </Link>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-4">
-              <GraduationCap className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
               {CATEGORY_LABEL[exam.category] ?? exam.category}
             </div>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-3">
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-3 tracking-tight">
               {exam.name}
             </h1>
             {exam.conductingAuth && (
-              <p className="text-white/70 text-base mb-4">Conducted by: {exam.conductingAuth}</p>
+              <p className="text-slate-600 text-sm mb-4 font-medium">Conducted by: <span className="text-slate-800 font-semibold">{exam.conductingAuth}</span></p>
             )}
             {exam.description && (
-              <p className="text-blue-100/75 text-base mb-8 max-w-2xl">{exam.description}</p>
+              <p className="text-slate-600 text-base mb-8 max-w-2xl leading-relaxed">{exam.description}</p>
             )}
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/register"
-                className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl"
+                className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
               >
                 Start Preparation <ArrowRight className="w-4 h-4" />
               </Link>
@@ -136,7 +137,7 @@ export default async function ExamDetailPage({ params }: PageProps) {
                   href={exam.officialWebsite}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10"
+                  className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors"
                 >
                   Official Website <ExternalLink className="w-4 h-4" />
                 </a>

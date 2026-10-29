@@ -172,28 +172,28 @@ export default function BatchesPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0c2e28] via-[#1A6B5A] to-[#1A8A7A] pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.1),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm mb-5">
-                <Users className="w-4 h-4 text-[#F5C518]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+                <Users className="w-4 h-4 text-[#1A6B5A]" />
                 Find the Right Programme
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-5">
-                Batches &amp; Programmes
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
+                Batches &amp; <span className="text-[#1A6B5A]">Programmes</span>
               </h1>
-              <p className="text-lg text-white/75 max-w-2xl leading-relaxed">
+              <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Six structured programmes — Foundation, JEE Achiever, NEET Achiever,
                 Crash Course, Repeater, and Board Excellence. Online and offline options.
                 Batch sizes capped for personalised attention.
               </p>
               <div className="flex flex-wrap gap-4 mt-6">
-                <Link href="/contact" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3">
+                <Link href="/contact" className="btn !bg-[#1A6B5A] !text-white hover:!bg-[#145346] font-bold px-8 py-3 shadow-md shadow-teal-900/10">
                   Book Free Counselling
                 </Link>
-                <Link href="/admissions" className="btn border-2 border-white/30 text-white hover:bg-white/10 px-8 py-3">
+                <Link href="/admissions" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 px-8 py-3 shadow-xs">
                   View Admissions Process
                 </Link>
               </div>

@@ -111,18 +111,25 @@ export default async function CoursesPage({ searchParams }: PageProps) {
     <>
       <Navbar />
       <main>
-        <section className="bg-hero-pattern pt-32 pb-20">
-          <div className="container-wide text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">Course Catalogue</h1>
-            <p className="text-lg text-blue-100/80 max-w-xl mx-auto mb-8">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide text-center relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              Curriculum &amp; Exam Catalogue
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              Course <span className="text-[#1A6B5A]">Catalogue</span>
+            </h1>
+            <p className="text-lg text-slate-600 max-w-xl mx-auto mb-8 leading-relaxed">
               Browse courses across all boards, classes, and competitive examinations.
             </p>
             <div className="max-w-xl mx-auto relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="search"
                 placeholder="Search courses by subject, board, or class..."
-                className="w-full px-12 py-4 rounded-2xl bg-white/95 backdrop-blur text-gray-900 placeholder:text-gray-400 shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-500"
+                className="w-full px-12 py-4 rounded-2xl bg-white border border-slate-200 text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600"
               />
             </div>
           </div>

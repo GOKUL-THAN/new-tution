@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import { BookOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
 import prisma from '@/lib/db';
 
@@ -35,23 +37,31 @@ export default async function CurriculumPage() {
   } catch { /* DB unavailable — show static content */ }
 
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-700 to-brand-600 text-white py-16">
-        <div className="container-wide">
-          <nav className="flex items-center gap-2 text-sm text-brand-200 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span>/</span>
-            <span className="text-white">Curriculum</span>
-          </nav>
-          <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold mb-4">Our Curriculum</h1>
-            <p className="text-xl text-brand-100 leading-relaxed">
-              Structured learning across all major Indian school boards and competitive entrance exams. Each subject follows an official syllabus-aligned hierarchy from board to chapter.
-            </p>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide relative z-10">
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+              <span>/</span>
+              <span className="text-slate-900 font-semibold">Curriculum</span>
+            </nav>
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+                Syllabus-Aligned Architecture
+              </div>
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+                Our <span className="text-[#1A6B5A]">Curriculum</span>
+              </h1>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Structured learning across all major Indian school boards and competitive entrance exams. Each subject follows an official syllabus-aligned hierarchy from board to chapter.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats */}
       {(boards.length > 0 || classCount > 0 || subjectCount > 0) && (
@@ -152,6 +162,8 @@ export default async function CurriculumPage() {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 }

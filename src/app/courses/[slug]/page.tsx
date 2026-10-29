@@ -173,53 +173,54 @@ export default async function CourseDetailPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-violet-900 pt-32 pb-20">
-          <div className="container-wide">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <Link href="/courses" className="inline-flex items-center gap-1 text-white/60 text-sm mb-6 hover:text-white">
+              <Link href="/courses" className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">
                 ← Course Catalogue
               </Link>
               <div className="flex flex-wrap gap-2 mb-4">
                 {course.board && (
-                  <span className="badge bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                  <span className="badge bg-teal-50 text-teal-800 border border-teal-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                     {course.board.shortName}
                   </span>
                 )}
                 {course.class && (
-                  <span className="badge bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                  <span className="badge bg-white text-slate-700 border border-slate-200 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                     {course.class.name}
                   </span>
                 )}
                 {course.subject && (
-                  <span className="badge bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                  <span className="badge bg-white text-slate-700 border border-slate-200 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                     {course.subject.name}
                   </span>
                 )}
-                <span className="badge bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                <span className="badge bg-teal-50 text-teal-800 border border-teal-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                   {LEVEL_LABEL[course.level] ?? course.level}
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
+              <h1 className="text-3xl sm:text-4xl font-display font-black text-slate-900 mb-4 tracking-tight">
                 {course.title}
               </h1>
-              <p className="text-blue-100/75 text-base mb-6 max-w-2xl">
+              <p className="text-slate-600 text-base mb-6 max-w-2xl leading-relaxed">
                 {course.shortDescription || course.description.slice(0, 200)}
               </p>
-              <div className="flex flex-wrap gap-4 text-sm text-white/70 mb-8">
+              <div className="flex flex-wrap gap-4 text-sm text-slate-600 font-medium mb-8">
                 {totalLessons > 0 && (
                   <span className="flex items-center gap-1.5">
-                    <BookOpen className="w-4 h-4" /> {totalLessons} lessons
+                    <BookOpen className="w-4 h-4 text-[#1A6B5A]" /> {totalLessons} lessons
                   </span>
                 )}
                 {course.duration && (
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" /> {course.duration}
+                    <Clock className="w-4 h-4 text-[#1A6B5A]" /> {course.duration}
                   </span>
                 )}
                 {course._count.enrolments > 0 && (
                   <span className="flex items-center gap-1.5">
-                    <Users className="w-4 h-4" /> {course._count.enrolments.toLocaleString()} enrolled
+                    <Users className="w-4 h-4 text-[#1A6B5A]" /> {course._count.enrolments.toLocaleString()} enrolled
                   </span>
                 )}
               </div>
@@ -228,12 +229,12 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/register"
-                  className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl"
+                  className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
                 >
                   Enrol Now {priceDisplay !== 'Free' ? `— ${priceDisplay}` : '(Free)'}{' '}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/login" className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10">
+                <Link href="/login" className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors">
                   Already enrolled? Login
                 </Link>
               </div>

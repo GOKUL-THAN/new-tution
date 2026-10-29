@@ -51,26 +51,26 @@ export default function OfflineClassesPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-violet-900 pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(124,58,237,0.3),transparent_60%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-6">
-                <MapPin className="w-4 h-4 text-emerald-300" />
-                In-Person · Tamil Nadu
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
+                <MapPin className="w-4 h-4 text-[#1A6B5A]" />
+                In-Person Centre · Chennai, Tamil Nadu
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
-                Offline Classes
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
+                Offline Classroom <span className="text-[#1A6B5A]">Batches</span>
               </h1>
-              <p className="text-lg text-blue-100/80 mb-8 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 For students who learn best in a classroom. Small batches, expert teachers, structured daily sessions, and a distraction-free environment — all at our centre.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors">
                   Enquire Now <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/admissions" className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10">
+                <Link href="/admissions" className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors">
                   Admission Process
                 </Link>
               </div>

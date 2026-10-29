@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import { CheckCircle2, ArrowRight, BookOpen, Target, Clock, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -28,38 +30,41 @@ const faqs = [
 
 export default function JEEMainPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-800 via-brand-700 to-accent-700 text-white py-20">
-        <div className="container-wide">
-          <nav className="flex items-center gap-2 text-sm text-brand-200 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span>/</span>
-            <Link href="/entrance-exams" className="hover:text-white">Entrance Exams</Link>
-            <span>/</span>
-            <span className="text-white">JEE Main</span>
-          </nav>
-          <div className="max-w-3xl">
-            <span className="inline-block bg-amber-400/20 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 mb-4">
-              Engineering Entrance
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold mb-4 leading-tight">
-              JEE Main Preparation
-            </h1>
-            <p className="text-xl text-brand-100 mb-8 leading-relaxed">
-              Joint Entrance Examination (Main) — conducted by NTA for admission to NITs, IIITs, and other centrally funded technical institutions. Qualifying score also determines eligibility for JEE Advanced.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/register" className="btn bg-white text-brand-700 hover:bg-gray-50 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2">
-                Start Preparation <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/contact" className="btn border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-xl font-semibold">
-                Free Counselling
-              </Link>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide relative z-10">
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/entrance-exams" className="hover:text-slate-900 transition-colors">Entrance Exams</Link>
+              <span>/</span>
+              <span className="text-slate-900 font-semibold">JEE Main</span>
+            </nav>
+            <div className="max-w-3xl">
+              <span className="inline-block bg-teal-50 text-teal-800 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-teal-200/80 mb-4 shadow-xs">
+                Engineering Entrance
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 leading-tight tracking-tight">
+                JEE Main <span className="text-[#1A6B5A]">Preparation</span>
+              </h1>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                Joint Entrance Examination (Main) — conducted by NTA for admission to NITs, IIITs, and other centrally funded technical institutions. Qualifying score also determines eligibility for JEE Advanced.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/register" className="btn bg-[#1A6B5A] text-white hover:bg-[#145346] px-7 py-3.5 rounded-xl font-bold shadow-md shadow-teal-900/10 inline-flex items-center gap-2 transition-colors">
+                  Start Preparation <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-7 py-3.5 rounded-xl font-semibold shadow-xs transition-colors">
+                  Free Counselling
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Exam pattern */}
       <section className="section-padding bg-white">
@@ -192,6 +197,8 @@ export default function JEEMainPage() {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 }

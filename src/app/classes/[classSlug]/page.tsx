@@ -99,21 +99,22 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
     <>
       <Navbar />
       <main>
-        <section className={`bg-gradient-to-br ${colorClass} pt-32 pb-20 relative overflow-hidden`}>
-          <div className="absolute inset-0 bg-black/20" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <Link href={classListHref} className="inline-flex items-center gap-1 text-white/70 text-sm mb-6 hover:text-white">
+              <Link href={classListHref} className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">
                 ← All Classes
               </Link>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white/90 text-sm mb-4">
-                <GraduationCap className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+                <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
                 {group}
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-                Class {classNum}
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+                Class {classNum} <span className="text-[#1A6B5A]">Learning</span>
               </h1>
-              <p className="text-lg text-white/75 mb-8 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 {selectedBoard && selectedSubjectSlug
                   ? `Explore ${getSubjectLabel(selectedSubjectSlug)} learning for Class ${classNum} in ${getBoardCurriculum(selectedBoard)?.name}.`
                   : `Explore subjects, courses, and study materials designed for Class ${classNum} students across CBSE, ICSE, and Tamil Nadu State Board.`}
@@ -121,13 +122,13 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
               <div className="flex flex-wrap gap-4">
                 <Link
                   href={{ pathname: `/courses`, query: { class: String(classNum), ...(selectedBoard ? { board: selectedBoard } : {}), ...(selectedSubjectSlug ? { subject: selectedSubjectSlug } : {}) } }}
-                  className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl"
+                  className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
                 >
                   Browse Class {classNum} Courses <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/register"
-                  className="inline-flex items-center gap-2 border-2 border-white/40 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10"
+                  className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors"
                 >
                   Get Started Free
                 </Link>

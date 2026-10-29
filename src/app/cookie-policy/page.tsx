@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy — Global Minds Academy',
@@ -62,35 +64,39 @@ Note that deleting or blocking the auth_token cookie will log you out of the pla
 
 export default function CookiePolicyPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container-wide max-w-3xl">
-        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-brand-600">Home</Link>
-          <span>/</span>
-          <span className="text-gray-900">Cookie Policy</span>
-        </nav>
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <Navbar />
+      <main className="flex-1 pt-32 pb-20">
+        <div className="container-wide max-w-3xl">
+          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-brand-600">Home</Link>
+            <span>/</span>
+            <span className="text-slate-900 font-semibold">Cookie Policy</span>
+          </nav>
 
-        <div className="card p-8 sm:p-10">
-          <h1 className="text-3xl font-display font-bold text-gray-900 mb-2">Cookie Policy</h1>
-          <p className="text-sm text-gray-500 mb-8">Last updated: October 2026</p>
+          <div className="card p-8 sm:p-10 border border-slate-200 shadow-sm">
+            <h1 className="text-3xl font-display font-black text-slate-900 mb-2">Cookie Policy</h1>
+            <p className="text-sm text-slate-500 mb-8">Last updated: October 2026</p>
 
-          <p className="text-gray-600 leading-relaxed mb-8">
-            This Cookie Policy explains how Global Minds Academy uses cookies and similar tracking technologies when you use our platform. Please read this policy alongside our{' '}
-            <Link href="/privacy" className="text-brand-600 hover:underline">Privacy Policy</Link>.
-          </p>
+            <p className="text-slate-600 leading-relaxed mb-8">
+              This Cookie Policy explains how Global Minds Academy uses cookies and similar tracking technologies when you use our platform. Please read this policy alongside our{' '}
+              <Link href="/privacy" className="text-brand-600 hover:underline">Privacy Policy</Link>.
+            </p>
 
-          <div className="space-y-8">
-            {sections.map((s) => (
-              <section key={s.title}>
-                <h2 className="text-lg font-display font-bold text-gray-900 mb-3">{s.title}</h2>
-                <div className="prose prose-sm max-w-none text-gray-600 leading-relaxed whitespace-pre-line">
-                  {s.content}
-                </div>
-              </section>
-            ))}
+            <div className="space-y-8">
+              {sections.map((s) => (
+                <section key={s.title}>
+                  <h2 className="text-lg font-display font-bold text-slate-900 mb-3">{s.title}</h2>
+                  <div className="prose prose-sm max-w-none text-slate-600 leading-relaxed whitespace-pre-line">
+                    {s.content}
+                  </div>
+                </section>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }

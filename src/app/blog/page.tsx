@@ -162,20 +162,20 @@ export default function BlogPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0c2e28] via-[#1A6B5A] to-[#1A8A7A] pt-32 pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,197,24,0.1),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-16 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm mb-5">
-              <BookOpen className="w-4 h-4 text-[#F5C518]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <BookOpen className="w-4 h-4 text-[#1A6B5A]" />
               Study Tips · Exam Updates · Career Guidance
             </div>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-              GMA Blog
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              Academic <span className="text-[#1A6B5A]">Insights &amp; Blog</span>
             </h1>
-            <p className="text-lg text-white/70 max-w-xl mx-auto">
-              Expert articles from our team on JEE, NEET, board exam strategies,
-              career guidance, and study techniques.
+            <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
+              Expert articles from our educators on JEE, NEET, board exam strategies,
+              career guidance, and effective learning techniques.
             </p>
           </div>
         </section>

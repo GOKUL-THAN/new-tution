@@ -53,26 +53,26 @@ export default function ScholarshipsPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-amber-900 pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.2),transparent_50%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-6">
-                <Trophy className="w-4 h-4 text-amber-300" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
+                <Trophy className="w-4 h-4 text-[#1A6B5A]" />
                 Merit-Based · Transparent · Fair
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
-                Scholarships &amp; Fee Concessions
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
+                Scholarships &amp; <span className="text-[#1A6B5A]">Fee Concessions</span>
               </h1>
-              <p className="text-lg text-blue-100/80 mb-8 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 We believe talent should not be held back by financial barriers. Global Minds Academy offers merit-based scholarships and fee concessions for deserving students.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/register" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl">
+                <Link href="/register" className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors">
                   Apply Now <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10">
+                <Link href="/contact" className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors">
                   Ask a Question
                 </Link>
               </div>

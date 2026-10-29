@@ -191,13 +191,13 @@ export default function FeaturesSection() {
               <h3 className="font-display font-bold text-white text-xl mb-2">
                 Live Classes with Expert Teachers
               </h3>
-              <p className="text-white/70 text-sm leading-relaxed mb-4">
+              <p className="text-white/90 text-sm leading-relaxed mb-4 font-medium">
                 Join live sessions, ask doubts in real time, and access recordings anytime.
                 Interactive whiteboards, polls, and chat — just like Vedantu and PW.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['Live sessions','Recordings','Doubt chat','Whiteboard'].map((t) => (
-                  <span key={t} className="text-xs bg-white/10 text-white/80 px-3 py-1 rounded-full">{t}</span>
+                  <span key={t} className="text-xs bg-white/20 text-white font-medium px-3 py-1 rounded-full">{t}</span>
                 ))}
               </div>
             </div>

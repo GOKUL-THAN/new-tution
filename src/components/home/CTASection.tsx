@@ -24,27 +24,31 @@ export default function CTASection() {
           Start Your Learning Journey Today
         </div>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-6 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white mb-6 max-w-3xl mx-auto leading-tight">
           Ready to Transform Your{' '}
           <span className="bg-gradient-to-r from-[#F5C518] to-[#F9D85A] bg-clip-text text-transparent">
             Academic Future?
           </span>
         </h2>
 
-        <p className="text-lg text-white/70 max-w-xl mx-auto mb-4">
+        <p className="text-lg sm:text-xl text-white font-medium max-w-2xl mx-auto mb-6 leading-relaxed">
           Join Global Minds Academy — expert-guided learning for Classes 6–12, JEE, NEET,
           and Tamil Nadu State Board. Perumbakkam, Chennai.
         </p>
 
-        <p className="text-sm text-white/50 mb-10">
-          15,000+ students trained · 4.9/5 rating · 98.4% placement success
-        </p>
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2.5 rounded-2xl bg-white/15 border border-white/25 text-white font-semibold text-sm mb-10 backdrop-blur-md">
+          <span>15,000+ Students Trained</span>
+          <span className="text-[#F5C518]">·</span>
+          <span>4.9 / 5.0 Rating</span>
+          <span className="text-[#F5C518]">·</span>
+          <span>98.4% Placement Success</span>
+        </div>
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link
             href="/register"
-            className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-xl shadow-[#F5C518]/25 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto group"
+            className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-xl shadow-[#F5C518]/25 px-8 py-4 text-base font-black rounded-2xl w-full sm:w-auto group transition-all"
           >
             <BookOpen className="w-5 h-5" />
             Start Learning Free
@@ -56,7 +60,7 @@ export default function CTASection() {
             href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20joining%20Global%20Minds%20Academy"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-base rounded-2xl w-full sm:w-auto inline-flex items-center gap-3"
+            className="btn border-2 border-white/60 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto inline-flex items-center gap-3 backdrop-blur-sm transition-all"
           >
             {/* WhatsApp icon */}
             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#25D366]" aria-hidden="true">
@@ -67,14 +71,14 @@ export default function CTASection() {
 
           <Link
             href="/contact"
-            className="btn border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-base rounded-2xl w-full sm:w-auto"
+            className="btn border-2 border-white/60 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto backdrop-blur-sm transition-all"
           >
             Book Free Counselling
           </Link>
         </div>
 
         {/* Trust badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-white/40 text-xs">
+        <div className="flex flex-wrap items-center justify-center gap-6 text-white/90 text-xs sm:text-sm font-semibold">
           {[
             '✓ No credit card required',
             '✓ Free diagnostic test included',

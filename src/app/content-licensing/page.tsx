@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Content Licensing — Global Minds Academy',
@@ -8,17 +10,19 @@ export const metadata: Metadata = {
 
 export default function ContentLicensingPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container-wide max-w-3xl">
-        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-brand-600">Home</Link>
-          <span>/</span>
-          <span className="text-gray-900">Content Licensing</span>
-        </nav>
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <Navbar />
+      <main className="flex-1 pt-32 pb-20">
+        <div className="container-wide max-w-3xl">
+          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-brand-600">Home</Link>
+            <span>/</span>
+            <span className="text-slate-900 font-semibold">Content Licensing</span>
+          </nav>
 
-        <div className="card p-8 sm:p-10">
-          <h1 className="text-3xl font-display font-bold text-gray-900 mb-2">Content Licensing Policy</h1>
-          <p className="text-sm text-gray-500 mb-8">Last updated: October 2026</p>
+          <div className="card p-8 sm:p-10 border border-slate-200 shadow-sm">
+            <h1 className="text-3xl font-display font-black text-slate-900 mb-2">Content Licensing Policy</h1>
+            <p className="text-sm text-slate-500 mb-8">Last updated: October 2026</p>
 
           <div className="space-y-8 text-sm text-gray-600 leading-relaxed">
 
@@ -89,6 +93,8 @@ export default function ContentLicensingPage() {
           </div>
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
   );
 }

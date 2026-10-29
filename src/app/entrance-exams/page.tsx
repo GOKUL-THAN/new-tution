@@ -99,10 +99,18 @@ export default function EntranceExamsPage() {
     <>
       <Navbar />
       <main>
-        <section className="bg-gradient-to-b from-gray-950 to-gray-900 pt-32 pb-20">
-          <div className="container-wide text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">Entrance Exam Preparation</h1>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide text-center relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+              <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
+              National &amp; State Level Entrances
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
+              Entrance Exam <span className="text-[#1A6B5A]">Preparation</span>
+            </h1>
+            <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Structured preparation for India&apos;s top competitive examinations with mock tests,
               study material, and personalised analytics.
             </p>

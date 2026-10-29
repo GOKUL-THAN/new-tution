@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import { CheckCircle2, ArrowRight, BookOpen, Zap, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -23,38 +25,41 @@ const keyDifferences = [
 
 export default function JEEAdvancedPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-violet-900 via-brand-800 to-brand-700 text-white py-20">
-        <div className="container-wide">
-          <nav className="flex items-center gap-2 text-sm text-brand-200 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span>/</span>
-            <Link href="/jee" className="hover:text-white">JEE</Link>
-            <span>/</span>
-            <span className="text-white">JEE Advanced</span>
-          </nav>
-          <div className="max-w-3xl">
-            <span className="inline-block bg-violet-400/20 text-violet-200 text-xs font-semibold px-3 py-1 rounded-full border border-violet-400/30 mb-4">
-              IIT Admission
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold mb-4 leading-tight">
-              JEE Advanced Preparation
-            </h1>
-            <p className="text-xl text-brand-100 mb-8 leading-relaxed">
-              The gateway to the IITs — among the most challenging undergraduate engineering entrance examinations in India. Conducted by one of the IITs on a rotational basis. Only JEE Main qualifiers (top ~2.5 lakh) are eligible.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/register" className="btn bg-white text-brand-700 hover:bg-gray-50 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2">
-                Start Preparation <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/jee-main" className="btn border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-xl font-semibold">
-                JEE Main First
-              </Link>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+          <div className="container-wide relative z-10">
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/jee" className="hover:text-slate-900 transition-colors">JEE</Link>
+              <span>/</span>
+              <span className="text-slate-900 font-semibold">JEE Advanced</span>
+            </nav>
+            <div className="max-w-3xl">
+              <span className="inline-block bg-teal-50 text-teal-800 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-teal-200/80 mb-4 shadow-xs">
+                IIT Admission Pathway
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 leading-tight tracking-tight">
+                JEE Advanced <span className="text-[#1A6B5A]">Preparation</span>
+              </h1>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                The gateway to the IITs — among the most challenging undergraduate engineering entrance examinations in India. Conducted by one of the IITs on a rotational basis. Only JEE Main qualifiers (top ~2.5 lakh) are eligible.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/register" className="btn bg-[#1A6B5A] text-white hover:bg-[#145346] px-7 py-3.5 rounded-xl font-bold shadow-md shadow-teal-900/10 inline-flex items-center gap-2 transition-colors">
+                  Start Preparation <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/jee-main" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-7 py-3.5 rounded-xl font-semibold shadow-xs transition-colors">
+                  JEE Main First
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Eligibility note */}
       <section className="bg-amber-50 border-b border-amber-200">
@@ -156,6 +161,8 @@ export default function JEEAdvancedPage() {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 }

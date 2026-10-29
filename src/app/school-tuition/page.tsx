@@ -55,33 +55,33 @@ export default function SchoolTuitionPage() {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-indigo-900 pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,102,241,0.3),transparent_60%)]" />
+        {/* Hero — Premium Light Theme */}
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-6">
-                <BookOpen className="w-4 h-4 text-emerald-300" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
+                <BookOpen className="w-4 h-4 text-[#1A6B5A]" />
                 Classes 6–12 · All Boards
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
-                School Tuition for Every Class and Board
+              <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
+                School Tuition for <span className="text-[#1A6B5A]">Every Class &amp; Board</span>
               </h1>
-              <p className="text-lg text-blue-100/80 mb-8 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 Structured, board-aligned tuition from Class 6 to Class 12. Live classes, recorded lessons, doubt support, and exam preparation — all in one place.
               </p>
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-2.5 mb-8">
                 {boards.map((b) => (
-                  <span key={b} className="px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm">
+                  <span key={b} className="px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-medium shadow-xs">
                     {b}
                   </span>
                 ))}
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="/register" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 shadow-xl">
+                <Link href="/register" className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors">
                   Get Started Free <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/10">
+                <Link href="/contact" className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 transition-colors shadow-xs">
                   Talk to a Counsellor
                 </Link>
               </div>
