@@ -35,7 +35,7 @@ const featureCards = [
     icon: Users,
     title: 'Personalised Learning',
     desc: 'Adaptive study plans tailored to your pace',
-    color: 'from-emerald-500 to-teal-400',
+    color: 'from-sky-500 to-blue-600',
   },
   {
     icon: Star,

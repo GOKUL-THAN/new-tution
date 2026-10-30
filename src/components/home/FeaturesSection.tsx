@@ -80,8 +80,8 @@ const features = [
     title: 'Study Planner',
     desc: 'Daily and weekly study schedules with chapter prioritisation, revision slots, and deadline reminders.',
     tag: 'Planning',
-    color: 'bg-teal-600',
-    tagColor: 'bg-teal-50 text-teal-700',
+    color: 'bg-blue-600',
+    tagColor: 'bg-blue-50 text-blue-700',
   },
   {
     icon: Users,
@@ -96,8 +96,8 @@ const features = [
     title: 'Rank & Score Predictor',
     desc: 'Estimate your JEE/NEET rank based on mock scores, accuracy, and difficulty using transparent rule-based logic.',
     tag: 'Insights',
-    color: 'bg-yellow-600',
-    tagColor: 'bg-yellow-50 text-yellow-700',
+    color: 'bg-amber-500',
+    tagColor: 'bg-amber-50 text-amber-700',
   },
   {
     icon: Globe,
@@ -245,7 +245,7 @@ export default function FeaturesSection() {
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <h3 className="font-display font-bold text-gray-900 text-sm group-hover:text-blue-600 transition-colors">
+                    <h3 className="font-display font-bold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors">
                       {f.title}
                     </h3>
                     <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${f.tagColor}`}>

@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   GraduationCap, BarChart3, Users, BookOpen, ClipboardList,
   Settings, Shield, Bell, FileText, CreditCard, MessageSquare,
@@ -38,13 +39,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="flex items-center justify-between px-4 sm:px-6 h-16">
-          <Link href="/admin" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-brand-600 to-accent-600 rounded-lg flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
+          <Link href="/admin" className="flex items-center gap-2.5">
+            <Image src="/logo.svg" alt="Global Minds Academy" width={32} height={32} priority />
             <div className="hidden sm:block">
               <span className="font-display font-bold text-gray-900 text-sm block leading-tight">Global Minds Academy</span>
-              <span className="text-[10px] text-brand-600 font-medium uppercase tracking-wider">Admin Panel</span>
+              <span className="text-[10px] text-blue-600 font-semibold uppercase tracking-wider">Admin Panel</span>
             </div>
           </Link>
           <div className="flex items-center gap-3">

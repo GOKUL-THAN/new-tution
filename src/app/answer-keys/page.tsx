@@ -33,7 +33,7 @@ const answerKeyExams = [
     officialUrl: 'https://jeeadv.ac.in/',
     pdfNote: 'IIT releases provisional and final answer keys at jeeadv.ac.in. Candidates can view marks after final key publication.',
     color: 'bg-blue-600',
-    bg: 'bg-teal-50 border-teal-200',
+    bg: 'bg-blue-50 border-blue-200',
     icon: '🎓',
     keySteps: [
       'Go to jeeadv.ac.in',
@@ -141,11 +141,11 @@ export default function AnswerKeysPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <Key className="w-4 h-4 text-blue-600" />
                 Official Examination Sources Only
               </div>
@@ -257,7 +257,7 @@ export default function AnswerKeysPage() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
+        <section className="section-padding bg-gradient-to-b from-blue-50/50 via-slate-50 to-white border-t border-blue-100">
           <div className="container-wide text-center">
             <h2 className="text-2xl font-display font-black text-slate-900 mb-4">
               Practice Before the Exam
@@ -269,7 +269,7 @@ export default function AnswerKeysPage() {
               <Link href="/practice" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Go to Practice Hub
               </Link>
-              <Link href="/previous-year-papers" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
+              <Link href="/previous-year-papers" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-8 py-3">
                 Previous Year Papers <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>

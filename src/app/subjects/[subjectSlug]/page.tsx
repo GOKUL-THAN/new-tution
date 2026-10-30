@@ -35,7 +35,7 @@ const SUBJECTS: Record<
   chemistry: {
     name: 'Chemistry',
     icon: '🧪',
-    color: 'from-emerald-500 to-teal-600',
+    color: 'from-emerald-500 to-cyan-600',
     desc: 'Explore matter, reactions, and the chemical foundations of science.',
   },
   biology: {
@@ -95,7 +95,7 @@ const SUBJECTS: Record<
   economics: {
     name: 'Economics',
     icon: '📈',
-    color: 'from-teal-500 to-cyan-600',
+    color: 'from-sky-500 to-blue-600',
     desc: 'Explore micro and macroeconomic concepts, theory, and applications.',
   },
   'business-studies': {
@@ -113,7 +113,7 @@ const SUBJECTS: Record<
   history: {
     name: 'History',
     icon: '📜',
-    color: 'from-yellow-600 to-amber-700',
+    color: 'from-amber-500 to-orange-500',
     desc: 'Study world and Indian history from ancient civilisations to modern times.',
   },
   geography: {
@@ -228,8 +228,8 @@ export default async function SubjectDetailPage({ params, searchParams }: PagePr
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <Link href="/subjects" className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">

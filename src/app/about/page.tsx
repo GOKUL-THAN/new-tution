@@ -55,16 +55,21 @@ export default function AboutPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/30 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(245,197,24,0.06),transparent_50%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/30 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(56,189,248,0.05),transparent_50%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-5">
                   <Image src="/logo.svg" alt="Global Minds Academy" width={56} height={56} priority />
                   <div>
-                    <p className="font-display font-black text-xl text-slate-900 uppercase tracking-wide">GLOBAL MINDS</p>
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <p className="font-display font-black text-xl text-slate-900 uppercase tracking-wide">GLOBAL MINDS</p>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80">
+                        ACADEMY
+                      </span>
+                    </div>
                     <p className="text-[10px] text-blue-600 uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</p>
                   </div>
                 </div>
@@ -90,7 +95,7 @@ export default function AboutPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((s) => (
-                  <div key={s.value} className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm shadow-slate-100/50 hover:shadow-md hover:border-teal-300 transition-all text-center">
+                  <div key={s.value} className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm shadow-slate-100/50 hover:shadow-md hover:border-blue-300 transition-all text-center">
                     <p className="text-3xl font-display font-black text-blue-600 mb-1">{s.value}</p>
                     <p className="font-bold text-slate-800 text-sm">{s.label}</p>
                     <p className="text-slate-500 text-xs mt-0.5">{s.sub}</p>
@@ -143,14 +148,14 @@ export default function AboutPage() {
         {/* What We Offer */}
         <section className="section-padding bg-white">
           <div className="container-wide">
-            <div className="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 border border-teal-200/80 rounded-3xl p-8 sm:p-12 shadow-sm">
+            <div className="bg-gradient-to-br from-blue-50 via-slate-50 to-emerald-50 border border-blue-200/80 rounded-3xl p-8 sm:p-12 shadow-sm">
               <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-8 text-center">
                 What We Offer
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {offerings.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2 bg-white border border-teal-100 rounded-xl p-3 shadow-sm">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-2 bg-white border border-blue-100 rounded-xl p-3 shadow-sm">
+                    <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                     <span className="text-sm text-slate-800 font-medium">{item}</span>
                   </div>
                 ))}

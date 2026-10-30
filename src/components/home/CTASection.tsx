@@ -3,11 +3,11 @@ import { ArrowRight, BookOpen, Sparkles } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-teal-50/60 via-slate-50 to-white border-t border-teal-100 relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-blue-50/40 via-slate-50 to-white border-t border-blue-100 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.05),transparent_60%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Subtle dot pattern */}
       <div

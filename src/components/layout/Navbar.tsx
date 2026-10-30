@@ -100,10 +100,15 @@ export default function Navbar() {
               className="transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:flex flex-col leading-none">
-              <span className="font-display font-black text-base uppercase tracking-wide text-slate-900">
-                GLOBAL MINDS
-              </span>
-              <span className="text-[9px] uppercase tracking-widest font-bold text-blue-600">
+              <div className="flex items-center gap-1.5">
+                <span className="font-display font-black text-base uppercase tracking-wide text-slate-900">
+                  GLOBAL MINDS
+                </span>
+                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80">
+                  ACADEMY
+                </span>
+              </div>
+              <span className="text-[9px] uppercase tracking-widest font-bold text-blue-600 mt-1">
                 BUILD SKILLS | OWN THE FUTURE
               </span>
             </div>

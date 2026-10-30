@@ -174,8 +174,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
         />
 
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <Link href="/courses" className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">
@@ -183,7 +183,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
               </Link>
               <div className="flex flex-wrap gap-2 mb-4">
                 {course.board && (
-                  <span className="badge bg-teal-50 text-teal-800 border border-teal-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
+                  <span className="badge bg-blue-50 text-blue-900 border border-blue-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                     {course.board.shortName}
                   </span>
                 )}
@@ -197,7 +197,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                     {course.subject.name}
                   </span>
                 )}
-                <span className="badge bg-teal-50 text-teal-800 border border-teal-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
+                <span className="badge bg-blue-50 text-blue-900 border border-blue-200/80 text-xs px-3 py-1 rounded-full font-semibold shadow-xs">
                   {LEVEL_LABEL[course.level] ?? course.level}
                 </span>
               </div>

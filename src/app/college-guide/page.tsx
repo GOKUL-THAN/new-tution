@@ -97,7 +97,7 @@ const engineeringColleges = [
     counselling: 'https://www.tneaonline.org/',
     highlight: 'Premier state university in Tamil Nadu. TNEA-based admission for TN students.',
     courses: ['B.E./B.Tech', 'M.E./M.Tech', 'MBA', 'M.C.A'],
-    color: 'bg-teal-700',
+    color: 'bg-blue-700',
   },
 ];
 
@@ -144,7 +144,7 @@ const medicalColleges = [
     counselling: 'https://tnmedicalselection.net/',
     highlight: 'Major government medical college in Chennai with 1,400+ bed hospital.',
     courses: ['MBBS', 'M.D.', 'M.S.'],
-    color: 'bg-teal-600',
+    color: 'bg-blue-600',
   },
   {
     name: 'Sri Ramachandra Institute',
@@ -216,8 +216,8 @@ export default function CollegeGuidePage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
@@ -225,7 +225,7 @@ export default function CollegeGuidePage() {
               <span className="text-slate-900 font-semibold">College Guide</span>
             </nav>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <GraduationCap className="w-4 h-4 text-blue-600" />
                 IITs · NITs · AIIMS · TN Colleges &amp; Counselling
               </div>
@@ -401,7 +401,7 @@ export default function CollegeGuidePage() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
+        <section className="section-padding bg-gradient-to-b from-blue-50/50 via-slate-50 to-white border-t border-blue-100">
           <div className="container-wide text-center">
             <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-4">
               Start Your JEE or NEET Preparation
@@ -411,8 +411,8 @@ export default function CollegeGuidePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/jee" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">JEE Preparation</Link>
-              <Link href="/neet" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">NEET Preparation</Link>
-              <Link href="/career-paths" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">Career Paths <ArrowRight className="w-4 h-4 ml-1" /></Link>
+              <Link href="/neet" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-8 py-3">NEET Preparation</Link>
+              <Link href="/career-paths" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-8 py-3">Career Paths <ArrowRight className="w-4 h-4 ml-1" /></Link>
             </div>
           </div>
         </section>

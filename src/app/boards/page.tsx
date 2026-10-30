@@ -24,7 +24,7 @@ const boards = [
   },
   {
     name: 'ISC', fullName: 'Indian School Certificate', slug: 'isc',
-    classes: 'Classes 11–12', color: 'from-teal-500 to-teal-700',
+    classes: 'Classes 11–12', color: 'from-blue-600 to-cyan-600',
     description: 'Senior secondary programme under CISCE with specialised streams. We prepare students for ISC board exams alongside competitive entrance examinations.',
     features: ['Stream specialisation', 'ISC board exam prep', 'Parallel entrance exam prep', 'Project work guidance', 'University admission support'],
   },
@@ -48,10 +48,10 @@ export default function BoardsPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide text-center relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-4 shadow-xs">
               National &amp; State Boards
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">

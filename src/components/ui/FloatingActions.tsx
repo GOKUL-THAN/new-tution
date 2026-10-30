@@ -131,7 +131,7 @@ export default function FloatingActions() {
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`fixed right-4 bottom-6 sm:bottom-20 z-40 w-10 h-10 rounded-full bg-teal-600 hover:bg-teal-700 flex items-center justify-center shadow-lg shadow-black/20 transition-all duration-300 hover:scale-110 active:scale-95 ${
+        className={`fixed right-4 bottom-6 sm:bottom-20 z-40 w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/25 transition-all duration-300 hover:scale-110 active:scale-95 ${
           showScrollTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'

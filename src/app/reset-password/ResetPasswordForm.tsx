@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { GraduationCap, Lock, Eye, EyeOff, ArrowRight, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -191,15 +192,20 @@ export default function ResetPasswordForm() {
   return (
     <div className="min-h-screen flex">
       {/* Left Panel - Brand */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-50 via-teal-50/50 to-emerald-50/50 border-r border-slate-200 relative items-center justify-center p-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-50 via-blue-50/40 to-sky-50/40 border-r border-slate-200 relative items-center justify-center p-12">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05),transparent_60%)] pointer-events-none" />
         <div className="relative z-10 text-center max-w-md">
-          <Link href="/" className="inline-flex items-center gap-3 mb-8">
-            <div className="w-14 h-14 bg-white border border-blue-200/80 shadow-md rounded-2xl flex items-center justify-center">
-              <GraduationCap className="w-8 h-8 text-blue-600" />
-            </div>
+          <Link href="/" className="inline-flex items-center gap-3 mb-8 group">
+            <Image
+              src="/logo.svg"
+              alt="Global Minds Academy"
+              width={56}
+              height={56}
+              priority
+              className="transition-transform group-hover:scale-105"
+            />
             <div className="text-left">
-              <span className="font-display font-black text-2xl text-slate-900 block">Global Minds</span>
+              <span className="font-display font-black text-2xl text-slate-900 block leading-tight">Global Minds</span>
               <span className="text-xs uppercase tracking-widest text-blue-600 font-bold">Academy</span>
             </div>
           </Link>

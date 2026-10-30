@@ -1,60 +1,126 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
-  <!-- Open book base -->
-  <path d="M20 155 Q100 135 180 155 L185 175 Q100 158 15 175 Z" fill="#38BDF8"/>
-  <path d="M100 138 L100 175" stroke="#0284C7" stroke-width="2"/>
-  <path d="M20 155 Q100 140 180 155" fill="none" stroke="#0284C7" stroke-width="1.5"/>
-  <!-- Book pages left -->
-  <path d="M15 175 Q55 165 100 175 L100 138 Q60 128 18 140 Z" fill="#38BDF8" opacity="0.9"/>
-  <!-- Book pages right -->
-  <path d="M100 175 Q145 165 185 175 L182 140 Q140 128 100 138 Z" fill="#7DD3FC" opacity="0.9"/>
-
-  <!-- Globe -->
-  <circle cx="100" cy="95" r="38" fill="none" stroke="#2563EB" stroke-width="2.5"/>
-  <ellipse cx="100" cy="95" rx="38" ry="20" fill="none" stroke="#2563EB" stroke-width="1.5"/>
-  <line x1="100" y1="57" x2="100" y2="133" stroke="#2563EB" stroke-width="1.5"/>
-  <ellipse cx="100" cy="95" rx="22" ry="38" fill="none" stroke="#2563EB" stroke-width="1.5"/>
-  <!-- Globe gradient fill -->
-  <circle cx="100" cy="95" r="37" fill="url(#globeGrad)" opacity="0.15"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
   <defs>
-    <linearGradient id="globeGrad" x1="70" y1="57" x2="130" y2="133" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#2563EB"/>
+    <!-- Premium Light Theme Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#38BDF8" />
     </linearGradient>
-    <linearGradient id="stemGrad" x1="100" y1="140" x2="100" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#10B981"/>
+
+    <linearGradient id="cyanSkyGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="60%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#38BDF8" />
     </linearGradient>
-    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#10B981"/>
+
+    <linearGradient id="lightCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#7DD3FC" />
     </linearGradient>
+
+    <linearGradient id="bookBaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <linearGradient id="bookPageLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+
+    <linearGradient id="bookPageRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0284C7" flood-opacity="0.2" />
+    </filter>
   </defs>
 
-  <!-- Stem -->
-  <path d="M100 133 Q97 110 100 85 Q103 70 98 55" stroke="url(#stemGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Background Soft Aura -->
+  <circle cx="250" cy="230" r="185" fill="url(#accentGlow)" />
 
-  <!-- Leaves left -->
-  <path d="M98 105 Q75 98 72 80 Q88 85 98 100 Z" fill="#38BDF8" opacity="0.9"/>
-  <path d="M98 90 Q68 78 65 58 Q85 68 98 88 Z" fill="#10B981" opacity="0.85"/>
-  <path d="M98 75 Q76 62 80 42 Q95 55 99 73 Z" fill="#38BDF8" opacity="0.8"/>
-  <!-- Leaves right -->
-  <path d="M102 105 Q125 98 128 80 Q112 85 102 100 Z" fill="#10B981" opacity="0.9"/>
-  <path d="M102 90 Q132 78 135 58 Q115 68 102 88 Z" fill="#38BDF8" opacity="0.85"/>
-  <path d="M102 75 Q124 62 120 42 Q105 55 101 73 Z" fill="#10B981" opacity="0.8"/>
+  <!-- === BOOK BASE (Foundation of Learning) === -->
+  <!-- Under cover shadow/base -->
+  <path d="M80 395 C140 375 220 375 250 415 C280 375 360 375 420 395 L425 410 C360 385 280 385 250 435 C220 385 140 385 75 410 Z" fill="url(#bookBaseGrad)" />
 
-  <!-- Graduation cap -->
-  <rect x="82" y="28" width="36" height="6" rx="2" fill="#2563EB"/>
-  <path d="M100 22 L122 30 L100 38 L78 30 Z" fill="#2563EB"/>
-  <line x1="122" y1="30" x2="122" y2="42" stroke="#2563EB" stroke-width="2"/>
-  <circle cx="122" cy="43" r="3" fill="#38BDF8"/>
+  <!-- Left Page -->
+  <path d="M85 390 C145 360 215 360 248 395 L248 335 C215 305 145 305 90 330 Z" fill="url(#bookPageLeft)" />
+  <!-- Left Page inner highlight line -->
+  <path d="M98 338 C145 316 210 316 240 342" stroke="#BAE6FD" stroke-width="3" stroke-linecap="round" opacity="0.7" />
 
-  <!-- Person/student icon -->
-  <circle cx="68" cy="138" r="6" fill="#2563EB"/>
-  <path d="M62 155 Q65 145 68 143 Q71 145 74 155" fill="#2563EB" opacity="0.8"/>
+  <!-- Right Page -->
+  <path d="M252 395 C285 360 355 360 415 390 L410 330 C355 305 285 305 252 335 Z" fill="url(#bookPageRight)" />
+  <!-- Right Page inner highlight line -->
+  <path d="M260 342 C290 316 355 316 402 338" stroke="#BAE6FD" stroke-width="3" stroke-linecap="round" opacity="0.7" />
 
-  <!-- Dots decoration -->
-  <rect x="148" y="75" width="5" height="5" rx="1" fill="#2563EB" opacity="0.7"/>
-  <rect x="156" y="82" width="4" height="4" rx="1" fill="#2563EB" opacity="0.5"/>
-  <rect x="152" y="90" width="3" height="3" rx="1" fill="#2563EB" opacity="0.4"/>
-  <rect x="160" y="72" width="3" height="3" rx="1" fill="#38BDF8" opacity="0.6"/>
+  <!-- Center spine seam -->
+  <path d="M250 332 L250 430" stroke="#BAE6FD" stroke-width="4" stroke-linecap="round" opacity="0.85" />
+
+  <!-- === THE GLOBE (Global Mind / Worldwide Standard) === -->
+  <g transform="translate(265, 205)">
+    <!-- Globe sphere subtle fill -->
+    <circle cx="0" cy="0" r="82" fill="#F0F9FF" opacity="0.75" stroke="url(#primaryGrad)" stroke-width="7" />
+    <!-- Latitudes -->
+    <ellipse cx="0" cy="0" rx="82" ry="38" stroke="url(#cyanSkyGrad)" stroke-width="4.5" fill="none" opacity="0.8" />
+    <ellipse cx="0" cy="0" rx="82" ry="65" stroke="url(#cyanSkyGrad)" stroke-width="3.5" stroke-dasharray="6 4" fill="none" opacity="0.4" />
+    <!-- Longitudes -->
+    <ellipse cx="0" cy="0" rx="44" ry="82" stroke="url(#cyanSkyGrad)" stroke-width="4.5" fill="none" opacity="0.85" />
+    <line x1="0" y1="-82" x2="0" y2="82" stroke="url(#primaryGrad)" stroke-width="5" stroke-linecap="round" />
+    <line x1="-82" y1="0" x2="82" y2="0" stroke="url(#primaryGrad)" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+  </g>
+
+  <!-- === THE TREE OF GROWTH (Organic Knowledge branching upward) === -->
+  <!-- Main ascending trunk -->
+  <path d="M250 332 C245 280 205 240 185 180 C175 150 180 120 190 90" fill="none" stroke="url(#primaryGrad)" stroke-width="14" stroke-linecap="round" />
+
+  <!-- Branch towards the globe -->
+  <path d="M215 245 C230 230 250 250 265 290" fill="none" stroke="url(#cyanSkyGrad)" stroke-width="9" stroke-linecap="round" />
+
+  <!-- Right branch embracing the globe -->
+  <path d="M265 295 C305 305 340 280 370 250" fill="none" stroke="url(#primaryGrad)" stroke-width="8" stroke-linecap="round" />
+
+  <!-- === LEAVES (Vibrant Light Sapphire, Sky & Electric Cerulean) === -->
+  <!-- Leaf: Main Top Left Leaf -->
+  <path d="M190 90 C185 50 145 35 125 45 C120 75 150 100 190 90 Z" fill="url(#primaryGrad)" />
+  <!-- Leaf: Upper Left Outward -->
+  <path d="M165 130 C135 110 105 125 100 145 C125 160 155 150 165 130 Z" fill="url(#cyanSkyGrad)" />
+  <!-- Leaf: Mid Left Outward -->
+  <path d="M175 195 C140 190 115 210 118 230 C142 238 168 220 175 195 Z" fill="url(#lightCyanGrad)" />
+  <!-- Leaf: Center sprout over globe -->
+  <path d="M210 230 C200 195 225 170 245 170 C250 195 235 225 210 230 Z" fill="url(#cyanSkyGrad)" />
+  <!-- Leaf: Top Sprout near Cap -->
+  <path d="M215 120 C225 85 260 80 275 95 C265 120 235 130 215 120 Z" fill="url(#primaryGrad)" />
+  <!-- Leaf: Right Lower Leaf -->
+  <path d="M370 250 C395 240 420 255 422 272 C400 285 375 275 370 250 Z" fill="url(#primaryGrad)" />
+  <!-- Leaf: Right Mid Leaf -->
+  <path d="M350 190 C375 165 405 175 410 195 C390 212 360 210 350 190 Z" fill="url(#cyanSkyGrad)" />
+
+  <!-- Enlightening Beacon (Sun of Wisdom on Left) -->
+  <circle cx="115" cy="170" r="24" fill="url(#lightCyanGrad)" filter="url(#dropShadow)" />
+
+  <!-- Digital Tech / Modern Skill Nodes (Right) -->
+  <rect x="395" y="160" width="18" height="18" rx="5" fill="url(#lightCyanGrad)" transform="rotate(12 395 160)" />
+  <rect x="425" y="125" width="14" height="14" rx="4" fill="url(#primaryGrad)" opacity="0.9" />
+  <rect x="420" y="195" width="12" height="12" rx="3" fill="url(#cyanSkyGrad)" opacity="0.8" />
+
+  <!-- === GRADUATION CAP (Academic Mastery & Higher Success) === -->
+  <g transform="translate(340, 80)">
+    <!-- Mortarboard Diamond Top -->
+    <path d="M0 -28 L55 -8 L0 12 L-55 -8 Z" fill="url(#primaryGrad)" />
+    <path d="M0 -22 L45 -8 L0 6 L-45 -8 Z" fill="#38BDF8" opacity="0.5" />
+    <!-- Cap skull base underneath -->
+    <path d="M-28 -1 C-28 15 28 15 28 -1 L22 -4 C22 10 -22 10 -22 -4 Z" fill="url(#bookBaseGrad)" />
+    <!-- Center button on cap -->
+    <circle cx="0" cy="-8" r="3.5" fill="#BAE6FD" />
+    <!-- Tassel hanging to right -->
+    <path d="M0 -8 Q28 -5 38 12 Q42 25 45 40" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+    <circle cx="45" cy="42" r="4" fill="#38BDF8" />
+  </g>
 </svg>

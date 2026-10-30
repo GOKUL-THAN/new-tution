@@ -26,7 +26,7 @@ const paperCategories = [
   {
     category: 'JEE Advanced — Previous Year Papers',
     color: 'bg-blue-600',
-    bg: 'border-teal-200 bg-teal-50',
+    bg: 'border-blue-200 bg-blue-50',
     icon: '🎓',
     description: 'JEE Advanced papers from 2007–2024. Includes Paper 1 and Paper 2, both in English and Hindi.',
     officialUrl: 'https://jeeadv.ac.in/',
@@ -100,8 +100,8 @@ export default function PreviousYearPapersPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
@@ -111,7 +111,7 @@ export default function PreviousYearPapersPage() {
               <span className="text-slate-900 font-semibold">Previous Year Papers</span>
             </nav>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <FileText className="w-4 h-4 text-blue-600" />
                 JEE · NEET · CBSE · TN Board Archive
               </div>
@@ -242,7 +242,7 @@ export default function PreviousYearPapersPage() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
+        <section className="section-padding bg-gradient-to-b from-blue-50/50 via-slate-50 to-white border-t border-blue-100">
           <div className="container-wide text-center">
             <h2 className="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-4">
               Practise with Full Mock Tests
@@ -255,7 +255,7 @@ export default function PreviousYearPapersPage() {
               <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Start Free Mock Test
               </Link>
-              <Link href="/entrance-exams" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">
+              <Link href="/entrance-exams" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-8 py-3">
                 View All Exam Prep
               </Link>
             </div>

@@ -68,7 +68,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
       { name: 'CUET UG 2026', type: 'University', color: 'bg-blue-600', note: 'Common University Entrance Test typically May–June. Verify at cuet.samarth.ac.in.', url: 'https://cuet.samarth.ac.in/', status: 'Exam' },
       { name: 'JEE Main / Advanced Results & JoSAA', type: 'Engineering', color: 'bg-violet-600', note: 'JoSAA counselling for IITs, NITs, IIITs typically June–July. Verify at josaa.admissions.nic.in.', url: 'https://josaa.admissions.nic.in/', status: 'Counselling' },
       { name: 'NEET UG Results & NEET Counselling', type: 'Medical', color: 'bg-emerald-600', note: 'NEET results and MCC counselling for MBBS/BDS typically June–August. Verify at mcc.nic.in.', url: 'https://mcc.nic.in/', status: 'Results/Counselling' },
-      { name: 'COMEDK UGET 2026', type: 'Engineering', color: 'bg-teal-600', note: 'Karnataka engineering entrance, typically May–June. Verify at comedk.org.', url: 'https://www.comedk.org/', status: 'Exam' },
+      { name: 'COMEDK UGET 2026', type: 'Engineering', color: 'bg-blue-600', note: 'Karnataka engineering entrance, typically May–June. Verify at comedk.org.', url: 'https://www.comedk.org/', status: 'Exam' },
     ],
   },
   {
@@ -103,7 +103,7 @@ const statusColors: Record<string, string> = {
   'Results/Counselling': 'bg-blue-100 text-blue-700',
   'Counselling':         'bg-indigo-100 text-indigo-700',
   'Notification':        'bg-yellow-100 text-yellow-700',
-  'Registration':        'bg-teal-100 text-teal-700',
+  'Registration':        'bg-blue-100 text-blue-600',
   'Training/Selection':  'bg-purple-100 text-purple-700',
 };
 
@@ -113,11 +113,11 @@ export default function ExamCalendarPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <Calendar className="w-4 h-4 text-blue-600" />
                 Academic Year 2025–26
               </div>
@@ -179,8 +179,8 @@ export default function ExamCalendarPage() {
               {examsByMonth.map((month) => (
                 <div key={month.month}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-teal-50 border border-teal-200 flex items-center justify-center shadow-sm">
-                      <Clock className="w-4 h-4 text-teal-700" />
+                    <div className="w-8 h-8 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center shadow-sm">
+                      <Clock className="w-4 h-4 text-blue-600" />
                     </div>
                     <h2 className="font-display font-bold text-gray-900 text-lg">{month.month}</h2>
                   </div>

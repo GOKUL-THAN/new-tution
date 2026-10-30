@@ -13,7 +13,7 @@ const boards = [
     name: 'ICSE',
     fullName: 'Indian Certificate of Secondary Education',
     slug: 'icse',
-    color: 'from-teal-600 to-teal-800',
+    color: 'from-blue-600 to-indigo-700',
     features: ['CISCE curriculum', 'Application-based learning', 'Language & Science focus'],
   },
   {

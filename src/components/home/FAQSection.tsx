@@ -83,7 +83,7 @@ export default function FAQSection() {
           </div>
           <h2 className="section-title mb-4">
             Frequently Asked{' '}
-            <span className="text-blue-600">
+            <span className="bg-gradient-to-r from-[#1A6B5A] to-[#F5C518] bg-clip-text text-transparent">
               Questions
             </span>
           </h2>

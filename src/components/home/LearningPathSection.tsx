@@ -114,7 +114,7 @@ export default function LearningPathSection() {
               <ul className="space-y-1.5">
                 {step.tools.map((tool) => (
                   <li key={tool} className="flex items-center gap-2 text-xs text-gray-600">
-                    <Circle className="w-2 h-2 fill-current text-blue-600 shrink-0" />
+                    <Circle className="w-2 h-2 fill-current text-[#1A6B5A] shrink-0" />
                     {tool}
                   </li>
                 ))}

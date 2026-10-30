@@ -60,8 +60,8 @@ const practiceTypes = [
     title: 'Reasoning Practice',
     desc: 'Logical reasoning, analytical ability, and mental aptitude — for CUET, NDA, NTSE, and scholarship exams.',
     tag: 'Aptitude',
-    tagColor: 'bg-teal-100 text-teal-700',
-    color: 'bg-teal-600',
+    tagColor: 'bg-blue-100 text-blue-600',
+    color: 'bg-blue-600',
     link: '/student/tests',
     time: '20–30 min',
     features: ['Logical reasoning', 'Data interpretation', 'Verbal ability', 'Quantitative aptitude'],
@@ -84,7 +84,7 @@ const subjects = [
   { name: 'Chemistry',        chapters: 14, slug: 'chemistry',        color: 'bg-orange-500', for: 'JEE + NEET' },
   { name: 'Mathematics',      chapters: 13, slug: 'mathematics',      color: 'bg-blue-600',   for: 'JEE + Board' },
   { name: 'Biology',          chapters: 14, slug: 'biology',          color: 'bg-emerald-600',for: 'NEET' },
-  { name: 'Science (6–10)',   chapters: 13, slug: 'science',          color: 'bg-teal-600',   for: 'Board' },
+  { name: 'Science (6–10)',   chapters: 13, slug: 'science',          color: 'bg-blue-600',   for: 'Board' },
   { name: 'Social Science',   chapters: 12, slug: 'social-science',   color: 'bg-amber-600',  for: 'Board' },
   { name: 'English',          chapters: 10, slug: 'english',          color: 'bg-rose-600',   for: 'Board + CUET' },
   { name: 'Logical Reasoning',chapters: 8,  slug: 'mathematics',      color: 'bg-indigo-600', for: 'CUET + NDA' },
@@ -103,11 +103,11 @@ export default function PracticePage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <Zap className="w-4 h-4 text-blue-600" />
                 Daily Practice · Chapter Drills · Speed Tests
               </div>
@@ -223,7 +223,7 @@ export default function PracticePage() {
                 ))}
               </div>
 
-              <div className="bg-gradient-to-r from-teal-50 via-slate-50 to-emerald-50 border border-teal-200/80 rounded-2xl p-6 mt-8 text-center shadow-sm">
+              <div className="bg-gradient-to-r from-blue-50 via-slate-50 to-emerald-50 border border-blue-200/80 rounded-2xl p-6 mt-8 text-center shadow-sm">
                 <h3 className="font-display font-black text-slate-900 text-lg mb-2">Ready to start?</h3>
                 <p className="text-slate-600 text-sm mb-5 font-medium">
                   Create a free account to access all practice modes, save your progress, and track improvement.
@@ -232,7 +232,7 @@ export default function PracticePage() {
                   <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-6 py-2.5 text-sm shadow-md shadow-blue-500/25">
                     Create Free Account
                   </Link>
-                  <Link href="/diagnostic-test" className="btn bg-white border border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-6 py-2.5 text-sm">
+                  <Link href="/diagnostic-test" className="btn bg-white border border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-6 py-2.5 text-sm">
                     Take Diagnostic Test
                   </Link>
                 </div>

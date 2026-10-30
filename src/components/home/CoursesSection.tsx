@@ -14,7 +14,7 @@ const sampleCourses = [
     lessons: 52,
     duration: '70+ hours',
     isFree: false,
-    color: 'from-blue-600 to-indigo-600',
+    color: 'from-[#1A6B5A] to-indigo-500',
   },
   {
     title: 'NEET Biology — Cell Biology & Genetics',

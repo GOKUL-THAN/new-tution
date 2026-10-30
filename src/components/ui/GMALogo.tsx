@@ -38,10 +38,13 @@ export default function GMALogo({
       />
       {showTagline && (
         <span className="flex flex-col leading-none">
-          <span className={`font-display font-black tracking-wide uppercase ${titleClass} ${titleCol}`}>
-            GLOBAL MINDS
+          <span className={`font-display font-black tracking-wide uppercase ${titleClass} ${titleCol} flex items-center gap-1.5`}>
+            <span>GLOBAL MINDS</span>
+            <span className="text-[9px] tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80 font-bold">
+              ACADEMY
+            </span>
           </span>
-          <span className={`font-semibold uppercase tracking-widest ${subClass} ${subCol}`}>
+          <span className={`font-semibold uppercase tracking-widest ${subClass} ${subCol} mt-0.5`}>
             BUILD SKILLS | OWN THE FUTURE
           </span>
         </span>

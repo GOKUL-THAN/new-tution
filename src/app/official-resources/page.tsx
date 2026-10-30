@@ -52,7 +52,7 @@ const sections = [
     title: 'Tamil Nadu School Education',
     icon: BookOpen,
     color: 'bg-blue-600',
-    bg: 'bg-teal-50 border-teal-200',
+    bg: 'bg-blue-50 border-blue-200',
     resources: [
       { label: 'TN School Education Department', url: 'https://www.tnschools.gov.in/', desc: 'Official portal of Tamil Nadu Department of School Education.' },
       { label: 'Samacheer Kalvi Textbooks (Official)', url: 'https://www.tnschools.gov.in/textbooks', desc: 'Official TN State Board textbook downloads for Classes 1–12.' },
@@ -108,10 +108,10 @@ export default function OfficialResourcesPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
               <Globe className="w-4 h-4 text-blue-600" />
               Government &amp; Official Portals Directory
             </div>

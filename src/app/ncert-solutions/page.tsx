@@ -49,8 +49,8 @@ export default function NCERTSolutionsPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
@@ -58,7 +58,7 @@ export default function NCERTSolutionsPage() {
               <span className="text-slate-900 font-semibold">NCERT Solutions</span>
             </nav>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
                 <BookOpen className="w-4 h-4 text-blue-600" />
                 Classes 6–12 · All Subjects · NCERT Aligned
               </div>
@@ -183,7 +183,7 @@ export default function NCERTSolutionsPage() {
         </section>
 
         {/* Official resources CTA */}
-        <section className="section-padding bg-gradient-to-b from-teal-50/50 via-slate-50 to-white border-t border-teal-100">
+        <section className="section-padding bg-gradient-to-b from-blue-50/50 via-slate-50 to-white border-t border-blue-100">
           <div className="container-wide">
             <div className="grid md:grid-cols-3 gap-5">
               {[
@@ -196,13 +196,13 @@ export default function NCERTSolutionsPage() {
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-slate-200/90 rounded-2xl p-5 hover:border-teal-400 hover:shadow-md transition-all group flex items-center justify-between shadow-sm"
+                  className="bg-white border border-slate-200/90 rounded-2xl p-5 hover:border-blue-400 hover:shadow-md transition-all group flex items-center justify-between shadow-sm"
                 >
                   <div>
-                    <p className="font-bold text-slate-900 text-sm group-hover:text-teal-700 transition-colors">{r.label}</p>
+                    <p className="font-bold text-slate-900 text-sm group-hover:text-blue-600 transition-colors">{r.label}</p>
                     <p className="text-xs text-slate-600 mt-0.5 font-medium">{r.sub}</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-teal-600 group-hover:text-teal-700 transition-colors shrink-0" />
+                  <ExternalLink className="w-4 h-4 text-blue-600 group-hover:text-blue-600 transition-colors shrink-0" />
                 </a>
               ))}
             </div>

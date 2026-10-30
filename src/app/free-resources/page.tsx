@@ -66,7 +66,7 @@ const officialLinks = [
   { label: 'TN Board Textbooks', url: 'https://www.tnschools.gov.in/textbooks', source: 'tnschools.gov.in', color: 'bg-amber-500' },
   { label: 'NTA Abhyas (Free Mocks)', url: 'https://abhyas.nta.ac.in/', source: 'abhyas.nta.ac.in', color: 'bg-violet-600' },
   { label: 'JEE Previous Papers', url: 'https://jeemain.nta.nic.in/', source: 'jeemain.nta.nic.in', color: 'bg-indigo-600' },
-  { label: 'NEET Previous Papers', url: 'https://neet.nta.nic.in/', source: 'neet.nta.nic.in', color: 'bg-teal-600' },
+  { label: 'NEET Previous Papers', url: 'https://neet.nta.nic.in/', source: 'neet.nta.nic.in', color: 'bg-blue-600' },
 ];
 
 /* ── PYQ section ─────────────────────────────────────────────────────── */
@@ -85,10 +85,10 @@ export default function FreeResourcesPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-5 shadow-xs">
               <Download className="w-4 h-4 text-blue-600" />
               100% Free · Open Academic Resources
             </div>

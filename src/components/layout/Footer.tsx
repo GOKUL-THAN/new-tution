@@ -79,9 +79,14 @@ export default function Footer() {
                 className="transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col leading-none">
-                <span className="font-display font-black text-lg text-slate-900 uppercase tracking-wide">
-                  GLOBAL MINDS
-                </span>
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span className="font-display font-black text-lg text-slate-900 uppercase tracking-wide">
+                    GLOBAL MINDS
+                  </span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80">
+                    ACADEMY
+                  </span>
+                </div>
                 <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600">
                   BUILD SKILLS | OWN THE FUTURE
                 </span>

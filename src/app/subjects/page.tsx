@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 const subjects = [
   { name: 'Mathematics', slug: 'mathematics', icon: '∑', color: 'from-blue-500 to-indigo-600', desc: 'Algebra, geometry, calculus & more' },
   { name: 'Physics', slug: 'physics', icon: '⚛', color: 'from-violet-500 to-purple-600', desc: 'Mechanics, thermodynamics & optics' },
-  { name: 'Chemistry', slug: 'chemistry', icon: '🧪', color: 'from-emerald-500 to-teal-600', desc: 'Organic, inorganic & physical' },
+  { name: 'Chemistry', slug: 'chemistry', icon: '🧪', color: 'from-emerald-500 to-cyan-600', desc: 'Organic, inorganic & physical' },
   { name: 'Biology', slug: 'biology', icon: '🔬', color: 'from-green-500 to-emerald-600', desc: 'Botany, zoology & human physiology' },
   { name: 'English', slug: 'english', icon: 'Aa', color: 'from-sky-500 to-blue-600', desc: 'Language, literature & communication' },
   { name: 'Tamil', slug: 'tamil', icon: 'த', color: 'from-orange-500 to-amber-600', desc: 'Language, literature & grammar' },
   { name: 'Social Science', slug: 'social-science', icon: '🌍', color: 'from-rose-500 to-pink-600', desc: 'History, geography & civics' },
   { name: 'Computer Science', slug: 'computer-science', icon: '💻', color: 'from-indigo-500 to-violet-600', desc: 'Programming, algorithms & IT' },
   { name: 'Accountancy', slug: 'accountancy', icon: '📊', color: 'from-amber-500 to-orange-600', desc: 'Financial accounting & analysis' },
-  { name: 'Economics', slug: 'economics', icon: '📈', color: 'from-teal-500 to-cyan-600', desc: 'Micro & macroeconomics' },
+  { name: 'Economics', slug: 'economics', icon: '📈', color: 'from-sky-500 to-blue-600', desc: 'Micro & macroeconomics' },
   { name: 'Business Studies', slug: 'business-studies', icon: '🏢', color: 'from-blue-500 to-cyan-600', desc: 'Business management & commerce' },
   { name: 'Environmental Science', slug: 'environmental-science', icon: '🌿', color: 'from-lime-500 to-green-600', desc: 'Ecology, environment & sustainability' },
-  { name: 'History', slug: 'history', icon: '📜', color: 'from-yellow-600 to-amber-700', desc: 'Ancient, medieval & modern history' },
+  { name: 'History', slug: 'history', icon: '📜', color: 'from-amber-500 to-orange-500', desc: 'Ancient, medieval & modern history' },
   { name: 'Geography', slug: 'geography', icon: '🗺', color: 'from-cyan-500 to-blue-600', desc: 'Physical & human geography' },
   { name: 'Physical Education', slug: 'physical-education', icon: '🏃', color: 'from-red-500 to-rose-600', desc: 'Sports science & health education' },
   { name: 'Japanese', slug: 'japanese', icon: '日', color: 'from-pink-500 to-fuchsia-600', desc: 'Language, kanji & Japanese culture' },
@@ -35,10 +35,10 @@ export default function SubjectsPage() {
       <Navbar />
       <main>
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-teal-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide text-center relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-4 shadow-xs">
               Subject Mastery
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
