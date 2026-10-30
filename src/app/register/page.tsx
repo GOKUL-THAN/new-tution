@@ -54,21 +54,14 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left Panel - Brand */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-50 via-blue-50/40 to-sky-50/40 border-r border-slate-200 relative items-center justify-center p-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05),transparent_60%)] pointer-events-none" />
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-50 via-teal-50/50 to-emerald-50/50 border-r border-slate-200 relative items-center justify-center p-12">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
         <div className="relative z-10 text-center max-w-md">
-          <Link href="/" className="inline-flex items-center gap-3 mb-8 group">
-            <Image
-              src="/logo.svg"
-              alt="Global Minds Academy"
-              width={56}
-              height={56}
-              priority
-              className="transition-transform group-hover:scale-105"
-            />
+          <Link href="/" className="inline-flex items-center gap-3.5 mb-8">
+            <Image src="/logo-emblem.svg" alt="Global Minds Academy" width={56} height={45} priority className="shrink-0" />
             <div className="text-left">
-              <span className="font-display font-black text-2xl text-slate-900 block leading-tight">Global Minds</span>
-              <span className="text-xs uppercase tracking-widest text-blue-600 font-bold">Academy</span>
+              <span className="font-display font-black text-2xl text-[#0E3B43] block">GLOBAL MINDS</span>
+              <span className="text-[10px] uppercase tracking-widest text-[#D98A12] font-bold">BUILD SKILLS | OWN THE FUTURE</span>
             </div>
           </Link>
           <h1 className="text-3xl font-display font-black text-slate-900 mb-4">
@@ -84,11 +77,12 @@ export default function RegisterPage() {
       {/* Right Panel - Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-gray-50">
         <div className="w-full max-w-md">
-          <Link href="/" className="lg:hidden flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-600 to-accent-600 rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
+          <Link href="/" className="lg:hidden flex items-center gap-2.5 mb-8">
+            <Image src="/logo-emblem.svg" alt="Global Minds Academy" width={40} height={32} priority className="shrink-0" />
+            <div className="text-left">
+              <span className="font-display font-black text-base text-[#0E3B43] block">GLOBAL MINDS</span>
+              <span className="text-[9px] uppercase tracking-widest text-[#D98A12] font-bold">BUILD SKILLS | OWN THE FUTURE</span>
             </div>
-            <span className="font-display font-bold text-lg text-gray-900">Global Minds Academy</span>
           </Link>
 
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-2">Create your account</h2>

@@ -14,17 +14,17 @@ const classGroups = [
   {
     range: 'Secondary',
     classes: [9, 10],
-    color: 'from-blue-600 to-indigo-600',
-    bgColor: 'bg-blue-50',
-    textColor: 'text-blue-700',
+    color: 'from-brand-700 to-brand-500',
+    bgColor: 'bg-brand-50',
+    textColor: 'text-brand-700',
     description: 'Board exam preparation & concept mastery',
   },
   {
     range: 'Senior Secondary',
     classes: [11, 12],
-    color: 'from-amber-500 to-orange-400',
+    color: 'from-accent-600 to-accent-400',
     bgColor: 'bg-amber-50',
-    textColor: 'text-amber-700',
+    textColor: 'text-amber-800',
     description: 'Board exams + JEE / NEET / entrance exams',
   },
 ];

@@ -73,8 +73,8 @@ export default function WhyUsSection() {
   return (
     <section className="section-padding bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 overflow-hidden relative border-y border-slate-200/80" id="why-us">
       {/* Background subtle light glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-400/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-wide relative z-10">
 
@@ -83,7 +83,7 @@ export default function WhyUsSection() {
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-4 leading-tight">
               Why{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 bg-clip-text text-transparent">
                 Global Minds Academy?
               </span>
             </h2>
@@ -94,7 +94,7 @@ export default function WhyUsSection() {
             </p>
             <div className="flex flex-wrap gap-3">
               {['Classes 6–12', 'JEE + NEET', 'TN State Board', 'CBSE + ICSE'].map((tag) => (
-                <span key={tag} className="bg-blue-50 text-blue-800 text-xs font-semibold px-4 py-1.5 rounded-full border border-blue-200/70 shadow-sm">
+                <span key={tag} className="bg-brand-50 text-brand-800 text-xs font-semibold px-4 py-1.5 rounded-full border border-brand-200 shadow-sm">
                   {tag}
                 </span>
               ))}
@@ -111,10 +111,10 @@ export default function WhyUsSection() {
           {reasons.map((r, i) => (
             <div
               key={i}
-              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-md hover:border-blue-400 transition-all duration-300"
+              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-md hover:border-teal-400 transition-all duration-300"
             >
               <div className="text-3xl mb-4">{r.emoji}</div>
-              <h3 className="font-display font-bold text-slate-900 text-lg mb-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="font-display font-bold text-slate-900 text-lg mb-2 group-hover:text-teal-700 transition-colors">
                 {r.title}
               </h3>
               <p className="text-sm text-slate-700 leading-relaxed mb-3">{r.desc}</p>
@@ -138,7 +138,7 @@ export default function WhyUsSection() {
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-100/70">
                   <th className="text-left px-6 py-3.5 text-slate-700 font-bold text-xs uppercase tracking-wider">Feature</th>
-                  <th className="px-4 py-3.5 text-blue-800 font-black text-xs uppercase tracking-wider bg-blue-50/60">GMA</th>
+                  <th className="px-4 py-3.5 text-brand-700 font-black text-xs uppercase tracking-wider bg-brand-50/80">GMA</th>
                   <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">BYJU&apos;S</th>
                   <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">PW</th>
                   <th className="px-4 py-3.5 text-slate-600 font-semibold text-xs uppercase tracking-wider">Aakash</th>
@@ -149,9 +149,9 @@ export default function WhyUsSection() {
                   <tr key={row.feature} className="hover:bg-slate-50/60 transition-colors">
                     <td className="px-6 py-3.5 text-slate-800 text-sm font-medium">{row.feature}</td>
                     {[row.us, row.byju, row.pw, row.aakash].map((val, i) => (
-                      <td key={i} className={`px-4 py-3.5 text-center ${i === 0 ? 'bg-blue-50/30' : ''}`}>
+                      <td key={i} className={`px-4 py-3.5 text-center ${i === 0 ? 'bg-teal-50/30' : ''}`}>
                         {val
-                          ? <CheckCircle2 className={`w-5 h-5 mx-auto ${i === 0 ? 'text-blue-600' : 'text-slate-400'}`} />
+                          ? <CheckCircle2 className={`w-5 h-5 mx-auto ${i === 0 ? 'text-teal-600' : 'text-slate-400'}`} />
                           : <span className="text-slate-300 text-lg">—</span>
                         }
                       </td>

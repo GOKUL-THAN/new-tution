@@ -8,7 +8,7 @@ const testimonials = [
     class: 'Class 12 · CBSE · JEE Aspirant',
     location: 'Chennai, Tamil Nadu',
     initials: 'AS',
-    color: 'bg-blue-600',
+    color: 'bg-brand-700',
     rating: 5,
     text: 'The DPP practice system is exactly like Allen — but I can do it on my phone anytime. The error notebook helped me fix the same mistakes I kept making in Physics.',
     subject: 'JEE Main Preparation',
@@ -19,7 +19,7 @@ const testimonials = [
     class: 'Class 10 · TN State Board',
     location: 'Perumbakkam, Chennai',
     initials: 'PM',
-    color: 'bg-amber-500',
+    color: 'bg-accent-600',
     rating: 5,
     text: 'Finally a platform that teaches Samacheer Kalvi in Tamil AND English. My Maths score went from 71 to 88 after following the personalised learning path.',
     subject: 'Mathematics',
@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
           </span>
           <h2 className="section-title mb-4">
             What Students{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 bg-clip-text text-transparent">
               Are Saying
             </span>
           </h2>
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
               <div key={r.platform} className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full border border-gray-200">
                 <div className="flex">
                   {[1,2,3,4,5].map((s) => (
-                    <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    <Star key={s} className="w-3.5 h-3.5 text-accent-500 fill-accent-500" />
                   ))}
                 </div>
                 <span className="font-bold text-gray-900 text-sm">{r.rating}</span>
@@ -123,12 +123,12 @@ export default function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, s) => (
-                  <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  <Star key={s} className="w-4 h-4 text-accent-500 fill-accent-500" />
                 ))}
               </div>
 
               {/* Quote icon */}
-              <Quote className="w-6 h-6 text-blue-500/20 mb-2" />
+              <Quote className="w-6 h-6 text-brand-300 mb-2" />
 
               {/* Testimonial text */}
               <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5">
@@ -136,7 +136,7 @@ export default function TestimonialsSection() {
               </p>
 
               {/* Score badge */}
-              <div className="bg-blue-50 text-blue-700 border border-blue-200/60 text-xs font-semibold px-3 py-1.5 rounded-lg mb-4 inline-block">
+              <div className="bg-brand-50 text-brand-700 border border-brand-200/80 text-xs font-semibold px-3 py-1.5 rounded-lg mb-4 inline-block">
                 📊 {t.score}
               </div>
 

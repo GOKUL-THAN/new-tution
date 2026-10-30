@@ -34,11 +34,11 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50/40 via-slate-50 to-white border-y border-slate-200/80">
+    <section className="py-16 bg-gradient-to-b from-brand-50/50 via-slate-50 to-white border-y border-slate-200/80">
       <div className="container-wide">
 
         {/* Section label */}
-        <p className="text-center text-xs uppercase tracking-widest text-blue-800 font-bold mb-10">
+        <p className="text-center text-xs uppercase tracking-widest text-brand-700 font-bold mb-10">
           Trusted by thousands of students worldwide
         </p>
 
@@ -46,7 +46,7 @@ export default function StatsSection() {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="text-center group bg-white/90 border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all"
+              className="text-center group bg-white/95 border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
             >
               <div
                 className={`w-14 h-14 rounded-2xl ${stat.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-sm`}
@@ -57,7 +57,7 @@ export default function StatsSection() {
                 {stat.value}
               </div>
               <div className="font-bold text-slate-800 text-sm mb-0.5">{stat.label}</div>
-              <div className="text-xs text-blue-600 font-medium">{stat.desc}</div>
+              <div className="text-xs text-brand-600 font-semibold">{stat.desc}</div>
             </div>
           ))}
         </div>

@@ -90,25 +90,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* ── Logo ─────────────────────────────────────────────── */}
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+          <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
-              src="/logo.svg"
+              src="/logo-emblem.svg"
               alt="Global Minds Academy"
-              width={44}
-              height={44}
+              width={46}
+              height={37}
               priority
               className="transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:flex flex-col leading-none">
-              <div className="flex items-center gap-1.5">
-                <span className="font-display font-black text-base uppercase tracking-wide text-slate-900">
-                  GLOBAL MINDS
-                </span>
-                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80">
-                  ACADEMY
-                </span>
-              </div>
-              <span className="text-[9px] uppercase tracking-widest font-bold text-blue-600 mt-1">
+              <span className="font-display font-black text-[17px] uppercase tracking-wide text-[#0E3B43]">
+                GLOBAL MINDS
+              </span>
+              <span className="text-[9.5px] uppercase tracking-widest font-bold text-[#D98A12] mt-0.5">
                 BUILD SKILLS | OWN THE FUTURE
               </span>
             </div>
@@ -202,7 +197,7 @@ export default function Navbar() {
 
             <Link
               href="/register"
-              className="btn-primary btn-sm bg-blue-600 text-white hover:bg-blue-700 font-bold shadow-md shadow-blue-500/20"
+              className="btn-primary btn-sm !bg-accent-500 !text-slate-950 hover:!bg-accent-600 font-bold shadow-md shadow-accent-500/20"
             >
               Get Started
             </Link>
@@ -224,11 +219,11 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden bg-white rounded-2xl shadow-xl mt-2 mb-4 p-4 animate-fade-in border border-gray-100">
             {/* Mobile logo row */}
-            <div className="flex items-center gap-2 px-2 pb-4 border-b border-gray-100 mb-2">
-              <Image src="/logo.svg" alt="Global Minds Academy" width={36} height={36} />
+            <div className="flex items-center gap-2.5 px-2 pb-4 border-b border-gray-100 mb-2">
+              <Image src="/logo-emblem.svg" alt="Global Minds Academy" width={38} height={31} priority />
               <div className="flex flex-col leading-none">
-                <span className="font-display font-black text-sm text-slate-900 uppercase tracking-wide">GLOBAL MINDS</span>
-                <span className="text-[9px] text-blue-600 uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</span>
+                <span className="font-display font-black text-sm text-[#0E3B43] uppercase tracking-wide">GLOBAL MINDS</span>
+                <span className="text-[9px] text-[#D98A12] uppercase tracking-widest font-bold mt-0.5">BUILD SKILLS | OWN THE FUTURE</span>
               </div>
             </div>
 
@@ -287,7 +282,7 @@ export default function Navbar() {
               <Link
                 href="/register"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center btn-primary bg-blue-600 text-white hover:bg-blue-700 font-bold"
+                className="block w-full text-center btn-primary !bg-accent-500 !text-slate-950 font-bold"
               >
                 Get Started Free
               </Link>

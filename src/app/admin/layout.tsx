@@ -40,10 +40,10 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="flex items-center justify-between px-4 sm:px-6 h-16">
           <Link href="/admin" className="flex items-center gap-2.5">
-            <Image src="/logo.svg" alt="Global Minds Academy" width={32} height={32} priority />
+            <Image src="/logo-emblem.svg" alt="Global Minds Academy" width={36} height={29} priority className="shrink-0" />
             <div className="hidden sm:block">
-              <span className="font-display font-bold text-gray-900 text-sm block leading-tight">Global Minds Academy</span>
-              <span className="text-[10px] text-blue-600 font-semibold uppercase tracking-wider">Admin Panel</span>
+              <span className="font-display font-black text-[#0E3B43] text-sm block leading-tight">Global Minds Academy</span>
+              <span className="text-[10px] text-brand-600 font-bold uppercase tracking-wider">Admin Panel</span>
             </div>
           </Link>
           <div className="flex items-center gap-3">

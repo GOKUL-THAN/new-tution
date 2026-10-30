@@ -11,7 +11,7 @@ const exams = [
     authority: 'National Testing Agency (NTA)',
     subjects: ['Physics', 'Chemistry', 'Mathematics'],
     icon: Atom,
-    color: 'from-[#1A6B5A] to-indigo-500',
+    color: 'from-brand-700 to-brand-500',
     features: ['Full-length mocks (NTA pattern)', 'Chapter-wise DPPs', 'Syllabus checklist', 'Rank predictor'],
     desc: 'Gateway to NITs, IIITs, and CFTIs. Also eligibility for JEE Advanced.',
   },
@@ -88,28 +88,28 @@ const prepTools = [
 
 export default function ExamPrepSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-white via-blue-50/25 to-slate-50 text-slate-900 overflow-hidden border-t border-slate-200/80" id="exam-prep">
+    <section className="section-padding bg-gradient-to-b from-white via-brand-50/30 to-slate-50 text-slate-900 overflow-hidden border-t border-slate-200/80" id="exam-prep">
       <div className="container-wide">
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-sm font-semibold mb-5 shadow-sm">
-              <Target className="w-4 h-4 text-blue-600" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-sm font-semibold mb-5 shadow-sm">
+              <Target className="w-4 h-4 text-brand-600" />
               Competitive Exam Preparation
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-4 leading-tight">
               Ace Your{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 bg-clip-text text-transparent">
                 Entrance Exams
               </span>
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-normal">
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
               JEE, NEET, BITSAT, CUET — structured prep with DPPs, mock tests, error notebooks,
               and rank predictors. Built by studying Aakash, Allen, FIITJEE, Sri Chaitanya, and
               Resonance preparation methodologies.
             </p>
-            <Link href="/entrance-exams" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-6 py-3 rounded-xl transition-all">
+            <Link href="/entrance-exams" className="btn bg-white border-2 border-brand-200 text-brand-700 hover:border-brand-600 hover:bg-brand-50 shadow-sm px-6 py-3 rounded-xl transition-all">
               View All Exams <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
@@ -123,7 +123,7 @@ export default function ExamPrepSection() {
         {/* ── Prep tools strip ────────────────────────────────────── */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-14">
           {prepTools.map((t) => (
-            <div key={t.title} className="bg-white border border-slate-200/90 shadow-sm rounded-2xl p-4 text-center hover:border-blue-300 hover:shadow-md transition-all">
+            <div key={t.title} className="bg-white border border-slate-200/90 shadow-sm rounded-2xl p-4 text-center hover:border-teal-300 hover:shadow-md transition-all">
               <div className="text-2xl mb-2">{t.icon}</div>
               <p className="font-bold text-slate-900 text-xs mb-1">{t.title}</p>
               <p className="text-[11px] text-slate-600 leading-snug">{t.desc}</p>
@@ -137,7 +137,7 @@ export default function ExamPrepSection() {
             <Link
               key={exam.slug}
               href={exam.href}
-              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-lg hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group bg-white border border-slate-200/90 shadow-sm rounded-2xl p-6 hover:shadow-lg hover:border-teal-400 transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
               {/* Top */}
               <div className="flex items-start justify-between mb-4">
@@ -150,7 +150,7 @@ export default function ExamPrepSection() {
               </div>
 
               {/* Info */}
-              <h3 className="font-display font-bold text-lg text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
+              <h3 className="font-display font-bold text-lg text-slate-900 mb-1 group-hover:text-teal-700 transition-colors">
                 {exam.name}
               </h3>
               <p className="text-xs text-slate-500 mb-2 font-medium">{exam.authority}</p>
@@ -159,7 +159,7 @@ export default function ExamPrepSection() {
               {/* Subjects */}
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {exam.subjects.map((s) => (
-                  <span key={s} className="text-xs px-2 py-0.5 rounded-md bg-blue-50 border border-blue-200/60 text-blue-800 font-medium">{s}</span>
+                  <span key={s} className="text-xs px-2 py-0.5 rounded-md bg-brand-50 border border-brand-200/60 text-brand-800 font-medium">{s}</span>
                 ))}
               </div>
 
@@ -167,13 +167,13 @@ export default function ExamPrepSection() {
               <ul className="space-y-1.5 mb-4">
                 {exam.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-xs text-slate-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-500 shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
 
-              <div className="flex items-center text-sm font-bold text-blue-600 group-hover:text-blue-700 mt-auto">
+              <div className="flex items-center text-sm font-bold text-brand-700 group-hover:text-brand-800 mt-auto">
                 Start Preparing
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -185,10 +185,10 @@ export default function ExamPrepSection() {
         <div className="mt-10 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm text-center">
           <p className="text-xs text-slate-600">
             📌 Official exam info sources:{' '}
-            <a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:underline">JEE Main</a> ·{' '}
-            <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:underline">JEE Advanced</a> ·{' '}
-            <a href="https://neet.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:underline">NEET UG</a> ·{' '}
-            <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:underline">NTA</a>
+            <a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">JEE Main</a> ·{' '}
+            <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">JEE Advanced</a> ·{' '}
+            <a href="https://neet.nta.nic.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">NEET UG</a> ·{' '}
+            <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">NTA</a>
             {' '}— always verify dates from official sources.
           </p>
         </div>

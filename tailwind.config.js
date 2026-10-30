@@ -8,38 +8,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Global Minds Academy — Modern Vibrant Blue & Indigo Light Theme
+        // Global Minds Academy — New Premium Brand Palette
         brand: {
-          50:  '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',  // primary vibrant blue
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          50:  '#f0f9fa',
+          100: '#d8f1f5',
+          200: '#b4e3ec',
+          300: '#82cfdc',
+          400: '#48b2c4',
+          500: '#168b9e',
+          600: '#0F4C5C',  // New majestic teal
+          700: '#0E3B43',  // New deep logo teal
+          800: '#0a2b31',
+          900: '#061d22',
+          950: '#031013',
         },
-        // Modern Sky & Cyan accents
+        // Gold accent (from new logo leaves & book)
         accent: {
-          50:  '#f0fdfa',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',  // vibrant sky
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50:  '#fffdf5',
+          100: '#fef7da',
+          200: '#fdecb3',
+          300: '#fbdc81',
+          400: '#f8c646',
+          500: '#F5A623',  // Vibrant golden amber
+          600: '#D98A12',  // Rich gold
+          700: '#b36c0a',
+          800: '#8f530e',
+          900: '#75440f',
+          950: '#452504',
         },
-        // Modern Slate neutrals
+        // Deep Navy / Teal text
         navy: {
-          800: '#1e293b',
-          900: '#0f172a',
+          800: '#0E3B43',
+          900: '#061d22',
         },
         success: {
           50:  '#f0fdf4',
@@ -84,8 +84,8 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        // Global Minds hero gradient: modern airy sky-blue light gradient
-        'hero-pattern': 'linear-gradient(135deg, #f8fafc 0%, #eff6ff 50%, #e0f2fe 100%)',
+        // Global Minds hero gradient: new premium soft light gradient
+        'hero-pattern': 'linear-gradient(135deg, #f0f9fa 0%, #fafcfb 50%, #fef7da 100%)',
       },
     },
   },

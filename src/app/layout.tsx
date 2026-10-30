@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/logo.svg',
-    shortcut: '/logo.svg',
-    apple: '/logo.svg',
+    shortcut: '/logo-emblem.svg',
+    apple: '/logo.png',
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
 };
@@ -55,7 +55,8 @@ export default function RootLayout({
     <html lang="en" className={`scroll-smooth ${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#1d4ed8" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0F4C5C" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="GMA" />

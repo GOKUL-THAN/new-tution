@@ -23,28 +23,25 @@ export default function GMALogo({
   dark = false,
 }: GMALogoProps) {
   const { img, titleClass, subClass } = sizes[size];
-  const titleCol = dark ? 'text-white' : 'text-slate-900';
-  const subCol = dark ? 'text-sky-300' : 'text-blue-600';
+  const titleCol = dark ? 'text-white' : 'text-[#0E3B43]';
+  const subCol = dark ? 'text-accent-400' : 'text-[#D98A12]';
 
   const content = (
-    <span className={`flex items-center gap-2 group ${className}`}>
+    <span className={`flex items-center gap-2.5 group ${className}`}>
       <Image
-        src="/logo.svg"
+        src="/logo-emblem.svg"
         alt="Global Minds Academy Logo"
         width={img}
-        height={img}
+        height={Math.round((img * 365) / 450)}
         className="flex-shrink-0"
         priority
       />
       {showTagline && (
         <span className="flex flex-col leading-none">
-          <span className={`font-display font-black tracking-wide uppercase ${titleClass} ${titleCol} flex items-center gap-1.5`}>
-            <span>GLOBAL MINDS</span>
-            <span className="text-[9px] tracking-wider px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200/80 font-bold">
-              ACADEMY
-            </span>
+          <span className={`font-display font-black tracking-wide uppercase ${titleClass} ${titleCol}`}>
+            GLOBAL MINDS
           </span>
-          <span className={`font-semibold uppercase tracking-widest ${subClass} ${subCol} mt-0.5`}>
+          <span className={`font-bold uppercase tracking-widest ${subClass} ${subCol}`}>
             BUILD SKILLS | OWN THE FUTURE
           </span>
         </span>

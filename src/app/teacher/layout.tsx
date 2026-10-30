@@ -46,8 +46,8 @@ export default async function TeacherLayout({ children }: TeacherLayoutProps) {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="flex items-center justify-between px-4 sm:px-6 h-16">
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/logo.svg" alt="Global Minds Academy" width={32} height={32} priority />
-            <span className="font-display font-bold text-gray-900 hidden sm:block">
+            <Image src="/logo-emblem.svg" alt="Global Minds Academy" width={36} height={29} priority className="shrink-0" />
+            <span className="font-display font-black text-[#0E3B43] text-base hidden sm:block">
               Global Minds Academy
             </span>
           </Link>

@@ -9,8 +9,8 @@ const steps = [
     desc: 'Take a short test to identify your current knowledge level across subjects and chapters.',
     status: 'active',
     tools: ['Chapter-wise diagnostic', 'Strength & gap report', '15-minute test'],
-    color: 'bg-blue-600',
-    border: 'border-blue-600',
+    color: 'bg-brand-600',
+    border: 'border-brand-600',
   },
   {
     phase: '02',
@@ -18,8 +18,8 @@ const steps = [
     desc: 'Get a custom roadmap of chapters to study — prioritised by importance, exam weight, and your gaps.',
     status: 'active',
     tools: ['Exam-weighted chapters', 'Your weak topics first', 'Daily study targets'],
-    color: 'bg-amber-500',
-    border: 'border-amber-500',
+    color: 'bg-accent-500',
+    border: 'border-accent-500',
   },
   {
     phase: '03',
@@ -61,9 +61,9 @@ const steps = [
 
 const masteryLevels = [
   { level: 'Not Started',  color: 'bg-gray-200',   desc: 'Chapter not yet attempted' },
-  { level: 'Attempted',    color: 'bg-amber-400',   desc: 'Started but not practised enough' },
-  { level: 'Practising',   color: 'bg-sky-500',   desc: 'Good progress, needs more practice' },
-  { level: 'Mastered',     color: 'bg-blue-600',  desc: 'Consistently correct across sessions' },
+  { level: 'Attempted',    color: 'bg-accent-400',  desc: 'Started but not practised enough' },
+  { level: 'Practising',   color: 'bg-brand-500',  desc: 'Good progress, needs more practice' },
+  { level: 'Mastered',     color: 'bg-brand-600',  desc: 'Consistently correct across sessions' },
 ];
 
 export default function LearningPathSection() {
@@ -73,12 +73,12 @@ export default function LearningPathSection() {
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider border border-blue-200/60">
+          <span className="inline-block bg-brand-50 text-brand-700 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider border border-brand-200">
             Adaptive Learning
           </span>
           <h2 className="section-title mb-4">
             Your Personalised{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 bg-clip-text text-transparent">
               Learning Path
             </span>
           </h2>
@@ -104,7 +104,7 @@ export default function LearningPathSection() {
               <div className="absolute top-5 right-5">
                 {step.status === 'upcoming'
                   ? <Lock className="w-4 h-4 text-gray-300" />
-                  : <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  : <CheckCircle2 className="w-4 h-4 text-brand-600" />
                 }
               </div>
 
@@ -114,7 +114,7 @@ export default function LearningPathSection() {
               <ul className="space-y-1.5">
                 {step.tools.map((tool) => (
                   <li key={tool} className="flex items-center gap-2 text-xs text-gray-600">
-                    <Circle className="w-2 h-2 fill-current text-[#1A6B5A] shrink-0" />
+                    <Circle className="w-2 h-2 fill-current text-brand-600 shrink-0" />
                     {tool}
                   </li>
                 ))}
@@ -156,12 +156,12 @@ export default function LearningPathSection() {
               </p>
               <div className="grid grid-cols-5 gap-2">
                 {[
-                  { ch: 'Ch 1', color: 'bg-blue-600', pct: 94 },
-                  { ch: 'Ch 2', color: 'bg-sky-500', pct: 81 },
-                  { ch: 'Ch 3', color: 'bg-amber-400',  pct: 65 },
-                  { ch: 'Ch 4', color: 'bg-blue-600', pct: 91 },
-                  { ch: 'Ch 5', color: 'bg-sky-500', pct: 77 },
-                  { ch: 'Ch 6', color: 'bg-amber-400',  pct: 58 },
+                  { ch: 'Ch 1', color: 'bg-brand-600', pct: 94 },
+                  { ch: 'Ch 2', color: 'bg-brand-500', pct: 81 },
+                  { ch: 'Ch 3', color: 'bg-accent-400', pct: 65 },
+                  { ch: 'Ch 4', color: 'bg-brand-600', pct: 91 },
+                  { ch: 'Ch 5', color: 'bg-brand-500', pct: 77 },
+                  { ch: 'Ch 6', color: 'bg-accent-400', pct: 58 },
                   { ch: 'Ch 7', color: 'bg-gray-200',   pct: 0  },
                   { ch: 'Ch 8', color: 'bg-gray-200',   pct: 0  },
                   { ch: 'Ch 9', color: 'bg-gray-200',   pct: 0  },
@@ -182,7 +182,7 @@ export default function LearningPathSection() {
           </div>
 
           <div className="mt-8 pt-6 border-t border-gray-100 text-center">
-            <Link href="/diagnostic-test" className="btn-primary inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700">
+            <Link href="/diagnostic-test" className="btn-primary inline-flex items-center gap-2">
               Take Free Diagnostic Test
               <ArrowRight className="w-4 h-4" />
             </Link>

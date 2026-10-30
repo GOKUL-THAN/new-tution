@@ -17,17 +17,12 @@
   }
 
   body {
-    @apply font-sans text-gray-900 bg-white antialiased;
+    @apply font-sans text-slate-800 bg-[#FBFDFD] antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold tracking-tight;
   }
 
@@ -46,23 +41,38 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 font-medium rounded-xl
+           transition-all duration-200 ease-out
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           active:scale-[0.98];
   }
 
   .btn-primary {
-    @apply btn bg-blue-600 text-white hover:bg-blue-700 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/25 focus-visible:outline-blue-600 px-6 py-3 text-sm font-bold;
+    @apply btn bg-brand-600 text-white hover:bg-brand-700
+           shadow-lg shadow-brand-600/25 hover:shadow-xl hover:shadow-brand-600/30
+           focus-visible:outline-brand-600
+           px-6 py-3 text-sm;
   }
 
   .btn-secondary {
-    @apply btn bg-white text-slate-800 border-2 border-slate-200 hover:bg-blue-50/50 hover:border-blue-400 hover:text-blue-600 focus-visible:outline-blue-600 px-6 py-3 text-sm font-semibold;
+    @apply btn bg-white text-brand-700 border-2 border-brand-200
+           hover:bg-brand-50 hover:border-brand-300
+           focus-visible:outline-brand-600
+           px-6 py-3 text-sm;
   }
 
   .btn-accent {
-    @apply btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-md shadow-blue-500/25 focus-visible:outline-blue-600 px-6 py-3 text-sm font-bold;
+    @apply btn bg-gradient-to-r from-brand-600 to-accent-600 text-white
+           hover:from-brand-700 hover:to-accent-700
+           shadow-lg shadow-accent-600/25
+           focus-visible:outline-accent-600
+           px-6 py-3 text-sm;
   }
 
   .btn-ghost {
-    @apply btn text-slate-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 text-sm;
+    @apply btn text-gray-600 hover:text-brand-600 hover:bg-brand-50
+           px-4 py-2 text-sm;
   }
 
   .btn-lg {
@@ -74,20 +84,23 @@
   }
 
   .card {
-    @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 ease-out;
+    @apply bg-white rounded-2xl border border-gray-100
+           shadow-sm hover:shadow-md
+           transition-all duration-300 ease-out;
   }
 
   .card-hover {
-    @apply card hover:border-blue-300 hover:-translate-y-1 hover:shadow-md;
+    @apply card hover:border-brand-200 hover:-translate-y-1 hover:shadow-lg;
   }
 
   .glass {
-    @apply bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-sm;
+    @apply bg-white/80 backdrop-blur-xl border border-white/20
+           shadow-lg;
   }
 
-  /* Global Minds Academy — Modern Vibrant Blue Gradient Text */
+  /* Global Minds Academy — new brand teal-to-gold gradient text */
   .gradient-text {
-    background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+    background: linear-gradient(135deg, #0E3B43 0%, #D98A12 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -99,16 +112,19 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200;
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200
+           bg-white text-gray-900 placeholder:text-gray-400
+           focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500
+           transition-all duration-200;
   }
 
   .badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
   }
 
-  /* Global Minds Academy — badge-primary: modern light blue */
+  /* Global Minds Academy — badge-primary: new logo teal */
   .badge-primary {
-    @apply badge bg-blue-50 text-blue-700 border border-blue-200/80;
+    @apply badge bg-brand-50 text-brand-700 border border-brand-200 font-semibold;
   }
 
   .badge-success {
@@ -159,25 +175,19 @@
   width: 8px;
   height: 8px;
 }
-
 ::-webkit-scrollbar-track {
   @apply bg-gray-100;
 }
-
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-300 rounded-full;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400;
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
