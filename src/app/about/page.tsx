@@ -64,12 +64,12 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <Image src="/logo.svg" alt="Global Minds Academy" width={56} height={56} priority />
                   <div>
-                    <p className="font-display font-black text-xl text-[#0D2B3E] uppercase tracking-wide">GLOBAL MINDS</p>
-                    <p className="text-[10px] text-[#1A6B5A] uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</p>
+                    <p className="font-display font-black text-xl text-slate-900 uppercase tracking-wide">GLOBAL MINDS</p>
+                    <p className="text-[10px] text-blue-600 uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</p>
                   </div>
                 </div>
                 <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 leading-tight tracking-tight">
-                  About <span className="text-[#1A6B5A]">Global Minds Academy</span>
+                  About <span className="text-blue-600">Global Minds Academy</span>
                 </h1>
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
                   A comprehensive education platform dedicated to empowering Indian students
@@ -77,12 +77,12 @@ export default function AboutPage() {
                   Based in Perumbakkam, Chennai — serving Tamil Nadu and India.
                 </p>
                 <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
-                  <MapPin className="w-4 h-4 text-[#1A6B5A] shrink-0" />
+                  <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>Perumbakkam, Chennai, Tamil Nadu, India</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-600 text-sm mt-2 font-medium">
-                  <Mail className="w-4 h-4 text-[#1A6B5A] shrink-0" />
-                  <a href="mailto:info@globalmindsacademy.in" className="hover:text-[#1A6B5A] text-slate-700 transition-colors">
+                  <Mail className="w-4 h-4 text-blue-600 shrink-0" />
+                  <a href="mailto:info@globalmindsacademy.in" className="hover:text-blue-600 text-slate-700 transition-colors">
                     info@globalmindsacademy.in
                   </a>
                 </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((s) => (
                   <div key={s.value} className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm shadow-slate-100/50 hover:shadow-md hover:border-teal-300 transition-all text-center">
-                    <p className="text-3xl font-display font-black text-[#1A6B5A] mb-1">{s.value}</p>
+                    <p className="text-3xl font-display font-black text-blue-600 mb-1">{s.value}</p>
                     <p className="font-bold text-slate-800 text-sm">{s.label}</p>
                     <p className="text-slate-500 text-xs mt-0.5">{s.sub}</p>
                   </div>
@@ -104,12 +104,12 @@ export default function AboutPage() {
         {/* Mission */}
         <section className="section-padding bg-white">
           <div className="container-wide max-w-4xl text-center">
-            <span className="inline-block bg-[#1A6B5A]/10 text-[#1A6B5A] text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+            <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
               Our Mission
             </span>
             <h2 className="section-title mb-6">
               One Platform for All of{' '}
-              <span className="bg-gradient-to-r from-[#1A6B5A] to-[#F5C518] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">
                 Academic India
               </span>
             </h2>
@@ -128,9 +128,9 @@ export default function AboutPage() {
             <h2 className="section-title text-center mb-12">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((v, i) => (
-                <div key={i} className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-[#1A6B5A]/30 hover:shadow-md transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-[#1A6B5A]/10 flex items-center justify-center mb-4">
-                    <v.icon className="w-6 h-6 text-[#1A6B5A]" />
+                <div key={i} className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-blue-400 hover:shadow-md transition-all">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                    <v.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="font-display font-bold text-gray-900 mb-2">{v.title}</h3>
                   <p className="text-sm text-gray-500">{v.desc}</p>
@@ -177,7 +177,7 @@ export default function AboutPage() {
               examination authority, government body, or the organisations mentioned above.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248]">
+              <Link href="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700">
                 Get in Touch
               </Link>
               <Link href="/courses" className="btn-secondary">

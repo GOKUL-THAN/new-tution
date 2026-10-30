@@ -74,7 +74,7 @@ const posts = [
   {
     slug: 'tn-board-samacheer-kalvi-tips',
     category: 'TN Board',
-    categoryColor: 'bg-[#D4A017]/20 text-[#D4A017]',
+    categoryColor: 'bg-amber-50 text-amber-700',
     title: 'Tamil Nadu State Board Class 12 — Scoring 500/600 in 5 Steps',
     excerpt:
       'Samacheer Kalvi Class 12 requires a different strategy than CBSE. Learn chapter weighting, question patterns, and how to write answers that fetch full marks in TN board exams.',
@@ -82,7 +82,7 @@ const posts = [
     date: 'September 28, 2026',
     tags: ['TN State Board', 'Samacheer Kalvi', 'Class 12'],
     featured: false,
-    color: 'from-[#D4A017] to-amber-700',
+    color: 'from-amber-500 to-orange-500',
     icon: '🌴',
   },
   {
@@ -167,11 +167,11 @@ export default function BlogPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-              <BookOpen className="w-4 h-4 text-[#1A6B5A]" />
+              <BookOpen className="w-4 h-4 text-blue-600" />
               Study Tips · Exam Updates · Career Guidance
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Academic <span className="text-[#1A6B5A]">Insights &amp; Blog</span>
+              Academic <span className="text-blue-600">Insights &amp; Blog</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Expert articles from our educators on JEE, NEET, board exam strategies,
@@ -187,7 +187,7 @@ export default function BlogPage() {
               {categories.map((cat) => (
                 <button
                   key={cat.name}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors bg-gray-50 border border-gray-200 text-gray-600 hover:bg-[#1A6B5A]/10 hover:border-[#1A6B5A]/40 hover:text-[#1A6B5A]"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors bg-gray-50 border border-gray-200 text-gray-600 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600"
                 >
                   {cat.name}
                   <span className="bg-gray-200 text-gray-500 rounded-full px-1.5 py-0.5 text-[10px] font-bold">
@@ -228,7 +228,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="font-display font-bold text-gray-900 text-lg mb-3 group-hover:text-[#1A6B5A] transition-colors leading-snug">
+                    <h3 className="font-display font-bold text-gray-900 text-lg mb-3 group-hover:text-blue-600 transition-colors leading-snug">
                       {post.title}
                     </h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-2">
@@ -236,7 +236,7 @@ export default function BlogPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-gray-400">{post.date}</span>
-                      <span className="flex items-center gap-1 text-xs font-semibold text-[#1A6B5A] group-hover:gap-2 transition-all">
+                      <span className="flex items-center gap-1 text-xs font-semibold text-blue-600 group-hover:gap-2 transition-all">
                         Read More <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
@@ -254,7 +254,7 @@ export default function BlogPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group bg-white rounded-2xl border border-gray-100 p-5 hover:shadow-md hover:border-[#1A6B5A]/30 transition-all duration-300"
+                  className="group bg-white rounded-2xl border border-gray-100 p-5 hover:shadow-md hover:border-blue-400 transition-all duration-300"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xl">{post.icon}</span>
@@ -262,7 +262,7 @@ export default function BlogPage() {
                       {post.category}
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-gray-900 text-sm mb-2 leading-snug group-hover:text-[#1A6B5A] transition-colors line-clamp-2">
+                  <h3 className="font-display font-bold text-gray-900 text-sm mb-2 leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-xs text-gray-500 leading-relaxed mb-4 line-clamp-2">
@@ -305,12 +305,12 @@ export default function BlogPage() {
                 { label: 'TN Education News', url: 'https://www.tnschools.gov.in/', desc: 'Tamil Nadu board updates' },
               ].map((r) => (
                 <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer"
-                  className="bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-[#1A6B5A]/40 hover:shadow-sm transition-all group">
+                  className="bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-blue-400 hover:shadow-sm transition-all group">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors leading-snug flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-blue-600 transition-colors leading-snug flex-1">
                       {r.label}
                     </h3>
-                    <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-[#1A6B5A] shrink-0 mt-0.5 transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-blue-600 shrink-0 mt-0.5 transition-colors" />
                   </div>
                   <p className="text-xs text-gray-500">{r.desc}</p>
                 </a>
@@ -330,7 +330,7 @@ export default function BlogPage() {
               based on your board, class, and exam goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Create Free Account
               </Link>
               <Link href="/contact" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">

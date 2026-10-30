@@ -44,13 +44,13 @@ export default function JEEAdvancedPage() {
                 IIT Admission Pathway
               </span>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 leading-tight tracking-tight">
-                JEE Advanced <span className="text-[#1A6B5A]">Preparation</span>
+                JEE Advanced <span className="text-blue-600">Preparation</span>
               </h1>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 The gateway to the IITs — among the most challenging undergraduate engineering entrance examinations in India. Conducted by one of the IITs on a rotational basis. Only JEE Main qualifiers (top ~2.5 lakh) are eligible.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/register" className="btn bg-[#1A6B5A] text-white hover:bg-[#145346] px-7 py-3.5 rounded-xl font-bold shadow-md shadow-teal-900/10 inline-flex items-center gap-2 transition-colors">
+                <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 px-7 py-3.5 rounded-xl font-bold shadow-md shadow-blue-500/25 inline-flex items-center gap-2 transition-colors">
                   Start Preparation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/jee-main" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-7 py-3.5 rounded-xl font-semibold shadow-xs transition-colors">

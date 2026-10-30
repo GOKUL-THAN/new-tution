@@ -59,17 +59,17 @@ export default function NCERTSolutionsPage() {
             </nav>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <BookOpen className="w-4 h-4 text-[#1A6B5A]" />
+                <BookOpen className="w-4 h-4 text-blue-600" />
                 Classes 6–12 · All Subjects · NCERT Aligned
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                NCERT <span className="text-[#1A6B5A]">Solutions</span>
+                NCERT <span className="text-blue-600">Solutions</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Chapter-wise NCERT solutions for Classes 6–12. All solutions reference the official
                 NCERT textbooks. For the textbook PDFs, visit{' '}
                 <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer"
-                  className="text-[#1A6B5A] font-semibold hover:underline">ncert.nic.in</a>.
+                  className="text-blue-600 font-semibold hover:underline">ncert.nic.in</a>.
               </p>
             </div>
           </div>
@@ -103,9 +103,9 @@ export default function NCERTSolutionsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {classes.map((cls) => (
-                <div key={cls.num} className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#1A6B5A]/40 hover:shadow-md transition-all">
+                <div key={cls.num} className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-blue-400 hover:shadow-md transition-all">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1A6B5A] to-[#1A8A7A] flex items-center justify-center text-white font-display font-black text-lg shadow-md">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center text-white font-display font-black text-lg shadow-md">
                       {cls.num}
                     </div>
                     <div>
@@ -140,7 +140,7 @@ export default function NCERTSolutionsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularSolutions.map((sol) => (
-                <div key={`${sol.class}-${sol.subject}`} className="bg-gray-50 rounded-2xl border border-gray-100 p-5 hover:border-[#1A6B5A]/30 hover:shadow-sm transition-all">
+                <div key={`${sol.class}-${sol.subject}`} className="bg-gray-50 rounded-2xl border border-gray-100 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
                   <div className="flex items-center gap-3 mb-4">
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${subjectColors[sol.subject] ?? 'bg-gray-100 text-gray-600'}`}>
                       {sol.subject}
@@ -150,12 +150,12 @@ export default function NCERTSolutionsPage() {
                   <ul className="space-y-1.5">
                     {sol.chapters.slice(0, 6).map((ch) => (
                       <li key={ch} className="flex items-center gap-2 text-xs text-gray-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#1A6B5A] shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
                         {ch}
                       </li>
                     ))}
                     {sol.chapters.length > 6 && (
-                      <li className="text-xs text-[#1A6B5A] font-medium pl-3.5">
+                      <li className="text-xs text-blue-600 font-medium pl-3.5">
                         +{sol.chapters.length - 6} more chapters
                       </li>
                     )}
@@ -163,7 +163,7 @@ export default function NCERTSolutionsPage() {
                   <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
                     <Link
                       href={`/subjects/${sol.subject.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="text-xs text-[#1A6B5A] font-semibold hover:underline inline-flex items-center gap-1"
+                      className="text-xs text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"
                     >
                       View Solutions <ArrowRight className="w-3 h-3" />
                     </Link>

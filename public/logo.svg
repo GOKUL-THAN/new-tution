@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
   <!-- Open book base -->
-  <path d="M20 155 Q100 135 180 155 L185 175 Q100 158 15 175 Z" fill="#F5C518"/>
-  <path d="M100 138 L100 175" stroke="#D4A017" stroke-width="2"/>
-  <path d="M20 155 Q100 140 180 155" fill="none" stroke="#D4A017" stroke-width="1.5"/>
+  <path d="M20 155 Q100 135 180 155 L185 175 Q100 158 15 175 Z" fill="#38BDF8"/>
+  <path d="M100 138 L100 175" stroke="#0284C7" stroke-width="2"/>
+  <path d="M20 155 Q100 140 180 155" fill="none" stroke="#0284C7" stroke-width="1.5"/>
   <!-- Book pages left -->
-  <path d="M15 175 Q55 165 100 175 L100 138 Q60 128 18 140 Z" fill="#F5C518" opacity="0.9"/>
+  <path d="M15 175 Q55 165 100 175 L100 138 Q60 128 18 140 Z" fill="#38BDF8" opacity="0.9"/>
   <!-- Book pages right -->
-  <path d="M100 175 Q145 165 185 175 L182 140 Q140 128 100 138 Z" fill="#F9D85A" opacity="0.9"/>
+  <path d="M100 175 Q145 165 185 175 L182 140 Q140 128 100 138 Z" fill="#7DD3FC" opacity="0.9"/>
 
   <!-- Globe -->
-  <circle cx="100" cy="95" r="38" fill="none" stroke="#1A6B5A" stroke-width="2.5"/>
-  <ellipse cx="100" cy="95" rx="38" ry="20" fill="none" stroke="#1A6B5A" stroke-width="1.5"/>
-  <line x1="100" y1="57" x2="100" y2="133" stroke="#1A6B5A" stroke-width="1.5"/>
-  <ellipse cx="100" cy="95" rx="22" ry="38" fill="none" stroke="#1A6B5A" stroke-width="1.5"/>
+  <circle cx="100" cy="95" r="38" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+  <ellipse cx="100" cy="95" rx="38" ry="20" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <line x1="100" y1="57" x2="100" y2="133" stroke="#2563EB" stroke-width="1.5"/>
+  <ellipse cx="100" cy="95" rx="22" ry="38" fill="none" stroke="#2563EB" stroke-width="1.5"/>
   <!-- Globe gradient fill -->
   <circle cx="100" cy="95" r="37" fill="url(#globeGrad)" opacity="0.15"/>
   <defs>
     <linearGradient id="globeGrad" x1="70" y1="57" x2="130" y2="133" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F5C518"/>
-      <stop offset="100%" stop-color="#1A6B5A"/>
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
     <linearGradient id="stemGrad" x1="100" y1="140" x2="100" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1A6B5A"/>
-      <stop offset="100%" stop-color="#2ECC71"/>
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#10B981"/>
     </linearGradient>
     <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#F5C518"/>
-      <stop offset="100%" stop-color="#2ECC71"/>
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
     </linearGradient>
   </defs>
 
@@ -34,27 +34,27 @@
   <path d="M100 133 Q97 110 100 85 Q103 70 98 55" stroke="url(#stemGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
 
   <!-- Leaves left -->
-  <path d="M98 105 Q75 98 72 80 Q88 85 98 100 Z" fill="#F5C518" opacity="0.9"/>
-  <path d="M98 90 Q68 78 65 58 Q85 68 98 88 Z" fill="#2ECC71" opacity="0.85"/>
-  <path d="M98 75 Q76 62 80 42 Q95 55 99 73 Z" fill="#F5C518" opacity="0.8"/>
+  <path d="M98 105 Q75 98 72 80 Q88 85 98 100 Z" fill="#38BDF8" opacity="0.9"/>
+  <path d="M98 90 Q68 78 65 58 Q85 68 98 88 Z" fill="#10B981" opacity="0.85"/>
+  <path d="M98 75 Q76 62 80 42 Q95 55 99 73 Z" fill="#38BDF8" opacity="0.8"/>
   <!-- Leaves right -->
-  <path d="M102 105 Q125 98 128 80 Q112 85 102 100 Z" fill="#2ECC71" opacity="0.9"/>
-  <path d="M102 90 Q132 78 135 58 Q115 68 102 88 Z" fill="#F5C518" opacity="0.85"/>
-  <path d="M102 75 Q124 62 120 42 Q105 55 101 73 Z" fill="#2ECC71" opacity="0.8"/>
+  <path d="M102 105 Q125 98 128 80 Q112 85 102 100 Z" fill="#10B981" opacity="0.9"/>
+  <path d="M102 90 Q132 78 135 58 Q115 68 102 88 Z" fill="#38BDF8" opacity="0.85"/>
+  <path d="M102 75 Q124 62 120 42 Q105 55 101 73 Z" fill="#10B981" opacity="0.8"/>
 
   <!-- Graduation cap -->
-  <rect x="82" y="28" width="36" height="6" rx="2" fill="#1A6B5A"/>
-  <path d="M100 22 L122 30 L100 38 L78 30 Z" fill="#1A6B5A"/>
-  <line x1="122" y1="30" x2="122" y2="42" stroke="#1A6B5A" stroke-width="2"/>
-  <circle cx="122" cy="43" r="3" fill="#F5C518"/>
+  <rect x="82" y="28" width="36" height="6" rx="2" fill="#2563EB"/>
+  <path d="M100 22 L122 30 L100 38 L78 30 Z" fill="#2563EB"/>
+  <line x1="122" y1="30" x2="122" y2="42" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="122" cy="43" r="3" fill="#38BDF8"/>
 
   <!-- Person/student icon -->
-  <circle cx="68" cy="138" r="6" fill="#F5C518"/>
-  <path d="M62 155 Q65 145 68 143 Q71 145 74 155" fill="#F5C518" opacity="0.8"/>
+  <circle cx="68" cy="138" r="6" fill="#2563EB"/>
+  <path d="M62 155 Q65 145 68 143 Q71 145 74 155" fill="#2563EB" opacity="0.8"/>
 
   <!-- Dots decoration -->
-  <rect x="148" y="75" width="5" height="5" rx="1" fill="#1A6B5A" opacity="0.7"/>
-  <rect x="156" y="82" width="4" height="4" rx="1" fill="#1A6B5A" opacity="0.5"/>
-  <rect x="152" y="90" width="3" height="3" rx="1" fill="#1A6B5A" opacity="0.4"/>
-  <rect x="160" y="72" width="3" height="3" rx="1" fill="#F5C518" opacity="0.6"/>
+  <rect x="148" y="75" width="5" height="5" rx="1" fill="#2563EB" opacity="0.7"/>
+  <rect x="156" y="82" width="4" height="4" rx="1" fill="#2563EB" opacity="0.5"/>
+  <rect x="152" y="90" width="3" height="3" rx="1" fill="#2563EB" opacity="0.4"/>
+  <rect x="160" y="72" width="3" height="3" rx="1" fill="#38BDF8" opacity="0.6"/>
 </svg>

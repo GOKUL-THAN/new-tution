@@ -55,7 +55,7 @@ export default function BoardsPage() {
               National &amp; State Boards
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Education <span className="text-[#1A6B5A]">Boards</span>
+              Education <span className="text-blue-600">Boards</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Curriculum-aligned learning for every major Indian education board.

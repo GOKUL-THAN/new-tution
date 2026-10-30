@@ -104,11 +104,11 @@ export default function EntranceExamsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide text-center relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
-              <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
+              <GraduationCap className="w-4 h-4 text-blue-600" />
               National &amp; State Level Entrances
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Entrance Exam <span className="text-[#1A6B5A]">Preparation</span>
+              Entrance Exam <span className="text-blue-600">Preparation</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Structured preparation for India&apos;s top competitive examinations with mock tests,

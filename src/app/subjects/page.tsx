@@ -42,7 +42,7 @@ export default function SubjectsPage() {
               Subject Mastery
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Academic <span className="text-[#1A6B5A]">Subjects</span>
+              Academic <span className="text-blue-600">Subjects</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Deep-dive into any subject with expert-crafted content, practice problems, and live support.

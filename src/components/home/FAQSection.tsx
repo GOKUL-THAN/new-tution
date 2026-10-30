@@ -83,7 +83,7 @@ export default function FAQSection() {
           </div>
           <h2 className="section-title mb-4">
             Frequently Asked{' '}
-            <span className="bg-gradient-to-r from-[#1A6B5A] to-[#F5C518] bg-clip-text text-transparent">
+            <span className="text-blue-600">
               Questions
             </span>
           </h2>
@@ -96,10 +96,10 @@ export default function FAQSection() {
           {faqCategories.map((cat) => (
             <div key={cat.category}>
               {/* Category header */}
-              <h3 className="font-display font-bold text-[#1A6B5A] text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                <span className="h-px bg-[#1A6B5A]/20 flex-1" />
+              <h3 className="font-display font-bold text-blue-600 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                <span className="h-px bg-blue-100 flex-1" />
                 {cat.category}
-                <span className="h-px bg-[#1A6B5A]/20 flex-1" />
+                <span className="h-px bg-blue-100 flex-1" />
               </h3>
 
               <div className="space-y-3">
@@ -117,7 +117,7 @@ export default function FAQSection() {
                           {faq.q}
                         </span>
                         <ChevronDown
-                          className={`w-5 h-5 text-[#1A6B5A] shrink-0 transition-transform duration-200 ${
+                          className={`w-5 h-5 text-blue-600 shrink-0 transition-transform duration-200 ${
                             isOpen ? 'rotate-180' : ''
                           }`}
                         />
@@ -139,7 +139,7 @@ export default function FAQSection() {
           <p className="text-sm text-gray-500 mb-4">
             Still have questions? We&apos;re happy to help.
           </p>
-          <Link href="/contact" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248] inline-flex items-center gap-2">
+          <Link href="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 inline-flex items-center gap-2">
             Ask Us Anything
           </Link>
           <Link href="/faq" className="btn-secondary ml-3 inline-flex items-center gap-2">

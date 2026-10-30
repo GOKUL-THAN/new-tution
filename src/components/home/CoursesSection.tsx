@@ -14,7 +14,7 @@ const sampleCourses = [
     lessons: 52,
     duration: '70+ hours',
     isFree: false,
-    color: 'from-[#1A6B5A] to-teal-500',
+    color: 'from-blue-600 to-indigo-600',
   },
   {
     title: 'NEET Biology — Cell Biology & Genetics',
@@ -50,7 +50,7 @@ const sampleCourses = [
     lessons: 30,
     duration: '35+ hours',
     isFree: true,
-    color: 'from-[#D4A017] to-[#F5C518]',
+    color: 'from-amber-500 to-yellow-400',
   },
   {
     title: 'TN Class 12 Physics — Samacheer Kalvi',

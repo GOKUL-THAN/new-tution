@@ -58,7 +58,7 @@ export default function AdmissionsPage() {
               Admissions Open 2025–26
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Admissions & <span className="text-[#1A6B5A]">Enrolment</span>
+              Admissions & <span className="text-blue-600">Enrolment</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Simple, transparent, and student-first. Enrol in the programme that fits your academic goals and learning style.

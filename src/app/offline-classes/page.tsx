@@ -57,17 +57,17 @@ export default function OfflineClassesPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
-                <MapPin className="w-4 h-4 text-[#1A6B5A]" />
+                <MapPin className="w-4 h-4 text-blue-600" />
                 In-Person Centre · Chennai, Tamil Nadu
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
-                Offline Classroom <span className="text-[#1A6B5A]">Batches</span>
+                Offline Classroom <span className="text-blue-600">Batches</span>
               </h1>
               <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 For students who learn best in a classroom. Small batches, expert teachers, structured daily sessions, and a distraction-free environment — all at our centre.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/25 transition-colors">
                   Enquire Now <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/admissions" className="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-slate-50 shadow-xs transition-colors">

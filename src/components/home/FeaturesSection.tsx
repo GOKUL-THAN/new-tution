@@ -16,15 +16,15 @@ const features = [
     title: 'Live & Recorded Classes',
     desc: 'Interactive live sessions with expert teachers. All classes recorded for unlimited revision — just like Vedantu and PW.',
     tag: 'Live Learning',
-    color: 'bg-[#1A6B5A]',
-    tagColor: 'bg-[#1A6B5A]/10 text-[#1A6B5A]',
+    color: 'bg-blue-600',
+    tagColor: 'bg-blue-50 text-blue-700',
   },
   {
     icon: ClipboardCheck,
     title: 'Full-Length Mock Tests',
     desc: 'JEE/NEET pattern mocks with NTA-style interface, auto-scoring, rank prediction, and detailed analytics.',
     tag: 'Assessment',
-    color: 'bg-[#D4A017]',
+    color: 'bg-amber-500',
     tagColor: 'bg-amber-50 text-amber-700',
   },
   {
@@ -104,16 +104,16 @@ const features = [
     title: 'Tamil & English Support',
     desc: 'Content available in both English and Tamil — ideal for TN State Board and regional learners.',
     tag: 'Language',
-    color: 'bg-[#1A8A7A]',
-    tagColor: 'bg-[#1A6B5A]/10 text-[#1A6B5A]',
+    color: 'bg-sky-500',
+    tagColor: 'bg-sky-50 text-sky-700',
   },
   {
     icon: BookOpen,
     title: 'Multi-Board Content',
     desc: 'CBSE, ICSE, ISC, TN State Board, TN Matriculation — all syllabus-aligned in a single platform.',
     tag: 'Curriculum',
-    color: 'bg-[#1A6B5A]',
-    tagColor: 'bg-[#1A6B5A]/10 text-[#1A6B5A]',
+    color: 'bg-blue-600',
+    tagColor: 'bg-blue-50 text-blue-700',
   },
   {
     icon: Repeat,
@@ -164,12 +164,12 @@ export default function FeaturesSection() {
 
         {/* ── Header ──────────────────────────────────────────────── */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-[#1A6B5A]/10 text-[#1A6B5A] text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+          <span className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider border border-blue-200/60">
             Platform Features
           </span>
           <h2 className="section-title mb-4">
             Everything You Need to{' '}
-            <span className="bg-gradient-to-r from-[#1A6B5A] to-[#F5C518] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
               Excel
             </span>
           </h2>
@@ -182,10 +182,10 @@ export default function FeaturesSection() {
         {/* ── Two hero illustration cards ──────────────────────────── */}
         <div className="grid lg:grid-cols-2 gap-6 mb-14">
           {/* Live class card */}
-          <div className="rounded-3xl bg-gradient-to-br from-teal-50 via-emerald-50/50 to-teal-100/40 border border-teal-200 p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative shadow-sm">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-teal-400/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="rounded-3xl bg-gradient-to-br from-blue-50 via-indigo-50/30 to-sky-50 border border-blue-200 p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative shadow-sm">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-400/10 rounded-full blur-2xl pointer-events-none" />
             <div className="flex-1 text-left">
-              <span className="inline-block bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full mb-3 border border-teal-200/60">
+              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-3 border border-blue-200/60">
                 ● LIVE NOW
               </span>
               <h3 className="font-display font-bold text-slate-900 text-xl mb-2">
@@ -197,7 +197,7 @@ export default function FeaturesSection() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {['Live sessions','Recordings','Doubt chat','Whiteboard'].map((t) => (
-                  <span key={t} className="text-xs bg-teal-100/80 text-teal-900 font-semibold px-3 py-1 rounded-full border border-teal-200/60">{t}</span>
+                  <span key={t} className="text-xs bg-blue-100/80 text-blue-900 font-semibold px-3 py-1 rounded-full border border-blue-200/60">{t}</span>
                 ))}
               </div>
             </div>
@@ -207,22 +207,22 @@ export default function FeaturesSection() {
           </div>
 
           {/* Analytics card */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#fffbeb] to-[#fef3c7] border border-amber-200 p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative">
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#1A6B5A]/5 rounded-full blur-2xl" />
+          <div className="rounded-3xl bg-gradient-to-br from-sky-50 via-blue-50/40 to-slate-50 border border-blue-200 p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden relative shadow-sm">
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
             <div className="flex-1 text-left">
-              <span className="inline-block bg-[#1A6B5A]/10 text-[#1A6B5A] text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-3 border border-blue-200/60">
                 📊 ANALYTICS
               </span>
-              <h3 className="font-display font-bold text-[#0D2B3E] text-xl mb-2">
+              <h3 className="font-display font-bold text-slate-900 text-xl mb-2">
                 Smart Performance Dashboard
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">
                 Subject accuracy, score trends, rank prediction, and weak-topic detection.
                 Deeper insights than Embibe and Toppr — fully database-backed.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['Score trends','Weak topics','Rank predictor','Parent view'].map((t) => (
-                  <span key={t} className="text-xs bg-[#1A6B5A]/10 text-[#1A6B5A] px-3 py-1 rounded-full">{t}</span>
+                  <span key={t} className="text-xs bg-blue-100/80 text-blue-900 font-semibold px-3 py-1 rounded-full border border-blue-200/60">{t}</span>
                 ))}
               </div>
             </div>
@@ -237,7 +237,7 @@ export default function FeaturesSection() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="group border border-gray-100 rounded-2xl p-5 hover:border-[#1A6B5A]/30 hover:shadow-lg hover:shadow-[#1A6B5A]/5 transition-all duration-300 bg-white"
+              className="group border border-slate-200/80 rounded-2xl p-5 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/5 transition-all duration-300 bg-white"
             >
               <div className="flex items-start gap-4">
                 <div className={`w-11 h-11 rounded-xl ${f.color} flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform`}>
@@ -245,7 +245,7 @@ export default function FeaturesSection() {
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <h3 className="font-display font-bold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors">
+                    <h3 className="font-display font-bold text-gray-900 text-sm group-hover:text-blue-600 transition-colors">
                       {f.title}
                     </h3>
                     <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${f.tagColor}`}>

@@ -32,7 +32,7 @@ const answerKeyExams = [
     sessions: ['Paper 1', 'Paper 2'],
     officialUrl: 'https://jeeadv.ac.in/',
     pdfNote: 'IIT releases provisional and final answer keys at jeeadv.ac.in. Candidates can view marks after final key publication.',
-    color: 'bg-[#1A6B5A]',
+    color: 'bg-blue-600',
     bg: 'bg-teal-50 border-teal-200',
     icon: '🎓',
     keySteps: [
@@ -93,7 +93,7 @@ const answerKeyExams = [
     sessions: ['Class 10 SSLC', 'Class 11', 'Class 12 HSC'],
     officialUrl: 'https://www.dge.tn.gov.in/',
     pdfNote: 'TN DGE releases answer keys and model answer sheets after board examinations at dge.tn.gov.in.',
-    color: 'bg-[#D4A017]',
+    color: 'bg-amber-500',
     bg: 'bg-amber-50 border-amber-200',
     icon: '🌴',
     keySteps: [
@@ -146,11 +146,11 @@ export default function AnswerKeysPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <Key className="w-4 h-4 text-[#1A6B5A]" />
+                <Key className="w-4 h-4 text-blue-600" />
                 Official Examination Sources Only
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Answer Keys &amp; <span className="text-[#1A6B5A]">Solutions Directory</span>
+                Answer Keys &amp; <span className="text-blue-600">Solutions Directory</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Step-by-step guides to download official answer keys for JEE Main,
@@ -244,7 +244,7 @@ export default function AnswerKeysPage() {
               ].map((item) => (
                 <div key={item.step} className="bg-gray-50 rounded-2xl border border-gray-100 p-5">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl font-display font-black text-[#1A6B5A]/20">{item.step}</span>
+                    <span className="text-2xl font-display font-black text-blue-600/20">{item.step}</span>
                     <div>
                       <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
                       <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
@@ -266,7 +266,7 @@ export default function AnswerKeysPage() {
               Use our mock tests to practise in exam conditions and check your answers with server-side scoring.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/practice" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/practice" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Go to Practice Hub
               </Link>
               <Link href="/previous-year-papers" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">

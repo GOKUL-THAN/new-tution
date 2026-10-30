@@ -20,14 +20,14 @@ const boards = [
     name: 'ISC',
     fullName: 'Indian School Certificate',
     slug: 'isc',
-    color: 'from-[#1A6B5A] to-emerald-800',
+    color: 'from-blue-600 to-indigo-700',
     features: ['Pre-university preparation', 'Stream specialisation', 'Board exam readiness'],
   },
   {
     name: 'TN State Board',
     fullName: 'Tamil Nadu State Board / Samacheer Kalvi',
     slug: 'tn-state-board',
-    color: 'from-[#D4A017] to-amber-700',
+    color: 'from-amber-500 to-amber-700',
     features: ['Samacheer Kalvi syllabus', 'Tamil & English medium', 'Public exam preparation'],
   },
   {
@@ -82,7 +82,7 @@ export default function BoardsSection() {
               <ul className="space-y-2 mb-5">
                 {board.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                    <CheckCircle2 className="w-4 h-4 text-[#1A6B5A] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                     {f}
                   </li>
                 ))}

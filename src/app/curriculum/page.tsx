@@ -54,7 +54,7 @@ export default async function CurriculumPage() {
                 Syllabus-Aligned Architecture
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-                Our <span className="text-[#1A6B5A]">Curriculum</span>
+                Our <span className="text-blue-600">Curriculum</span>
               </h1>
               <p className="text-lg text-slate-600 leading-relaxed">
                 Structured learning across all major Indian school boards and competitive entrance exams. Each subject follows an official syllabus-aligned hierarchy from board to chapter.

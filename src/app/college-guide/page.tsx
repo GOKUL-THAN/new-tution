@@ -20,7 +20,7 @@ const engineeringColleges = [
     counselling: 'https://josaa.admissions.nic.in/',
     highlight: 'Nearest IIT to Chennai. Ranked #1 in NIRF Engineering 2024.',
     courses: ['B.Tech', 'B.Tech + M.Tech Dual', 'BS', 'MA'],
-    color: 'bg-[#1A6B5A]',
+    color: 'bg-blue-600',
   },
   {
     name: 'IIT Bombay',
@@ -170,7 +170,7 @@ const counsellingProcesses = [
       'Accept seat, pay fees, and report to institution',
     ],
     url: 'https://josaa.admissions.nic.in/',
-    color: 'bg-[#1A6B5A]',
+    color: 'bg-blue-600',
   },
   {
     title: 'MCC — For MBBS/BDS (AIQ)',
@@ -194,7 +194,7 @@ const counsellingProcesses = [
       'Seat allotted based on marks — no separate entrance exam for most seats',
     ],
     url: 'https://www.tneaonline.org/',
-    color: 'bg-[#D4A017]',
+    color: 'bg-amber-500',
   },
   {
     title: 'TN Medical Counselling',
@@ -226,11 +226,11 @@ export default function CollegeGuidePage() {
             </nav>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
+                <GraduationCap className="w-4 h-4 text-blue-600" />
                 IITs · NITs · AIIMS · TN Colleges &amp; Counselling
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Higher Education <span className="text-[#1A6B5A]">College Guide</span>
+                Higher Education <span className="text-blue-600">College Guide</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Discover top engineering and medical colleges in India and Tamil Nadu.
@@ -286,7 +286,7 @@ export default function CollegeGuidePage() {
 
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xs text-gray-500">Entrance:</span>
-                      <span className="text-xs font-semibold text-[#1A6B5A] bg-[#1A6B5A]/10 px-2 py-0.5 rounded-full">{col.entrance}</span>
+                      <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">{col.entrance}</span>
                     </div>
 
                     <div className="mb-4">
@@ -300,11 +300,11 @@ export default function CollegeGuidePage() {
 
                     <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                       <a href={col.website} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-[#1A6B5A] font-semibold hover:underline">
+                        className="flex items-center gap-1 text-xs text-blue-600 font-semibold hover:underline">
                         Official Site <ExternalLink className="w-3 h-3" />
                       </a>
                       <a href={col.counselling} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-gray-500 hover:text-[#1A6B5A] hover:underline">
+                        className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-600 hover:underline">
                         Counselling <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
@@ -354,11 +354,11 @@ export default function CollegeGuidePage() {
                     </div>
                     <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                       <a href={col.website} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-[#1A6B5A] font-semibold hover:underline">
+                        className="flex items-center gap-1 text-xs text-blue-600 font-semibold hover:underline">
                         Official Site <ExternalLink className="w-3 h-3" />
                       </a>
                       <a href={col.counselling} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-gray-500 hover:text-[#1A6B5A] hover:underline">
+                        className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-600 hover:underline">
                         Counselling <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
@@ -391,7 +391,7 @@ export default function CollegeGuidePage() {
                     ))}
                   </ol>
                   <a href={proc.url} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A6B5A] hover:underline">
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:underline">
                     Official Portal <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
@@ -410,7 +410,7 @@ export default function CollegeGuidePage() {
               Practise with full-length mock tests, DPPs, and our rank predictor to estimate your target college.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/jee" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">JEE Preparation</Link>
+              <Link href="/jee" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">JEE Preparation</Link>
               <Link href="/neet" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">NEET Preparation</Link>
               <Link href="/career-paths" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">Career Paths <ArrowRight className="w-4 h-4 ml-1" /></Link>
             </div>

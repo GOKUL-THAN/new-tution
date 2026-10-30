@@ -74,7 +74,7 @@ export default function FAQPage() {
               Help &amp; Support Centre
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Frequently Asked <span className="text-[#1A6B5A]">Questions</span>
+              Frequently Asked <span className="text-blue-600">Questions</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Find answers to common questions about courses, boards, exams, pricing, and admissions.

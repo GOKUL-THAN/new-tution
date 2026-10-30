@@ -63,7 +63,7 @@ const officialLinks = [
   { label: 'NCERT Exemplar Problems', url: 'https://ncert.nic.in/exemplar-problems.php', source: 'ncert.nic.in', color: 'bg-blue-500' },
   { label: 'DIKSHA Digital Textbooks', url: 'https://diksha.gov.in/', source: 'diksha.gov.in', color: 'bg-emerald-600' },
   { label: 'CBSE Sample Papers', url: 'https://cbseacademic.nic.in/SQP.html', source: 'cbseacademic.nic.in', color: 'bg-orange-500' },
-  { label: 'TN Board Textbooks', url: 'https://www.tnschools.gov.in/textbooks', source: 'tnschools.gov.in', color: 'bg-[#D4A017]' },
+  { label: 'TN Board Textbooks', url: 'https://www.tnschools.gov.in/textbooks', source: 'tnschools.gov.in', color: 'bg-amber-500' },
   { label: 'NTA Abhyas (Free Mocks)', url: 'https://abhyas.nta.ac.in/', source: 'abhyas.nta.ac.in', color: 'bg-violet-600' },
   { label: 'JEE Previous Papers', url: 'https://jeemain.nta.nic.in/', source: 'jeemain.nta.nic.in', color: 'bg-indigo-600' },
   { label: 'NEET Previous Papers', url: 'https://neet.nta.nic.in/', source: 'neet.nta.nic.in', color: 'bg-teal-600' },
@@ -72,11 +72,11 @@ const officialLinks = [
 /* ── PYQ section ─────────────────────────────────────────────────────── */
 const pyqExams = [
   { name: 'JEE Main PYQs', years: '2017–2025', url: 'https://jeemain.nta.nic.in/', color: 'bg-violet-600' },
-  { name: 'JEE Advanced PYQs', years: '2007–2024', url: 'https://jeeadv.ac.in/', color: 'bg-[#1A6B5A]' },
+  { name: 'JEE Advanced PYQs', years: '2007–2024', url: 'https://jeeadv.ac.in/', color: 'bg-blue-600' },
   { name: 'NEET UG PYQs', years: '2013–2024', url: 'https://neet.nta.nic.in/', color: 'bg-emerald-600' },
   { name: 'CBSE Class 10 Papers', years: '2018–2025', url: 'https://cbseacademic.nic.in/SQP.html', color: 'bg-orange-500' },
   { name: 'CBSE Class 12 Papers', years: '2018–2025', url: 'https://cbseacademic.nic.in/SQP.html', color: 'bg-red-600' },
-  { name: 'TN Board Papers', years: '2017–2024', url: 'https://www.tnschools.gov.in/', color: 'bg-[#D4A017]' },
+  { name: 'TN Board Papers', years: '2017–2024', url: 'https://www.tnschools.gov.in/', color: 'bg-amber-500' },
 ];
 
 export default function FreeResourcesPage() {
@@ -89,11 +89,11 @@ export default function FreeResourcesPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-              <Download className="w-4 h-4 text-[#1A6B5A]" />
+              <Download className="w-4 h-4 text-blue-600" />
               100% Free · Open Academic Resources
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-              Free Learning <span className="text-[#1A6B5A]">Resources</span>
+              Free Learning <span className="text-blue-600">Resources</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Notes, worksheets, formula sheets, previous year papers, and curated
@@ -113,7 +113,7 @@ export default function FreeResourcesPage() {
                 { label: 'Official Links', href: '#official-links', icon: Globe },
               ].map((tab) => (
                 <a key={tab.label} href={tab.href}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-50 border border-gray-200 text-sm font-medium text-gray-700 hover:bg-[#1A6B5A]/10 hover:border-[#1A6B5A]/40 hover:text-[#1A6B5A] transition-all">
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-50 border border-gray-200 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600 transition-all">
                   <tab.icon className="w-4 h-4" />
                   {tab.label}
                 </a>
@@ -129,7 +129,7 @@ export default function FreeResourcesPage() {
             <p className="text-gray-500 mb-10">Download notes, worksheets, and practice sets for Classes 6–12.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
               {categories.map((cat) => (
-                <div key={cat.label} className="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:shadow-md hover:border-[#1A6B5A]/30 transition-all">
+                <div key={cat.label} className="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:shadow-md hover:border-blue-400 transition-all">
                   <div className={`w-14 h-14 rounded-2xl ${cat.color} flex items-center justify-center mx-auto mb-4`}>
                     <cat.icon className="w-7 h-7" />
                   </div>
@@ -141,14 +141,14 @@ export default function FreeResourcesPage() {
 
             {/* DB-backed resources placeholder */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8 text-center">
-              <BookOpen className="w-12 h-12 text-[#1A6B5A]/30 mx-auto mb-4" />
+              <BookOpen className="w-12 h-12 text-blue-600/30 mx-auto mb-4" />
               <h3 className="font-display font-bold text-gray-900 mb-2">Resources Coming Soon</h3>
               <p className="text-gray-500 text-sm mb-6 max-w-md mx-auto">
                 Our team is preparing high-quality study materials. Register to get notified
                 when new resources are added, or browse our courses for full content access.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/register" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248] text-sm">Get Notified</Link>
+                <Link href="/register" className="btn-primary bg-blue-600 hover:bg-blue-700 text-sm">Get Notified</Link>
                 <Link href="/courses" className="btn-secondary text-sm">Browse Courses</Link>
               </div>
             </div>
@@ -204,19 +204,19 @@ export default function FreeResourcesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
               {pyqExams.map((exam) => (
                 <a key={exam.name} href={exam.url} target="_blank" rel="noopener noreferrer"
-                  className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#1A6B5A]/40 hover:shadow-md transition-all group flex items-center justify-between">
+                  className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-blue-400 hover:shadow-md transition-all group flex items-center justify-between">
                   <div>
                     <div className={`w-2 h-2 rounded-full ${exam.color} mb-2`} />
-                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors">{exam.name}</h3>
+                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-blue-600 transition-colors">{exam.name}</h3>
                     <p className="text-xs text-gray-500 mt-0.5">{exam.years}</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-[#1A6B5A] shrink-0 transition-colors" />
+                  <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-blue-600 shrink-0 transition-colors" />
                 </a>
               ))}
             </div>
 
             <div className="text-center">
-              <Link href="/previous-year-papers" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248] inline-flex items-center gap-2">
+              <Link href="/previous-year-papers" className="btn-primary bg-blue-600 hover:bg-blue-700 inline-flex items-center gap-2">
                 Full PYQ Guide <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -234,11 +234,11 @@ export default function FreeResourcesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
               {officialLinks.map((r) => (
                 <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer"
-                  className="bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-[#1A6B5A]/40 hover:shadow-sm transition-all group">
+                  className="bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-blue-400 hover:shadow-sm transition-all group">
                   <div className={`w-8 h-8 rounded-lg ${r.color} flex items-center justify-center mb-3`}>
                     <Globe className="w-4 h-4 text-white" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 text-xs mb-1 group-hover:text-[#1A6B5A] transition-colors leading-snug">
+                  <h3 className="font-semibold text-gray-900 text-xs mb-1 group-hover:text-blue-600 transition-colors leading-snug">
                     {r.label}
                   </h3>
                   <p className="text-[10px] text-gray-400 truncate">{r.source}</p>
@@ -255,7 +255,7 @@ export default function FreeResourcesPage() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-[#1A6B5A]/10">
+        <section className="section-padding bg-blue-50">
           <div className="container-wide text-center">
             <h2 className="text-2xl font-display font-bold text-gray-900 mb-4">
               Want Access to All Premium Resources?
@@ -264,7 +264,7 @@ export default function FreeResourcesPage() {
               Enrol in a course to unlock chapter-wise notes, video lessons, DPPs, and unlimited mock tests.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/courses" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248]">Browse Courses</Link>
+              <Link href="/courses" className="btn-primary bg-blue-600 hover:bg-blue-700">Browse Courses</Link>
               <Link href="/practice" className="btn-secondary">Practice Hub</Link>
             </div>
           </div>

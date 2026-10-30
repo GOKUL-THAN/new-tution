@@ -90,7 +90,7 @@ const streams = [
   {
     stream: 'Commerce & Management',
     icon: '💼',
-    color: 'from-[#D4A017] to-amber-500',
+    color: 'from-amber-500 to-orange-500',
     bg: 'bg-amber-50 border-amber-200',
     subjects: 'Accountancy + Business Studies + Economics + Maths',
     topExam: 'CUET UG / CA Foundation',
@@ -186,7 +186,7 @@ export default function CareerPathsPage() {
                 After Class 12 — Your Path Forward
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Career <span className="text-[#1A6B5A]">Pathways &amp; Guidance</span>
+                Career <span className="text-blue-600">Pathways &amp; Guidance</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 From Engineering to Medicine, Commerce to Law — understand every pathway,
@@ -227,7 +227,7 @@ export default function CareerPathsPage() {
                       <p className="text-sm text-gray-600 mt-1">
                         <strong>Core subjects:</strong> {stream.subjects}
                       </p>
-                      <p className="text-sm text-[#1A6B5A] font-semibold mt-0.5">
+                      <p className="text-sm text-blue-600 font-semibold mt-0.5">
                         Main entrance: {stream.topExam}
                       </p>
                     </div>
@@ -254,19 +254,19 @@ export default function CareerPathsPage() {
 
                         <div className="bg-gray-50 rounded-xl p-3 mb-4 border border-gray-100">
                           <div className="flex items-start gap-2">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#1A6B5A] shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                             <p className="text-xs text-gray-700"><strong>Outcome:</strong> {path.outcome}</p>
                           </div>
                         </div>
 
                         <div className="flex items-center gap-4">
                           <a href={path.examUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs text-[#1A6B5A] font-semibold hover:underline">
+                            className="inline-flex items-center gap-1 text-xs text-blue-600 font-semibold hover:underline">
                             Exam Portal <ExternalLink className="w-3 h-3" />
                           </a>
                           {path.counsellingUrl !== path.examUrl && (
                             <a href={path.counsellingUrl} target="_blank" rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-[#1A6B5A] hover:underline">
+                              className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-blue-600 hover:underline">
                               Counselling <ExternalLink className="w-3 h-3" />
                             </a>
                           )}
@@ -291,7 +291,7 @@ export default function CareerPathsPage() {
               and get a personalised study plan.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/diagnostic-test" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/diagnostic-test" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Take Free Diagnostic Test
               </Link>
               <Link href="/college-guide" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">

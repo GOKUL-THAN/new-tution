@@ -237,7 +237,7 @@ export default async function SubjectDetailPage({ params, searchParams }: PagePr
               </Link>
               <div className="text-5xl mb-4">{subject.icon}</div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-2 tracking-tight">
-                {subject.name} <span className="text-[#1A6B5A]">Curriculum</span>
+                {subject.name} <span className="text-blue-600">Curriculum</span>
               </h1>
               <p className="text-sm font-semibold text-slate-500 mb-3">
                 {selectedBoard
@@ -248,7 +248,7 @@ export default async function SubjectDetailPage({ params, searchParams }: PagePr
               <div className="flex flex-wrap gap-4">
                 <Link
                   href={courseHref}
-                  className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/25 transition-colors"
                 >
                   Browse {subject.name} Courses <ArrowRight className="w-4 h-4" />
                 </Link>

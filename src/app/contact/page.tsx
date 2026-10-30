@@ -55,7 +55,7 @@ export default function ContactPage() {
               Admissions &amp; Academic Inquiries
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Get in <span className="text-[#1A6B5A]">Touch</span>
+              Get in <span className="text-blue-600">Touch</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               Have questions about our programmes? Submit an enquiry and our team will get back to you promptly.

@@ -108,11 +108,11 @@ export default function PracticePage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <Zap className="w-4 h-4 text-[#1A6B5A]" />
+                <Zap className="w-4 h-4 text-blue-600" />
                 Daily Practice · Chapter Drills · Speed Tests
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Practice <span className="text-[#1A6B5A]">Hub</span>
+                Practice <span className="text-blue-600">Hub</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Quick daily practice for JEE, NEET, and board exam preparation.
@@ -120,7 +120,7 @@ export default function PracticePage() {
                 all with instant scoring, error notebooks, and performance analysis.
               </p>
               <div className="flex flex-wrap gap-4 mt-6">
-                <Link href="/register" className="btn !bg-[#1A6B5A] !text-white hover:!bg-[#145346] font-bold px-8 py-3.5 shadow-md shadow-teal-900/10 transition-colors">
+                <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3.5 shadow-md shadow-blue-500/25 transition-colors">
                   Start Practising Free
                 </Link>
                 <Link href="/student/tests" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-8 py-3.5 font-semibold shadow-xs transition-colors">
@@ -141,7 +141,7 @@ export default function PracticePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {practiceTypes.map((p) => (
-                <div key={p.title} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-[#1A6B5A]/30 transition-all group">
+                <div key={p.title} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-400 transition-all group">
                   {/* Top bar */}
                   <div className={`${p.color} px-5 py-4 flex items-center justify-between`}>
                     <div className="flex items-center gap-3">
@@ -164,13 +164,13 @@ export default function PracticePage() {
                     <ul className="space-y-1.5 mb-5">
                       {p.features.map((f) => (
                         <li key={f} className="flex items-center gap-2 text-xs text-gray-600">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#1A6B5A] shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                           {f}
                         </li>
                       ))}
                     </ul>
                     <Link href={p.link}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1A6B5A] group-hover:underline">
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:underline">
                       Start Practice <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
@@ -189,11 +189,11 @@ export default function PracticePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {subjects.map((s) => (
                 <Link key={s.name} href={`/subjects/${s.slug}`}
-                  className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-[#1A6B5A]/40 hover:shadow-sm transition-all group">
+                  className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-blue-400 hover:shadow-sm transition-all group">
                   <div className={`w-10 h-10 rounded-xl ${s.color} flex items-center justify-center mb-3`}>
                     <BookOpen className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-[#1A6B5A] transition-colors">
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">
                     {s.name}
                   </h3>
                   <div className="flex items-center justify-between text-xs text-gray-500">
@@ -229,7 +229,7 @@ export default function PracticePage() {
                   Create a free account to access all practice modes, save your progress, and track improvement.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-6 py-2.5 text-sm shadow-md shadow-amber-500/20">
+                  <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-6 py-2.5 text-sm shadow-md shadow-blue-500/25">
                     Create Free Account
                   </Link>
                   <Link href="/diagnostic-test" className="btn bg-white border border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-6 py-2.5 text-sm">

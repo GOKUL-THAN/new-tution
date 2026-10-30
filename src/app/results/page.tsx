@@ -60,7 +60,7 @@ const examResults = [
   {
     exam: 'TN State Board Class 12 — 2025',
     authority: 'Tamil Nadu DGE',
-    color: 'from-[#D4A017] to-amber-600',
+    color: 'from-amber-500 to-orange-500',
     bg: 'bg-amber-50 border-amber-200',
     icon: '🌴',
     highlights: [
@@ -109,11 +109,11 @@ export default function ResultsPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <Trophy className="w-4 h-4 text-[#1A6B5A]" />
+                <Trophy className="w-4 h-4 text-blue-600" />
                 JEE · NEET · CBSE · TN Board Benchmarks
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Results &amp; <span className="text-[#1A6B5A]">Achievements</span>
+                Results &amp; <span className="text-blue-600">Achievements</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Our preparation approach is built around helping every student reach their
@@ -165,7 +165,7 @@ export default function ResultsPage() {
                   <div className="space-y-3 mb-6">
                     {exam.highlights.map((h) => (
                       <div key={h.stat} className="flex items-start gap-3 bg-white rounded-xl p-3 border border-white">
-                        <CheckCircle2 className="w-4 h-4 text-[#1A6B5A] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                         <div>
                           <span className="font-bold text-gray-900 text-sm">{h.stat}</span>
                           <span className="text-gray-500 text-sm"> — {h.desc}</span>
@@ -195,7 +195,7 @@ export default function ResultsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievementBadges.map((badge) => (
-                <div key={badge.title} className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#1A6B5A]/30 hover:shadow-md transition-all">
+                <div key={badge.title} className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-400 hover:shadow-md transition-all">
                   <div className="text-4xl mb-4">{badge.icon}</div>
                   <h3 className="font-display font-bold text-gray-900 mb-2">{badge.title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed">{badge.desc}</p>
@@ -228,7 +228,7 @@ export default function ResultsPage() {
                     — Placeholder: Replace with real verified results before launch
                   </p>
                 </div>
-                <Link href="/contact" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248] inline-flex items-center gap-2">
+                <Link href="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 inline-flex items-center gap-2">
                   Share Your Success Story <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -241,7 +241,7 @@ export default function ResultsPage() {
                 {preparationPhilosophy.map((item) => (
                   <div key={item.title} className="bg-white rounded-2xl border border-gray-100 p-5">
                     <div className="flex items-start gap-3">
-                      <Star className="w-5 h-5 text-[#F5C518] shrink-0 mt-0.5" />
+                      <Star className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                       <div>
                         <h4 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h4>
                         <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
@@ -278,7 +278,7 @@ export default function ResultsPage() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Start Your Preparation
               </Link>
             </div>

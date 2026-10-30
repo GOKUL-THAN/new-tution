@@ -15,9 +15,9 @@ const batches = [
     name: 'Foundation Batch',
     tag: 'Classes 6–10',
     tagColor: 'bg-blue-100 text-blue-700',
-    color: 'from-[#1A6B5A] to-teal-500',
-    border: 'border-[#1A6B5A]',
-    accentBg: 'bg-[#1A6B5A]/5',
+    color: 'from-blue-600 to-indigo-600',
+    border: 'border-blue-500',
+    accentBg: 'bg-blue-50/50',
     icon: BookOpen,
     desc: 'Build unshakeable subject foundations for Classes 6–10. Aligned to CBSE, ICSE, TN State Board, and Matriculation. Prepares students for Class 10 board exams and lays the groundwork for JEE/NEET.',
     duration: 'Full academic year (June – March)',
@@ -143,8 +143,8 @@ const batches = [
   {
     name: 'Board Excellence Batch',
     tag: 'Classes 9–12',
-    tagColor: 'bg-[#D4A017]/20 text-[#D4A017]',
-    color: 'from-[#D4A017] to-amber-500',
+    tagColor: 'bg-amber-50 text-amber-700',
+    color: 'from-amber-500 to-orange-500',
     border: 'border-amber-400',
     accentBg: 'bg-amber-50',
     icon: BookOpen,
@@ -178,11 +178,11 @@ export default function BatchesPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <Users className="w-4 h-4 text-[#1A6B5A]" />
+                <Users className="w-4 h-4 text-blue-600" />
                 Find the Right Programme
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Batches &amp; <span className="text-[#1A6B5A]">Programmes</span>
+                Batches &amp; <span className="text-blue-600">Programmes</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Six structured programmes — Foundation, JEE Achiever, NEET Achiever,
@@ -190,7 +190,7 @@ export default function BatchesPage() {
                 Batch sizes capped for personalised attention.
               </p>
               <div className="flex flex-wrap gap-4 mt-6">
-                <Link href="/contact" className="btn !bg-[#1A6B5A] !text-white hover:!bg-[#145346] font-bold px-8 py-3 shadow-md shadow-teal-900/10">
+                <Link href="/contact" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                   Book Free Counselling
                 </Link>
                 <Link href="/admissions" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 px-8 py-3 shadow-xs">
@@ -212,7 +212,7 @@ export default function BatchesPage() {
                 <div key={batch.name}
                   className={`bg-white rounded-2xl border-2 ${batch.border} overflow-hidden hover:shadow-lg transition-shadow relative`}>
                   {batch.highlight && (
-                    <div className="absolute top-4 right-4 bg-[#F5C518] text-[#0D2B3E] text-xs font-black px-3 py-1 rounded-full z-10">
+                    <div className="absolute top-4 right-4 bg-amber-400 text-slate-900 text-xs font-black px-3 py-1 rounded-full z-10">
                       MOST POPULAR
                     </div>
                   )}
@@ -236,7 +236,7 @@ export default function BatchesPage() {
                         { icon: Users, label: batch.classSize },
                       ].map(({ icon: Icon, label }) => (
                         <div key={label} className="flex items-center gap-2 text-xs text-gray-700">
-                          <Icon className="w-3.5 h-3.5 text-[#1A6B5A] shrink-0" />
+                          <Icon className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                           {label}
                         </div>
                       ))}
@@ -246,12 +246,12 @@ export default function BatchesPage() {
                     <ul className="space-y-1.5 mb-4">
                       {batch.features.slice(0, 5).map((f) => (
                         <li key={f} className="flex items-start gap-2 text-xs text-gray-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#1A6B5A] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                           {f}
                         </li>
                       ))}
                       {batch.features.length > 5 && (
-                        <li className="text-xs text-[#1A6B5A] font-medium pl-5">
+                        <li className="text-xs text-blue-600 font-medium pl-5">
                           +{batch.features.length - 5} more features
                         </li>
                       )}
@@ -262,7 +262,7 @@ export default function BatchesPage() {
                       <p className="text-xs text-gray-500"><strong className="text-gray-700">Ideal for:</strong> {batch.ideal}</p>
                     </div>
 
-                    <Link href="/contact" className="btn-primary w-full text-center !bg-[#1A6B5A] hover:!bg-[#145248] text-sm">
+                    <Link href="/contact" className="btn-primary w-full text-center bg-blue-600 hover:bg-blue-700 text-sm">
                       Enquire About This Batch <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </Link>
                   </div>
@@ -321,7 +321,7 @@ export default function BatchesPage() {
               help you choose the right programme based on your current level and goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/contact" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Book Free Counselling
               </Link>
               <Link href="/diagnostic-test" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">

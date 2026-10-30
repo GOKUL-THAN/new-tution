@@ -151,18 +151,18 @@ export default async function BoardDetailPage({ params }: PageProps) {
                 ← All Boards
               </Link>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-4 shadow-xs">
-                <GraduationCap className="w-4 h-4 text-[#1A6B5A]" />
+                <GraduationCap className="w-4 h-4 text-blue-600" />
                 {classRange}
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-2 tracking-tight">
-                {board.name} <span className="text-[#1A6B5A]">Curriculum</span>
+                {board.name} <span className="text-blue-600">Curriculum</span>
               </h1>
               <p className="text-base text-slate-500 font-semibold mb-3">{board.fullName}</p>
               <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">{board.description}</p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href={`/courses?board=${board.slug}`}
-                  className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/25 transition-colors"
                 >
                   Browse {board.name} Courses <ArrowRight className="w-4 h-4" />
                 </Link>

@@ -23,8 +23,8 @@ export default function GMALogo({
   dark = false,
 }: GMALogoProps) {
   const { img, titleClass, subClass } = sizes[size];
-  const titleCol = dark ? 'text-white' : 'text-[#0D2B3E]';
-  const subCol = dark ? 'text-[#F5C518]' : 'text-[#1A6B5A]';
+  const titleCol = dark ? 'text-white' : 'text-slate-900';
+  const subCol = dark ? 'text-sky-300' : 'text-blue-600';
 
   const content = (
     <span className={`flex items-center gap-2 group ${className}`}>

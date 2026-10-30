@@ -25,7 +25,7 @@ const paperCategories = [
   },
   {
     category: 'JEE Advanced — Previous Year Papers',
-    color: 'bg-[#1A6B5A]',
+    color: 'bg-blue-600',
     bg: 'border-teal-200 bg-teal-50',
     icon: '🎓',
     description: 'JEE Advanced papers from 2007–2024. Includes Paper 1 and Paper 2, both in English and Hindi.',
@@ -73,7 +73,7 @@ const paperCategories = [
   },
   {
     category: 'Tamil Nadu State Board Papers',
-    color: 'bg-[#D4A017]',
+    color: 'bg-amber-500',
     bg: 'border-amber-200 bg-amber-50',
     icon: '🌴',
     description: 'Tamil Nadu Class 10 (SSLC) and Class 12 board question papers in Tamil and English medium.',
@@ -112,11 +112,11 @@ export default function PreviousYearPapersPage() {
             </nav>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <FileText className="w-4 h-4 text-[#1A6B5A]" />
+                <FileText className="w-4 h-4 text-blue-600" />
                 JEE · NEET · CBSE · TN Board Archive
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Previous Year <span className="text-[#1A6B5A]">Question Papers</span>
+                Previous Year <span className="text-blue-600">Question Papers</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Practice with actual board and entrance exam question papers.
@@ -127,7 +127,7 @@ export default function PreviousYearPapersPage() {
         </section>
 
         {/* Why PYQs matter */}
-        <section className="bg-[#F5C518]/10 border-b border-[#F5C518]/30">
+        <section className="bg-blue-50/60 border-b border-blue-200/50">
           <div className="container-wide py-5">
             <div className="flex flex-wrap items-center justify-around gap-4 text-sm text-center">
               {[
@@ -137,7 +137,7 @@ export default function PreviousYearPapersPage() {
                 { stat: 'Free', label: 'All PYQs officially available from NTA and CBSE websites' },
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-3">
-                  <span className="text-2xl font-display font-black text-[#D4A017]">{s.stat}</span>
+                  <span className="text-2xl font-display font-black text-amber-600">{s.stat}</span>
                   <span className="text-gray-600 text-xs max-w-[140px] text-left leading-snug">{s.label}</span>
                 </div>
               ))}
@@ -167,7 +167,7 @@ export default function PreviousYearPapersPage() {
                         <ul className="space-y-1">
                           {cat.subjectBreakdown.map((s) => (
                             <li key={s} className="flex items-center gap-2 text-xs text-gray-700">
-                              <span className="w-1.5 h-1.5 rounded-full bg-[#1A6B5A] shrink-0" />
+                              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
                               {s}
                             </li>
                           ))}
@@ -225,11 +225,11 @@ export default function PreviousYearPapersPage() {
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-[#1A6B5A]/40 hover:shadow-md transition-all group"
+                  className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-blue-400 hover:shadow-md transition-all group"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors">{r.label}</h3>
-                    <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-[#1A6B5A] shrink-0 mt-0.5 transition-colors" />
+                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-blue-600 transition-colors">{r.label}</h3>
+                    <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-blue-600 shrink-0 mt-0.5 transition-colors" />
                   </div>
                   <p className="text-xs text-gray-500 leading-relaxed">{r.desc}</p>
                 </a>
@@ -252,7 +252,7 @@ export default function PreviousYearPapersPage() {
               server-side scoring, rank predictor, and detailed question analysis.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/register" className="btn !bg-[#F5C518] !text-[#0D2B3E] font-bold px-8 py-3 shadow-md shadow-amber-500/20">
+              <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 font-bold px-8 py-3 shadow-md shadow-blue-500/25">
                 Start Free Mock Test
               </Link>
               <Link href="/entrance-exams" className="btn bg-white border-2 border-slate-300 text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-3">

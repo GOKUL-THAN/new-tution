@@ -79,16 +79,16 @@ export default function Footer() {
                 className="transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col leading-none">
-                <span className="font-display font-black text-lg text-[#0D2B3E] uppercase tracking-wide">
+                <span className="font-display font-black text-lg text-slate-900 uppercase tracking-wide">
                   GLOBAL MINDS
                 </span>
-                <span className="text-[10px] uppercase tracking-widest font-bold text-[#1A6B5A]">
+                <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600">
                   BUILD SKILLS | OWN THE FUTURE
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-slate-600 mb-6 max-w-xs leading-relaxed">
+            <p className="text-sm text-slate-600 mb-6 max-w-xs leading-relaxed font-normal">
               Comprehensive education platform for Indian students — school tuition,
               competitive exam preparation, and personalised learning.
               Serving students across Tamil Nadu and India.
@@ -96,22 +96,22 @@ export default function Footer() {
 
             {/* Contact details (from globalmindsacademy.in) */}
             <div className="space-y-2.5 text-sm">
-              <div className="flex items-start gap-3 text-slate-600">
-                <MapPin className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 text-slate-600 font-medium">
+                <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>Perumbakkam, Chennai, Tamil Nadu, India</span>
               </div>
               <a
                 href="mailto:info@globalmindsacademy.in"
-                className="flex items-center gap-3 text-slate-600 hover:text-teal-700 font-medium transition-colors"
+                className="flex items-center gap-3 text-slate-600 hover:text-blue-600 font-medium transition-colors"
               >
-                <Mail className="w-4 h-4 text-teal-700 shrink-0" />
+                <Mail className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>info@globalmindsacademy.in</span>
               </a>
               <a
                 href="https://wa.me/919876543210"
-                className="flex items-center gap-3 text-slate-600 hover:text-teal-700 font-medium transition-colors"
+                className="flex items-center gap-3 text-slate-600 hover:text-blue-600 font-medium transition-colors"
               >
-                <Phone className="w-4 h-4 text-teal-700 shrink-0" />
+                <Phone className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>Contact via WhatsApp</span>
               </a>
             </div>
@@ -126,7 +126,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-600 hover:text-teal-700 font-medium transition-colors"
+                      className="text-sm text-slate-600 hover:text-blue-600 font-medium transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -153,7 +153,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-teal-600 hover:text-white hover:border-teal-600 shadow-sm transition-all"
+                className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 shadow-sm transition-all"
               >
                 <Icon className="w-4 h-4" />
               </a>

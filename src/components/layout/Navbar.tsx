@@ -100,18 +100,10 @@ export default function Navbar() {
               className="transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:flex flex-col leading-none">
-              <span
-                className={`font-display font-black text-base uppercase tracking-wide transition-colors ${
-                  isLightNav ? 'text-[#0D2B3E]' : 'text-white'
-                }`}
-              >
+              <span className="font-display font-black text-base uppercase tracking-wide text-slate-900">
                 GLOBAL MINDS
               </span>
-              <span
-                className={`text-[9px] uppercase tracking-widest font-semibold transition-colors ${
-                  isLightNav ? 'text-[#1A6B5A]' : 'text-[#F5C518]'
-                }`}
-              >
+              <span className="text-[9px] uppercase tracking-widest font-bold text-blue-600">
                 BUILD SKILLS | OWN THE FUTURE
               </span>
             </div>
@@ -205,7 +197,7 @@ export default function Navbar() {
 
             <Link
               href="/register"
-              className="btn-primary btn-sm !bg-accent-500 !text-[#0D2B3E] hover:!bg-accent-600 font-bold shadow-lg shadow-accent-500/30"
+              className="btn-primary btn-sm bg-blue-600 text-white hover:bg-blue-700 font-bold shadow-md shadow-blue-500/20"
             >
               Get Started
             </Link>
@@ -230,8 +222,8 @@ export default function Navbar() {
             <div className="flex items-center gap-2 px-2 pb-4 border-b border-gray-100 mb-2">
               <Image src="/logo.svg" alt="Global Minds Academy" width={36} height={36} />
               <div className="flex flex-col leading-none">
-                <span className="font-display font-black text-sm text-[#0D2B3E] uppercase tracking-wide">GLOBAL MINDS</span>
-                <span className="text-[9px] text-[#1A6B5A] uppercase tracking-widest font-semibold">BUILD SKILLS | OWN THE FUTURE</span>
+                <span className="font-display font-black text-sm text-slate-900 uppercase tracking-wide">GLOBAL MINDS</span>
+                <span className="text-[9px] text-blue-600 uppercase tracking-widest font-bold">BUILD SKILLS | OWN THE FUTURE</span>
               </div>
             </div>
 
@@ -290,7 +282,7 @@ export default function Navbar() {
               <Link
                 href="/register"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center btn-primary !bg-accent-500 !text-[#0D2B3E] font-bold"
+                className="block w-full text-center btn-primary bg-blue-600 text-white hover:bg-blue-700 font-bold"
               >
                 Get Started Free
               </Link>

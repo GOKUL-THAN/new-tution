@@ -51,7 +51,7 @@ const sections = [
   {
     title: 'Tamil Nadu School Education',
     icon: BookOpen,
-    color: 'bg-[#1A6B5A]',
+    color: 'bg-blue-600',
     bg: 'bg-teal-50 border-teal-200',
     resources: [
       { label: 'TN School Education Department', url: 'https://www.tnschools.gov.in/', desc: 'Official portal of Tamil Nadu Department of School Education.' },
@@ -78,7 +78,7 @@ const sections = [
   {
     title: 'IIT Official Websites',
     icon: GraduationCap,
-    color: 'bg-[#D4A017]',
+    color: 'bg-amber-500',
     bg: 'bg-amber-50 border-amber-200',
     resources: [
       { label: 'IIT Madras', url: 'https://www.iitm.ac.in/', desc: 'Indian Institute of Technology Madras — Chennai, Tamil Nadu.' },
@@ -112,11 +112,11 @@ export default function OfficialResourcesPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.08),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-              <Globe className="w-4 h-4 text-[#1A6B5A]" />
+              <Globe className="w-4 h-4 text-blue-600" />
               Government &amp; Official Portals Directory
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-              Official Learning <span className="text-[#1A6B5A]">Resources</span>
+              Official Learning <span className="text-blue-600">Resources</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Curated links to official government educational portals — NCERT, DIKSHA,
@@ -166,10 +166,10 @@ export default function OfficialResourcesPage() {
                         className="bg-white rounded-2xl p-4 border border-white hover:border-gray-200 hover:shadow-md transition-all group flex flex-col gap-2"
                       >
                         <div className="flex items-start justify-between gap-2">
-                          <h3 className="font-semibold text-gray-900 text-sm group-hover:text-[#1A6B5A] transition-colors leading-snug flex-1">
+                          <h3 className="font-semibold text-gray-900 text-sm group-hover:text-blue-600 transition-colors leading-snug flex-1">
                             {r.label}
                           </h3>
-                          <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-[#1A6B5A] shrink-0 mt-0.5 transition-colors" />
+                          <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-blue-600 shrink-0 mt-0.5 transition-colors" />
                         </div>
                         <p className="text-xs text-gray-500 leading-relaxed">{r.desc}</p>
                         <p className="text-[10px] text-gray-300 mt-auto truncate">{r.url}</p>
@@ -185,7 +185,7 @@ export default function OfficialResourcesPage() {
               <p className="text-sm text-gray-500 leading-relaxed max-w-2xl mx-auto">
                 Links last verified: October 2026. Government website URLs may change.
                 If you find a broken link, please{' '}
-                <Link href="/contact" className="text-[#1A6B5A] hover:underline">contact us</Link>.
+                <Link href="/contact" className="text-blue-600 hover:underline">contact us</Link>.
                 Global Minds Academy is an independent platform and is not affiliated with
                 NCERT, NTA, CBSE, Tamil Nadu Government, or any institution listed above.
               </p>
@@ -204,7 +204,7 @@ export default function OfficialResourcesPage() {
               aligned to NCERT, CBSE, and TN State Board syllabuses.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/courses" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248]">Browse Courses</Link>
+              <Link href="/courses" className="btn-primary bg-blue-600 hover:bg-blue-700">Browse Courses</Link>
               <Link href="/ncert-solutions" className="btn-secondary">NCERT Solutions</Link>
               <Link href="/previous-year-papers" className="btn-secondary">Previous Year Papers</Link>
             </div>

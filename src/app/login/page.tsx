@@ -62,12 +62,12 @@ function LoginForm() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
         <div className="relative z-10 text-center max-w-md">
           <Link href="/" className="inline-flex items-center gap-3 mb-8">
-            <div className="w-14 h-14 bg-white border border-teal-200/80 shadow-md rounded-2xl flex items-center justify-center">
-              <GraduationCap className="w-8 h-8 text-teal-700" />
+            <div className="w-14 h-14 bg-white border border-blue-200/80 shadow-md rounded-2xl flex items-center justify-center">
+              <GraduationCap className="w-8 h-8 text-blue-600" />
             </div>
             <div className="text-left">
-              <span className="font-display font-black text-2xl text-[#0D2B3E] block">Global Minds</span>
-              <span className="text-xs uppercase tracking-widest text-[#1A6B5A] font-bold">Academy</span>
+              <span className="font-display font-black text-2xl text-slate-900 block">Global Minds</span>
+              <span className="text-xs uppercase tracking-widest text-blue-600 font-bold">Academy</span>
             </div>
           </Link>
           <h1 className="text-3xl font-display font-black text-slate-900 mb-4">

@@ -119,7 +119,7 @@ export default async function CoursesPage({ searchParams }: PageProps) {
               Curriculum &amp; Exam Catalogue
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              Course <span className="text-[#1A6B5A]">Catalogue</span>
+              Course <span className="text-blue-600">Catalogue</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto mb-8 leading-relaxed">
               Browse courses across all boards, classes, and competitive examinations.

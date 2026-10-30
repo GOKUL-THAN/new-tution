@@ -24,7 +24,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
     exams: [
       { name: 'JEE Main 2026 — Applications Open', type: 'Engineering', color: 'bg-violet-600', note: 'Session 1 application window typically opens Nov–Dec. Verify at jeemain.nta.nic.in.', url: 'https://jeemain.nta.nic.in/', status: 'Applications' },
       { name: 'BITSAT 2026 — Applications Open', type: 'Engineering', color: 'bg-orange-500', note: 'Application window typically opens in November. Verify at bitsadmission.com.', url: 'https://www.bitsadmission.com/', status: 'Applications' },
-      { name: 'IMO / NSO Stage 1', type: 'Olympiad', color: 'bg-[#D4A017]', note: 'SOF Olympiad Stage 1 conducted in schools during Oct–Nov. Verify at sofworld.org.', url: 'https://www.sofworld.org/', status: 'Exam' },
+      { name: 'IMO / NSO Stage 1', type: 'Olympiad', color: 'bg-amber-500', note: 'SOF Olympiad Stage 1 conducted in schools during Oct–Nov. Verify at sofworld.org.', url: 'https://www.sofworld.org/', status: 'Exam' },
     ],
   },
   {
@@ -47,7 +47,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
     exams: [
       { name: 'CBSE Class 10 Board Exams', type: 'Board', color: 'bg-orange-500', note: 'CBSE Class 10 board exams typically Feb–Mar. Exact datesheet at cbse.gov.in.', url: 'https://www.cbse.gov.in/', status: 'Exam' },
       { name: 'CBSE Class 12 Board Exams', type: 'Board', color: 'bg-red-600', note: 'CBSE Class 12 board exams typically Feb–Apr. Exact datesheet at cbse.gov.in.', url: 'https://www.cbse.gov.in/', status: 'Exam' },
-      { name: 'TN State Board — Class 10 (SSLC)', type: 'Board', color: 'bg-[#D4A017]', note: 'TN SSLC typically March–April. Exact dates from tnschools.gov.in.', url: 'https://www.tnschools.gov.in/', status: 'Exam' },
+      { name: 'TN State Board — Class 10 (SSLC)', type: 'Board', color: 'bg-amber-500', note: 'TN SSLC typically March–April. Exact dates from tnschools.gov.in.', url: 'https://www.tnschools.gov.in/', status: 'Exam' },
       { name: 'TN State Board — Class 12', type: 'Board', color: 'bg-amber-600', note: 'TN Class 12 typically March–April. Exact dates from tnschools.gov.in.', url: 'https://www.tnschools.gov.in/', status: 'Exam' },
       { name: 'JEE Main 2026 — Session 2', type: 'Engineering', color: 'bg-violet-600', note: 'Session 2 typically April. Verify dates at jeemain.nta.nic.in.', url: 'https://jeemain.nta.nic.in/', status: 'Exam' },
       { name: 'VITEEE 2026', type: 'Engineering', color: 'bg-indigo-600', note: 'VIT Engineering Entrance Exam typically April. Verify at viteee.vit.ac.in.', url: 'https://viteee.vit.ac.in/', status: 'Exam' },
@@ -56,7 +56,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
   {
     month: 'May 2026',
     exams: [
-      { name: 'JEE Advanced 2026', type: 'Engineering', color: 'bg-[#1A6B5A]', note: 'JEE Advanced typically May–June. Only top ~2.5L JEE Main qualifiers eligible. Verify at jeeadv.ac.in.', url: 'https://jeeadv.ac.in/', status: 'Exam' },
+      { name: 'JEE Advanced 2026', type: 'Engineering', color: 'bg-blue-600', note: 'JEE Advanced typically May–June. Only top ~2.5L JEE Main qualifiers eligible. Verify at jeeadv.ac.in.', url: 'https://jeeadv.ac.in/', status: 'Exam' },
       { name: 'NEET UG 2026', type: 'Medical', color: 'bg-emerald-600', note: 'NEET UG typically May. Single exam for all India. Verify at neet.nta.nic.in.', url: 'https://neet.nta.nic.in/', status: 'Exam' },
       { name: 'BITSAT 2026', type: 'Engineering', color: 'bg-orange-500', note: 'BITSAT typically May–June. Verify at bitsadmission.com.', url: 'https://www.bitsadmission.com/', status: 'Exam' },
       { name: 'SRMJEEE 2026', type: 'Engineering', color: 'bg-cyan-600', note: 'SRM Joint Engineering Entrance Exam typically April–May. Verify at srmist.edu.in.', url: 'https://www.srmist.edu.in/', status: 'Exam' },
@@ -74,7 +74,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
   {
     month: 'August–September 2026',
     exams: [
-      { name: 'TN State Board Results', type: 'Board', color: 'bg-[#D4A017]', note: 'TN Class 10 and 12 results typically May–June. Supplementary exams August–September.', url: 'https://www.tnschools.gov.in/', status: 'Results' },
+      { name: 'TN State Board Results', type: 'Board', color: 'bg-amber-500', note: 'TN Class 10 and 12 results typically May–June. Supplementary exams August–September.', url: 'https://www.tnschools.gov.in/', status: 'Results' },
       { name: 'HBCSE Olympiad Stage 2', type: 'Olympiad', color: 'bg-rose-600', note: 'HBCSE national Olympiad stage 2 typically Jan–April. Training camps in summer. Verify at hbcse.tifr.res.in.', url: 'https://olympiads.hbcse.tifr.res.in/', status: 'Training/Selection' },
     ],
   },
@@ -82,7 +82,7 @@ const examsByMonth: { month: string; exams: { name: string; type: string; color:
     month: 'October–November 2026',
     exams: [
       { name: 'JEE Main 2027 — Early Notification', type: 'Engineering', color: 'bg-violet-600', note: 'NTA typically releases next-year JEE Main notification by October–November.', url: 'https://jeemain.nta.nic.in/', status: 'Notification' },
-      { name: 'SOF Olympiads Stage 1 (2026–27)', type: 'Olympiad', color: 'bg-[#D4A017]', note: 'New Olympiad cycle begins. IMO, NSO, IEO conducted in schools Nov–Dec.', url: 'https://www.sofworld.org/', status: 'Registration' },
+      { name: 'SOF Olympiads Stage 1 (2026–27)', type: 'Olympiad', color: 'bg-amber-500', note: 'New Olympiad cycle begins. IMO, NSO, IEO conducted in schools Nov–Dec.', url: 'https://www.sofworld.org/', status: 'Registration' },
     ],
   },
 ];
@@ -118,11 +118,11 @@ export default function ExamCalendarPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-5 shadow-xs">
-                <Calendar className="w-4 h-4 text-[#1A6B5A]" />
+                <Calendar className="w-4 h-4 text-blue-600" />
                 Academic Year 2025–26
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight">
-                Exam Calendar <span className="text-[#1A6B5A]">2025–26</span>
+                Exam Calendar <span className="text-blue-600">2025–26</span>
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                 Indicative exam dates for JEE Main, JEE Advanced, NEET UG, CUET, BITSAT,
@@ -187,7 +187,7 @@ export default function ExamCalendarPage() {
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {month.exams.map((exam) => (
-                      <div key={exam.name} className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#1A6B5A]/30 hover:shadow-sm transition-all">
+                      <div key={exam.name} className="bg-white rounded-2xl border border-gray-100 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
                         <div className="flex items-start justify-between gap-2 mb-3">
                           <div className="flex flex-col gap-1.5">
                             <span className={`text-xs font-semibold px-2 py-0.5 rounded-full w-fit ${typeColors[exam.type] ?? 'bg-gray-100 text-gray-600'}`}>
@@ -206,7 +206,7 @@ export default function ExamCalendarPage() {
                           href={exam.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-[#1A6B5A] font-semibold hover:underline"
+                          className="inline-flex items-center gap-1.5 text-xs text-blue-600 font-semibold hover:underline"
                         >
                           Official Source <ExternalLink className="w-3 h-3" />
                         </a>
@@ -231,9 +231,9 @@ export default function ExamCalendarPage() {
                   { label: 'MCC MBBS Counselling', url: 'https://mcc.nic.in/' },
                 ].map((r) => (
                   <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center justify-between text-sm text-[#1A6B5A] font-medium p-3 bg-gray-50 rounded-xl hover:bg-[#1A6B5A]/5 transition-colors group">
+                    className="flex items-center justify-between text-sm text-blue-600 font-medium p-3 bg-gray-50 rounded-xl hover:bg-blue-50/50 transition-colors group">
                     {r.label}
-                    <ExternalLink className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#1A6B5A]" />
+                    <ExternalLink className="w-3.5 h-3.5 text-gray-300 group-hover:text-blue-600" />
                   </a>
                 ))}
               </div>
@@ -248,7 +248,7 @@ export default function ExamCalendarPage() {
               Use our platform to practise with full-length mock tests, DPPs, and syllabus checklists for every exam.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/entrance-exams" className="btn-primary !bg-[#1A6B5A] hover:!bg-[#145248]">View All Exams</Link>
+              <Link href="/entrance-exams" className="btn-primary bg-blue-600 hover:bg-blue-700">View All Exams</Link>
               <Link href="/previous-year-papers" className="btn-secondary">Previous Year Papers</Link>
             </div>
           </div>

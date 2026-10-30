@@ -84,7 +84,7 @@ export default async function ClassesPage({ searchParams }: PageProps) {
               Structured Grade Pathways
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-              {selectedSubject ? `${getSubjectLabel(selectedSubject)} Classes` : <span>Classes <span className="text-[#1A6B5A]">6–12</span></span>}
+              {selectedSubject ? `${getSubjectLabel(selectedSubject)} Classes` : <span>Classes <span className="text-blue-600">6–12</span></span>}
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
               {boardKey
@@ -104,7 +104,7 @@ export default async function ClassesPage({ searchParams }: PageProps) {
                   </span>
                 )}
                 {(boardKey || selectedSubject) && (
-                  <Link href="/classes" className="px-3.5 py-1.5 rounded-full bg-[#1A6B5A] text-white text-sm font-semibold hover:bg-[#145346] shadow-xs transition-colors">
+                  <Link href="/classes" className="px-3.5 py-1.5 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-[#145346] shadow-xs transition-colors">
                     Clear filters
                   </Link>
                 )}

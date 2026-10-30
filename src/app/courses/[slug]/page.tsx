@@ -210,17 +210,17 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <div className="flex flex-wrap gap-4 text-sm text-slate-600 font-medium mb-8">
                 {totalLessons > 0 && (
                   <span className="flex items-center gap-1.5">
-                    <BookOpen className="w-4 h-4 text-[#1A6B5A]" /> {totalLessons} lessons
+                    <BookOpen className="w-4 h-4 text-blue-600" /> {totalLessons} lessons
                   </span>
                 )}
                 {course.duration && (
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#1A6B5A]" /> {course.duration}
+                    <Clock className="w-4 h-4 text-blue-600" /> {course.duration}
                   </span>
                 )}
                 {course._count.enrolments > 0 && (
                   <span className="flex items-center gap-1.5">
-                    <Users className="w-4 h-4 text-[#1A6B5A]" /> {course._count.enrolments.toLocaleString()} enrolled
+                    <Users className="w-4 h-4 text-blue-600" /> {course._count.enrolments.toLocaleString()} enrolled
                   </span>
                 )}
               </div>
@@ -229,7 +229,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/register"
-                  className="inline-flex items-center gap-2 bg-[#1A6B5A] text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-[#145346] shadow-md shadow-teal-900/10 transition-colors"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/25 transition-colors"
                 >
                   Enrol Now {priceDisplay !== 'Free' ? `— ${priceDisplay}` : '(Free)'}{' '}
                   <ArrowRight className="w-4 h-4" />

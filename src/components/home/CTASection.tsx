@@ -7,26 +7,26 @@ export default function CTASection() {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(26,107,90,0.06),transparent_60%)] pointer-events-none" />
       <div className="absolute top-0 left-0 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Subtle dot pattern */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #1A6B5A 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #2563eb 1px, transparent 1px)`,
           backgroundSize: '32px 32px',
         }}
       />
 
       <div className="container-wide relative z-10 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-200/80 text-teal-900 text-sm font-semibold mb-6 shadow-sm">
-          <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-sm font-semibold mb-6 shadow-sm">
+          <Sparkles className="w-4 h-4 text-blue-600 shrink-0" />
           Start Your Learning Journey Today
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-6 max-w-3xl mx-auto leading-tight">
           Ready to Transform Your{' '}
-          <span className="bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
             Academic Future?
           </span>
         </h2>
@@ -36,11 +36,11 @@ export default function CTASection() {
           and Tamil Nadu State Board. Perumbakkam, Chennai.
         </p>
 
-        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2.5 rounded-2xl bg-white border border-teal-200/80 text-slate-800 font-bold text-sm mb-10 shadow-sm">
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2.5 rounded-2xl bg-white border border-blue-200/80 text-slate-800 font-bold text-sm mb-10 shadow-sm">
           <span>15,000+ Students Trained</span>
-          <span className="text-teal-600">·</span>
+          <span className="text-blue-600">·</span>
           <span>4.9 / 5.0 Rating</span>
-          <span className="text-teal-600">·</span>
+          <span className="text-blue-600">·</span>
           <span>98.4% Placement Success</span>
         </div>
 
@@ -48,7 +48,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link
             href="/register"
-            className="btn bg-[#F5C518] text-[#0D2B3E] hover:bg-[#F9D85A] shadow-lg shadow-amber-500/20 px-8 py-4 text-base font-black rounded-2xl w-full sm:w-auto group transition-all"
+            className="btn bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/25 px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto group transition-all"
           >
             <BookOpen className="w-5 h-5" />
             Start Learning Free
@@ -71,7 +71,7 @@ export default function CTASection() {
 
           <Link
             href="/contact"
-            className="btn border-2 border-slate-300 bg-white text-slate-800 hover:border-teal-600 hover:text-teal-700 hover:bg-teal-50/50 shadow-sm px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto transition-all"
+            className="btn border-2 border-slate-300 bg-white text-slate-800 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm px-8 py-4 text-base font-bold rounded-2xl w-full sm:w-auto transition-all"
           >
             Book Free Counselling
           </Link>

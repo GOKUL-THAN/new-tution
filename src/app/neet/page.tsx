@@ -20,18 +20,18 @@ export default function NEETPage() {
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 text-xs font-semibold mb-6 shadow-xs">
-                <Stethoscope className="w-4 h-4 text-[#1A6B5A]" />
+                <Stethoscope className="w-4 h-4 text-blue-600" />
                 Medical Entrance
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight">
-                NEET UG <span className="text-[#1A6B5A]">Preparation</span>
+                NEET UG <span className="text-blue-600">Preparation</span>
               </h1>
               <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
                 Comprehensive preparation for India&apos;s national medical entrance examination.
                 Master Biology, Physics, and Chemistry with expert guidance and NEET-pattern mock tests.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/register" className="btn bg-[#1A6B5A] text-white hover:bg-[#145346] shadow-md shadow-teal-900/10 px-7 py-3.5 text-sm font-bold rounded-xl transition-colors">
+                <Link href="/register" className="btn bg-blue-600 text-white hover:bg-blue-700 shadow-md shadow-blue-500/25 px-7 py-3.5 text-sm font-bold rounded-xl transition-colors">
                   Start NEET Prep <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/courses" className="btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 px-7 py-3.5 text-sm font-semibold rounded-xl shadow-xs transition-colors">
