@@ -25,15 +25,14 @@ const navigation = [
     ],
   },
   {
-    label: 'Curriculum',
+    label: 'Education Boards',
     children: [
-      { label: 'All Boards',    href: '/boards',      desc: 'CBSE, ICSE, TN State Board' },
-      { label: 'Classes 6–12',  href: '/classes',     desc: 'Grade-wise learning' },
-      { label: 'Subjects',      href: '/subjects',    desc: 'Browse by subject' },
-      { label: 'Courses',       href: '/courses',     desc: 'Full course catalogue' },
-      { label: 'Curriculum',    href: '/curriculum',  desc: 'Board → Subject → Chapter' },
-      { label: 'Online Learning',href: '/online-learning',  desc: 'Live + recorded classes' },
-      { label: 'Offline Classes',href: '/offline-classes',  desc: 'In-person batches' },
+      { label: 'All Boards (6–12)', href: '/boards', desc: 'Select Board → Class → Subject' },
+      { label: 'CBSE Board', href: '/boards/cbse', desc: 'NCERT aligned (Classes 6–12)' },
+      { label: 'ICSE Board', href: '/boards/icse', desc: 'CISCE curriculum (Classes 6–12)' },
+      { label: 'TN State Board', href: '/boards/tn-state-board', desc: 'Samacheer Kalvi (Classes 6–12)' },
+      { label: 'TN Matriculation', href: '/boards/tn-matriculation', desc: 'Matriculation (Classes 6–12)' },
+      { label: 'Curriculum Hierarchy', href: '/curriculum', desc: 'Board → Class → Subject → Chapter' },
     ],
   },
   {

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, GraduationCap } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, ShieldCheck } from 'lucide-react';
 import EmptyState from '@/components/ui/EmptyState';
 import {
   getBoardCurriculum,
@@ -10,6 +10,7 @@ import {
   getSubjectsForBoardClass,
   getSubjectsForClass,
 } from '@/lib/curriculum';
+import { getAllEducationBoards } from '@/data/education';
 
 interface PageProps {
   params: Promise<{ classSlug: string }>;
@@ -31,13 +32,6 @@ function getClassGroup(num: number): string {
   return 'Senior Secondary (11–12)';
 }
 
-function getClassColor(num: number): string {
-  if (num <= 5) return 'from-emerald-400 to-indigo-500';
-  if (num <= 8) return 'from-blue-400 to-indigo-500';
-  if (num <= 10) return 'from-violet-500 to-purple-600';
-  return 'from-rose-500 to-orange-500';
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { classSlug } = await params;
   const classNum = parseClassNumber(classSlug);
@@ -47,8 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `Class ${classNum} — Courses & Study Material`,
-    description: `Browse Class ${classNum} courses, subjects, and study material for CBSE, ICSE, and Tamil Nadu State Board at Global Minds Academy.`,
+    title: `Class ${classNum} — CBSE, ICSE, TN State Board & Matriculation Curriculum`,
+    description: `Browse Class ${classNum} courses, subjects, and study material across CBSE, ICSE, Tamil Nadu State Board, and Tamil Nadu Matriculation at Global Minds Academy.`,
   };
 }
 
@@ -61,7 +55,7 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
     return (
       <>
         <Navbar />
-        <main className="pt-32 min-h-screen">
+        <main className="pt-32 min-h-screen bg-[#FBFDFD]">
           <div className="container-wide">
             <EmptyState
               icon={GraduationCap}
@@ -77,7 +71,6 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
     );
   }
 
-  const colorClass = getClassColor(classNum);
   const group = getClassGroup(classNum);
   const selectedBoard = getBoardCurriculum(board) ? board : undefined;
   const allSubjects = selectedBoard
@@ -95,34 +88,36 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
   if (selectedSubjectSlug) classQuery.set('subject', selectedSubjectSlug);
   const classListHref = classQuery.toString() ? `/classes?${classQuery.toString()}` : '/classes';
 
+  const educationBoards = getAllEducationBoards();
+
   return (
     <>
       <Navbar />
-      <main>
+      <main className="min-h-screen bg-[#FBFDFD]">
         {/* Hero — Premium Light Theme */}
-        <section className="bg-gradient-to-b from-slate-50 via-blue-50/25 to-white pt-32 pb-20 relative overflow-hidden border-b border-slate-200/80">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)] pointer-events-none" />
+        <section className="bg-gradient-to-b from-slate-50 via-teal-50/20 to-white pt-32 pb-16 relative overflow-hidden border-b border-slate-200/80">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(15,76,92,0.06),transparent_60%)] pointer-events-none" />
           <div className="container-wide relative z-10">
             <div className="max-w-3xl">
               <Link href={classListHref} className="inline-flex items-center gap-1 text-slate-500 text-sm mb-6 hover:text-slate-900 font-medium transition-colors">
                 ← All Classes
               </Link>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-4 shadow-xs">
-                <GraduationCap className="w-4 h-4 text-blue-600" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-xs font-semibold mb-4 shadow-xs">
+                <GraduationCap className="w-4 h-4 text-accent-500" />
                 {group}
               </div>
               <h1 className="text-4xl sm:text-5xl font-display font-black text-slate-900 mb-4 tracking-tight">
-                Class {classNum} <span className="text-blue-600">Learning</span>
+                Class {classNum} <span className="bg-gradient-to-r from-brand-700 to-accent-600 bg-clip-text text-transparent">Education System</span>
               </h1>
-              <p className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed font-medium">
                 {selectedBoard && selectedSubjectSlug
                   ? `Explore ${getSubjectLabel(selectedSubjectSlug)} learning for Class ${classNum} in ${getBoardCurriculum(selectedBoard)?.name}.`
-                  : `Explore subjects, courses, and study materials designed for Class ${classNum} students across CBSE, ICSE, and Tamil Nadu State Board.`}
+                  : `Select your education board below to explore dedicated, board-specific Class ${classNum} curricula, syllabus, chapters, and assessments.`}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href={{ pathname: `/courses`, query: { class: String(classNum), ...(selectedBoard ? { board: selectedBoard } : {}), ...(selectedSubjectSlug ? { subject: selectedSubjectSlug } : {}) } }}
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-500/25 transition-colors"
+                  className="inline-flex items-center gap-2 bg-brand-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-brand-700 shadow-md transition-colors"
                 >
                   Browse Class {classNum} Courses <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -137,40 +132,89 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
           </div>
         </section>
 
+        {/* Board Selection Cards for this Class */}
+        {classNum >= 6 && classNum <= 12 && (
+          <section className="py-12 bg-white border-b border-slate-200/80">
+            <div className="container-wide">
+              <div className="mb-8">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-700">Dedicated Curriculum</span>
+                <h2 className="text-2xl font-display font-black text-slate-900 mt-1">
+                  Choose Board for Class {classNum}
+                </h2>
+                <p className="text-sm text-slate-600">
+                  Each board follows its own syllabus, textbooks, and examination pattern with zero cross-mixing.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {educationBoards.map((b) => (
+                  <Link
+                    key={b.slug}
+                    href={`/boards/${b.slug}/class-${classNum}`}
+                    className="card p-5 rounded-2xl border-2 border-slate-200 hover:border-brand-500 hover:shadow-md transition-all bg-slate-50/50 hover:bg-white flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs font-bold px-2 py-0.5 rounded bg-brand-50 text-brand-700 border border-brand-200">
+                          {b.badge}
+                        </span>
+                      </div>
+                      <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">
+                        {b.name}
+                      </h3>
+                      <p className="text-xs text-slate-500 line-clamp-1 mb-2">{b.fullName}</p>
+                      <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                        {b.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 mt-3 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-brand-600 group-hover:text-brand-700">
+                      <span>Explore Class {classNum}</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="section-padding">
           <div className="container-wide">
             {(selectedBoard || selectedSubjectSlug) && (
               <div className="mb-8 flex flex-wrap gap-3">
                 {selectedBoard && (
-                  <span className="px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100 text-sm">
+                  <span className="px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100 text-sm font-semibold">
                     {getBoardCurriculum(selectedBoard)?.name}
                   </span>
                 )}
                 {selectedSubjectSlug && (
-                  <span className="px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100 text-sm">
+                  <span className="px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100 text-sm font-semibold">
                     {getSubjectLabel(selectedSubjectSlug)}
                   </span>
                 )}
               </div>
             )}
             <h2 className="text-2xl font-display font-bold text-gray-900 mb-8">
-              {selectedSubjectSlug ? `${getSubjectLabel(selectedSubjectSlug)} for Class ${classNum}` : `Subjects for Class ${classNum}`}
+              {selectedSubjectSlug ? `${getSubjectLabel(selectedSubjectSlug)} for Class ${classNum}` : `All Subjects for Class ${classNum}`}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
-              {subjects.map((subject) => {
-                const subjectSlug = subject;
+              {subjects.map((subj) => {
+                const targetHref = selectedBoard
+                  ? `/boards/${selectedBoard}/class-${classNum}/${subj}`
+                  : `/subjects/${subj}?class=${classNum}`;
 
                 return (
                   <Link
-                    key={subject}
-                    href={`/subjects/${subjectSlug}${selectedBoard ? `?board=${selectedBoard}&class=${classNum}` : `?class=${classNum}`}`}
-                    className="card-hover p-5 flex items-center gap-3 group"
+                    key={subj}
+                    href={targetHref}
+                    className="card-hover p-5 flex items-center gap-3 group rounded-2xl border border-slate-200 bg-white"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center shrink-0 border border-brand-100">
                       <BookOpen className="w-5 h-5 text-brand-600" />
                     </div>
-                    <span className="text-sm font-medium text-gray-800 group-hover:text-brand-600 transition-colors">
-                      {getSubjectLabel(subject)}
+                    <span className="text-sm font-semibold text-gray-800 group-hover:text-brand-600 transition-colors">
+                      {getSubjectLabel(subj)}
                     </span>
                   </Link>
                 );
@@ -182,7 +226,7 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
               {prevClass ? (
                 <Link
                   href={classQuery.toString() ? `/classes/class-${prevClass}?${classQuery.toString()}` : `/classes/class-${prevClass}`}
-                  className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium text-sm"
+                  className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-bold text-sm"
                 >
                   ← Class {prevClass}
                 </Link>
@@ -192,7 +236,7 @@ export default async function ClassDetailPage({ params, searchParams }: PageProp
               {nextClass ? (
                 <Link
                   href={classQuery.toString() ? `/classes/class-${nextClass}?${classQuery.toString()}` : `/classes/class-${nextClass}`}
-                  className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium text-sm"
+                  className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-bold text-sm"
                 >
                   Class {nextClass} →
                 </Link>

@@ -82,6 +82,8 @@ export const BOARD_CURRICULA: BoardCurriculum[] = [
       8: ['mathematics', 'science', 'english', 'history-geography', 'japanese', 'german'],
       9: ['mathematics', 'physics', 'chemistry', 'biology', 'english', 'history-geography', 'japanese', 'german'],
       10: ['mathematics', 'physics', 'chemistry', 'biology', 'english', 'history-geography', 'japanese', 'german'],
+      11: ['physics', 'chemistry', 'mathematics', 'biology', 'computer-science', 'accountancy', 'economics', 'business-studies', 'english'],
+      12: ['physics', 'chemistry', 'mathematics', 'biology', 'computer-science', 'accountancy', 'economics', 'business-studies', 'english'],
     },
   },
   {

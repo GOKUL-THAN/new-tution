@@ -49,6 +49,14 @@ const staticRoutes: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/boards/isc`, changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE_URL}/boards/tn-state-board`, changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE_URL}/boards/tn-matriculation`, changeFrequency: 'monthly', priority: 0.7 },
+  // Board-specific class pages (4 boards × 7 classes)
+  ...['cbse', 'icse', 'tn-state-board', 'tn-matriculation'].flatMap((b) =>
+    Array.from({ length: 7 }, (_, i) => ({
+      url: `${BASE_URL}/boards/${b}/class-${i + 6}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  ),
   // Class pages (6–12 only — primary classes not served)
   ...Array.from({ length: 7 }, (_, i) => ({
     url: `${BASE_URL}/classes/class-${i + 6}`,
